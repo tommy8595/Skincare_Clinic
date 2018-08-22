@@ -56,12 +56,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Report_patient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Report_patient.Designer.cs">
       <DependentUpon>Report_patient.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="skin_cilinicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 4cf5ea9f639918580a1fe3c6f577354db41c71fe
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -84,6 +95,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="skin_cilinicDataSet.xsc">
+      <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="skin_cilinicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>skin_cilinicDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="skin_cilinicDataSet.xss">
+      <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
