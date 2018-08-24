@@ -293,6 +293,7 @@
             this.btn_print_history.TabIndex = 28;
             this.btn_print_history.Text = "Print";
             this.btn_print_history.UseVisualStyleBackColor = false;
+            this.btn_print_history.Click += new System.EventHandler(this.btn_print_history_Click);
             // 
             // frm_History
             // 

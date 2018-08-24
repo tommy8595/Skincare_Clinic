@@ -119,5 +119,11 @@ namespace Skincare_Management_System
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
         }
+
+        private void btn_print_history_Click(object sender, EventArgs e)
+        {
+            frm_ReportPatient rp = new frm_ReportPatient();
+            rp.Show();
+        }
     }
 }

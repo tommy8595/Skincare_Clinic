@@ -1,6 +1,6 @@
-﻿namespace skin_care
+﻿namespace Skincare_Management_System
 {
-    partial class Report_patient
+    partial class frm_ReportPatient
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // Report_patient
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skincare_Management_System.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(891, 499);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // frm_ReportPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 630);
-            this.Name = "Report_patient";
-            this.Text = "Report_patient";
+            this.ClientSize = new System.Drawing.Size(891, 499);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "frm_ReportPatient";
+            this.Text = "frm_ReportPatient";
+            this.Load += new System.EventHandler(this.frm_ReportPatient_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

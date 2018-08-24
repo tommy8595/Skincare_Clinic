@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace skin_care
+namespace Skincare_Management_System
 {
-    public partial class Form1 : Form
+    public partial class frm_ReportPatient : Form
     {
-        public Form1()
+        public frm_ReportPatient()
         {
             InitializeComponent();
+        }
+
+        private void frm_ReportPatient_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
