@@ -172,6 +172,7 @@
     <Compile Include="frm_Username.Designer.cs">
       <DependentUpon>frm_Username.cs</DependentUpon>
     </Compile>
+    <Compile Include="Receipt\ClassTestReceipt\Prescription.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -238,8 +239,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Receipt\ReceiptDesign\ReportReceipt.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Prescription.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
