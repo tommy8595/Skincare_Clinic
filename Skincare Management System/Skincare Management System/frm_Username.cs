@@ -32,5 +32,18 @@ namespace Skincare_Management_System
         {
             Application.Run(new frm_Setting());
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //if (true)
+            //{
+            //string connectionString =;
+            //SqlConnection con = new SqlConnection(connectionString);
+            //SqlCommand sql = new SqlCommand("Update User set Username=@NewUsername),con");
+            //sql.Parameter.AddWithValue("@NewUsername",txt_user_ChangeUser);
+            //}
+            //y need password
+
+        }
     }
 }

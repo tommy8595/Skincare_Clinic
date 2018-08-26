@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_New_pass = new System.Windows.Forms.TextBox();
+            this.txt_New_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Back = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Save_NewUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -47,23 +47,23 @@
             this.textBox1.Size = new System.Drawing.Size(361, 38);
             this.textBox1.TabIndex = 7;
             // 
-            // textBox3
+            // txt_New_pass
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(339, 258);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(361, 38);
-            this.textBox3.TabIndex = 11;
+            this.txt_New_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_New_pass.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_New_pass.Location = new System.Drawing.Point(339, 258);
+            this.txt_New_pass.Name = "txt_New_pass";
+            this.txt_New_pass.Size = new System.Drawing.Size(361, 38);
+            this.txt_New_pass.TabIndex = 11;
             // 
-            // textBox2
+            // txt_New_name
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(339, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(361, 38);
-            this.textBox2.TabIndex = 12;
+            this.txt_New_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_New_name.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_New_name.Location = new System.Drawing.Point(339, 173);
+            this.txt_New_name.Name = "txt_New_name";
+            this.txt_New_name.Size = new System.Drawing.Size(361, 38);
+            this.txt_New_name.TabIndex = 12;
             // 
             // label2
             // 
@@ -112,21 +112,22 @@
             this.btn_Back.UseVisualStyleBackColor = false;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // button1
+            // btn_Save_NewUser
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(339, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 45);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Save_NewUser.BackColor = System.Drawing.Color.White;
+            this.btn_Save_NewUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Save_NewUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_Save_NewUser.FlatAppearance.BorderSize = 2;
+            this.btn_Save_NewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save_NewUser.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save_NewUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_Save_NewUser.Location = new System.Drawing.Point(339, 350);
+            this.btn_Save_NewUser.Name = "btn_Save_NewUser";
+            this.btn_Save_NewUser.Size = new System.Drawing.Size(137, 45);
+            this.btn_Save_NewUser.TabIndex = 27;
+            this.btn_Save_NewUser.Text = "Save";
+            this.btn_Save_NewUser.UseVisualStyleBackColor = false;
+            this.btn_Save_NewUser.Click += new System.EventHandler(this.btn_Save_NewUser_Click);
             // 
             // frm_AddAccount
             // 
@@ -134,13 +135,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Save_NewUser);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_New_name);
+            this.Controls.Add(this.txt_New_pass);
             this.Controls.Add(this.textBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -156,12 +157,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_New_pass;
+        private System.Windows.Forms.TextBox txt_New_name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Back;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Save_NewUser;
     }
 }
