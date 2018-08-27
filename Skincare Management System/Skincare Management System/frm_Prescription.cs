@@ -21,7 +21,7 @@ namespace Skincare_Management_System
 
         private void openReceipt()
         {
-            Application.Run(new frmReceipt());
+            Application.Run(new frm_Receipt());
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
