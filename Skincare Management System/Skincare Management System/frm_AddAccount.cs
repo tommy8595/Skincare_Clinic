@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
@@ -32,6 +33,15 @@ namespace Skincare_Management_System
         {
             Application.Run(new frm_Setting());
         }
-
+        
+        private void btn_Save_NewUser_Click(object sender, EventArgs e)
+        {
+            //string connectionString =;
+            //SqlConnection con = new SqlConnection(connectionString);
+            //SqlCommand sql = new SqlCommand("Insert into User VALUE(" @Username, @Password"),con");
+            //sql.Parameter.AddWithValue("@Username",txt_Newname);
+            //sql.Parameter.AddWithValue("@Password",txt_Newpass);
+           
+        }
     }
 }

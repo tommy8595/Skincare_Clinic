@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_user_ChangeUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_pass_ChangeUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,14 +38,14 @@
             this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_user_ChangeUser
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(339, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 38);
-            this.textBox1.TabIndex = 6;
+            this.txt_user_ChangeUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_user_ChangeUser.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_user_ChangeUser.Location = new System.Drawing.Point(339, 88);
+            this.txt_user_ChangeUser.Name = "txt_user_ChangeUser";
+            this.txt_user_ChangeUser.Size = new System.Drawing.Size(361, 38);
+            this.txt_user_ChangeUser.TabIndex = 6;
             // 
             // label2
             // 
@@ -57,14 +57,14 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "New Username";
             // 
-            // textBox2
+            // txt_pass_ChangeUser
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(339, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(361, 38);
-            this.textBox2.TabIndex = 8;
+            this.txt_pass_ChangeUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_pass_ChangeUser.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass_ChangeUser.Location = new System.Drawing.Point(339, 173);
+            this.txt_pass_ChangeUser.Name = "txt_pass_ChangeUser";
+            this.txt_pass_ChangeUser.Size = new System.Drawing.Size(361, 38);
+            this.txt_pass_ChangeUser.TabIndex = 8;
             // 
             // label1
             // 
@@ -110,6 +110,7 @@
             this.button6.TabIndex = 24;
             this.button6.Text = "Save";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btn_Back
             // 
@@ -138,9 +139,9 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_pass_ChangeUser);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_user_ChangeUser);
             this.Controls.Add(this.label2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -155,9 +156,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_user_ChangeUser;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_pass_ChangeUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
