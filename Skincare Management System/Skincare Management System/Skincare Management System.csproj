@@ -238,7 +238,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReportReceipt.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Prescription.datasource" />

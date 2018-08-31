@@ -183,6 +183,7 @@
             this.btn_done_prescription.TabIndex = 35;
             this.btn_done_prescription.Text = "Done";
             this.btn_done_prescription.UseVisualStyleBackColor = false;
+            this.btn_done_prescription.Click += new System.EventHandler(this.btn_done_prescription_Click);
             // 
             // lst_category_prescription
             // 
