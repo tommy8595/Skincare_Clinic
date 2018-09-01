@@ -17,6 +17,7 @@ namespace Skincare_Management_System
         public frm_AddAccount()
         {
             InitializeComponent();
+            Connections.SkinCareConnection.OpenConnection();
         }
 
         Thread th;
@@ -41,7 +42,13 @@ namespace Skincare_Management_System
             //SqlCommand sql = new SqlCommand("Insert into User VALUE(" @Username, @Password"),con");
             //sql.Parameter.AddWithValue("@Username",txt_Newname);
             //sql.Parameter.AddWithValue("@Password",txt_Newpass);
-           
+
+            SqlCommand cmd = new SqlCommand("sp_insert_user");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@u", txt_New_name.Text.Trim());
+            cmd.Parameters.AddWithValue("@p", txt_New_pass.Text.Trim());
+            cmd.Connection = Connections.SkinCareConnection.Conn;
+            cmd.ExecuteNonQuery();
         }
     }
 }

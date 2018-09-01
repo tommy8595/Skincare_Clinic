@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
@@ -15,12 +16,26 @@ namespace Skincare_Management_System
     {
         public frm_Login()
         {
+            Connections.SkinCareConnection.OpenConnection();
             InitializeComponent();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_user");
+            cmd.Connection = Connections.SkinCareConnection.Conn;
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    MessageBox.Show(reader[0].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Rows");
+            }
         }
 
         Thread th;
-
-
 
         private void openHome()
         {

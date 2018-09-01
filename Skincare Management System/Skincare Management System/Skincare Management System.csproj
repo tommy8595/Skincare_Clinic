@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connections\SkinCareConnection.cs" />
     <Compile Include="frm_AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>

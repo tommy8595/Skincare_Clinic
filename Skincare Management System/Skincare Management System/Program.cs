@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
@@ -17,6 +18,8 @@ namespace Skincare_Management_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_Login());
+
+            Connections.SkinCareConnection.CloseConnection();
         }
     }
 }
