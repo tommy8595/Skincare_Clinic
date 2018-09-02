@@ -19,7 +19,7 @@ namespace Skincare_Management_System
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_Login());
 
-            Connections.SkinCareConnection.CloseConnection();
+            SkinCareConnection.CloseConnection();
         }
     }
 }

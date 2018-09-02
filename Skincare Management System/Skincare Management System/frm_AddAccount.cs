@@ -17,7 +17,7 @@ namespace Skincare_Management_System
         public frm_AddAccount()
         {
             InitializeComponent();
-            Connections.SkinCareConnection.OpenConnection();
+            SkinCareConnection.OpenConnection();
         }
 
         Thread th;
@@ -47,7 +47,7 @@ namespace Skincare_Management_System
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@u", txt_New_name.Text.Trim());
             cmd.Parameters.AddWithValue("@p", txt_New_pass.Text.Trim());
-            cmd.Connection = Connections.SkinCareConnection.Conn;
+            cmd.Connection = SkinCareConnection.Conn;
             cmd.ExecuteNonQuery();
         }
     }

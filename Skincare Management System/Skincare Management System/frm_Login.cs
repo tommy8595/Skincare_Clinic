@@ -16,11 +16,11 @@ namespace Skincare_Management_System
     {
         public frm_Login()
         {
-            Connections.SkinCareConnection.OpenConnection();
+            SkinCareConnection.OpenConnection();
             InitializeComponent();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_user");
-            cmd.Connection = Connections.SkinCareConnection.Conn;
+            cmd.Connection = SkinCareConnection.Conn;
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
