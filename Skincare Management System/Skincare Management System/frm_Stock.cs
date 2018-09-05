@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
@@ -103,6 +104,16 @@ namespace Skincare_Management_System
         {
             frm_Register register = new frm_Register();
             register.Show();
+        }
+
+        private void frm_Stock_Load(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("select *from tbl_product",SkinCareConnection.Conn);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            data.Fill(ds);
+            dgv_product_frmstock.DataSource = ds;
+
         }
     }
 }

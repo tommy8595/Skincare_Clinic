@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.skincilinicDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.skin_cilinicDataSet = new Skincare_Management_System.skin_cilinicDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.skincilinicDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // skincilinicDataSetBindingSource
+            // 
+            this.skincilinicDataSetBindingSource.DataSource = this.skin_cilinicDataSet;
+            this.skincilinicDataSetBindingSource.Position = 0;
+            // 
+            // skin_cilinicDataSet
+            // 
+            this.skin_cilinicDataSet.DataSetName = "skin_cilinicDataSet";
+            this.skin_cilinicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.skincilinicDataSetBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.skincilinicDataSetBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skincare_Management_System.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -50,6 +73,8 @@
             this.Name = "frm_ReportPatient";
             this.Text = "frm_ReportPatient";
             this.Load += new System.EventHandler(this.frm_ReportPatient_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.skincilinicDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -57,5 +82,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource skincilinicDataSetBindingSource;
+        private skin_cilinicDataSet skin_cilinicDataSet;
     }
 }

@@ -41,9 +41,11 @@
             this.btn_register_stock = new System.Windows.Forms.Button();
             this.btn_edit_stock = new System.Windows.Forms.Button();
             this.btn_back_stock = new System.Windows.Forms.Button();
+            this.dgv_product_frmstock = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_product_frmstock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -223,12 +225,22 @@
             this.btn_back_stock.UseVisualStyleBackColor = false;
             this.btn_back_stock.Click += new System.EventHandler(this.btn_back_stock_Click);
             // 
+            // dgv_product_frmstock
+            // 
+            this.dgv_product_frmstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_product_frmstock.Location = new System.Drawing.Point(389, 87);
+            this.dgv_product_frmstock.Name = "dgv_product_frmstock";
+            this.dgv_product_frmstock.RowTemplate.Height = 24;
+            this.dgv_product_frmstock.Size = new System.Drawing.Size(1093, 613);
+            this.dgv_product_frmstock.TabIndex = 32;
+            // 
             // frm_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.Controls.Add(this.dgv_product_frmstock);
             this.Controls.Add(this.btn_back_stock);
             this.Controls.Add(this.btn_edit_stock);
             this.Controls.Add(this.btn_register_stock);
@@ -240,9 +252,11 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skincare - Stock";
+            this.Load += new System.EventHandler(this.frm_Stock_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_product_frmstock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +276,6 @@
         private System.Windows.Forms.Button btn_register_stock;
         private System.Windows.Forms.Button btn_edit_stock;
         private System.Windows.Forms.Button btn_back_stock;
+        private System.Windows.Forms.DataGridView dgv_product_frmstock;
     }
 }
