@@ -42,6 +42,7 @@
             this.btn_edit_stock = new System.Windows.Forms.Button();
             this.btn_back_stock = new System.Windows.Forms.Button();
             this.dgv_product_frmstock = new System.Windows.Forms.DataGridView();
+            this.btn_print_frmstock = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).BeginInit();
@@ -227,6 +228,7 @@
             // 
             // dgv_product_frmstock
             // 
+            this.dgv_product_frmstock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_product_frmstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_product_frmstock.Location = new System.Drawing.Point(389, 87);
             this.dgv_product_frmstock.Name = "dgv_product_frmstock";
@@ -234,12 +236,30 @@
             this.dgv_product_frmstock.Size = new System.Drawing.Size(1093, 613);
             this.dgv_product_frmstock.TabIndex = 32;
             // 
+            // btn_print_frmstock
+            // 
+            this.btn_print_frmstock.BackColor = System.Drawing.Color.White;
+            this.btn_print_frmstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_print_frmstock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_print_frmstock.FlatAppearance.BorderSize = 2;
+            this.btn_print_frmstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_print_frmstock.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print_frmstock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_print_frmstock.Location = new System.Drawing.Point(979, 731);
+            this.btn_print_frmstock.Name = "btn_print_frmstock";
+            this.btn_print_frmstock.Size = new System.Drawing.Size(137, 45);
+            this.btn_print_frmstock.TabIndex = 33;
+            this.btn_print_frmstock.Text = "Print";
+            this.btn_print_frmstock.UseVisualStyleBackColor = false;
+            this.btn_print_frmstock.Click += new System.EventHandler(this.btn_print_frmstock_Click);
+            // 
             // frm_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.Controls.Add(this.btn_print_frmstock);
             this.Controls.Add(this.dgv_product_frmstock);
             this.Controls.Add(this.btn_back_stock);
             this.Controls.Add(this.btn_edit_stock);
@@ -277,5 +297,6 @@
         private System.Windows.Forms.Button btn_edit_stock;
         private System.Windows.Forms.Button btn_back_stock;
         private System.Windows.Forms.DataGridView dgv_product_frmstock;
+        private System.Windows.Forms.Button btn_print_frmstock;
     }
 }

@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPrintStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintStockReport.Designer.cs">
+      <DependentUpon>frmPrintStockReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmPrintStockReport.resx">
+      <DependentUpon>frmPrintStockReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_AddAccount.resx">
       <DependentUpon>frm_AddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +262,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportPrintStock.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Prescription.datasource" />
     <None Include="Properties\Settings.settings">
