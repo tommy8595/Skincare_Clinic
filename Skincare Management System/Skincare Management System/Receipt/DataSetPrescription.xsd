@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPrescription" targetNamespace="http://tempuri.org/DataSetPrescription.xsd" xmlns:mstns="http://tempuri.org/DataSetPrescription.xsd" xmlns="http://tempuri.org/DataSetPrescription.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="skin_cilinicConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="skin_cilinicConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Skincare_Management_System.Properties.Settings.GlobalReference.Default.skin_cilinicConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PrescriptionTableAdapter" GeneratorDataComponentClassName="PrescriptionTableAdapter" Name="Prescription" UserDataComponentName="PrescriptionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="skin_cilinicConnectionString2 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tbl_order.ord_id, tbl_product.pro_name, tbl_order_detail.qty, tbl_catagory.cat_name, tbl_product.pro_sup
+FROM     tbl_order INNER JOIN
+                  tbl_order_detail ON tbl_order.ord_id = tbl_order_detail.ord_id INNER JOIN
+                  tbl_product ON tbl_order_detail.pro_id = tbl_product.pro_id INNER JOIN
+                  tbl_catagory ON tbl_product.cat_id = tbl_catagory.cat_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ord_id" DataSetColumn="ord_id" />
+              <Mapping SourceColumn="pro_name" DataSetColumn="pro_name" />
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+              <Mapping SourceColumn="cat_name" DataSetColumn="cat_name" />
+              <Mapping SourceColumn="pro_sup" DataSetColumn="pro_sup" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPrescription" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPrescription" msprop:Generator_UserDSName="DataSetPrescription">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Prescription" msprop:Generator_TableClassName="PrescriptionDataTable" msprop:Generator_TableVarName="tablePrescription" msprop:Generator_RowChangedName="PrescriptionRowChanged" msprop:Generator_TablePropName="Prescription" msprop:Generator_RowDeletingName="PrescriptionRowDeleting" msprop:Generator_RowChangingName="PrescriptionRowChanging" msprop:Generator_RowEvHandlerName="PrescriptionRowChangeEventHandler" msprop:Generator_RowDeletedName="PrescriptionRowDeleted" msprop:Generator_RowClassName="PrescriptionRow" msprop:Generator_UserTableName="Prescription" msprop:Generator_RowEvArgName="PrescriptionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ord_id" msprop:Generator_ColumnVarNameInTable="columnord_id" msprop:Generator_ColumnPropNameInRow="ord_id" msprop:Generator_ColumnPropNameInTable="ord_idColumn" msprop:Generator_UserColumnName="ord_id" type="xs:int" />
+              <xs:element name="pro_name" msprop:Generator_ColumnVarNameInTable="columnpro_name" msprop:Generator_ColumnPropNameInRow="pro_name" msprop:Generator_ColumnPropNameInTable="pro_nameColumn" msprop:Generator_UserColumnName="pro_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:int" minOccurs="0" />
+              <xs:element name="cat_name" msprop:Generator_ColumnVarNameInTable="columncat_name" msprop:Generator_ColumnPropNameInRow="cat_name" msprop:Generator_ColumnPropNameInTable="cat_nameColumn" msprop:Generator_UserColumnName="cat_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pro_sup" msprop:Generator_ColumnVarNameInTable="columnpro_sup" msprop:Generator_ColumnPropNameInRow="pro_sup" msprop:Generator_ColumnPropNameInTable="pro_supColumn" msprop:Generator_UserColumnName="pro_sup" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Prescription" />
+      <xs:field xpath="mstns:ord_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

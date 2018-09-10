@@ -108,11 +108,11 @@ namespace Skincare_Management_System
 
         private void frm_Stock_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select *from tbl_product",SkinCareConnection.Conn);
-            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            //SqlCommand cmd = new SqlCommand("select *from tbl_product",SkinCareConnection.Conn);
+            SqlDataAdapter data = new SqlDataAdapter("select *from tbl_product",SkinCareConnection.Conn);
             DataSet ds = new DataSet();
             data.Fill(ds);
-            dgv_product_frmstock.DataSource = ds;
+            dgv_product_frmstock.DataSource = ds.Tables[0];
 
         }
     }
