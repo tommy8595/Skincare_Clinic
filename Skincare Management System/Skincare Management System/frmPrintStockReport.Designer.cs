@@ -32,19 +32,19 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
-            this.tbl_productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_productTableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.tbl_productTableAdapter();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1TableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.tbl_productBindingSource;
+            reportDataSource1.Value = this.DataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skincare_Management_System.ReportPrintStock.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skincare_Management_System.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -56,14 +56,14 @@
             this.skin_cilinicDataSet1.DataSetName = "skin_cilinicDataSet1";
             this.skin_cilinicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tbl_productBindingSource
+            // DataTable1BindingSource
             // 
-            this.tbl_productBindingSource.DataMember = "tbl_product";
-            this.tbl_productBindingSource.DataSource = this.skin_cilinicDataSet1;
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.skin_cilinicDataSet1;
             // 
-            // tbl_productTableAdapter
+            // DataTable1TableAdapter
             // 
-            this.tbl_productTableAdapter.ClearBeforeFill = true;
+            this.DataTable1TableAdapter.ClearBeforeFill = true;
             // 
             // frmPrintStockReport
             // 
@@ -75,7 +75,7 @@
             this.Text = "frmPrintStockReport";
             this.Load += new System.EventHandler(this.frmPrintStockReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,8 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource tbl_productBindingSource;
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private skin_cilinicDataSet1 skin_cilinicDataSet1;
-        private skin_cilinicDataSet1TableAdapters.tbl_productTableAdapter tbl_productTableAdapter;
+        private skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
     }
 }

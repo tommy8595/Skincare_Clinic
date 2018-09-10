@@ -189,6 +189,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="skin_cilinicDataSet1.cs">
+      <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="skin_cilinicDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,7 +265,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="ReportPrintStock.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Prescription.datasource" />
     <None Include="Properties\Settings.settings">
