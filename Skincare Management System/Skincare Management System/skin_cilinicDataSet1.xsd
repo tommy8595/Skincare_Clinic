@@ -554,6 +554,29 @@ SELECT user_id, user_password FROM tbl_user WHERE (user_id = @user_id)</CommandT
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="skin_cilinicConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tbl_product.pro_id, tbl_product.pro_name, tbl_catagory.cat_name, tbl_product.pro_sup, tbl_product.pro_upis, tbl_product.pro_qty
+FROM     tbl_catagory INNER JOIN
+                  tbl_product ON tbl_catagory.cat_id = tbl_product.cat_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pro_id" DataSetColumn="pro_id" />
+              <Mapping SourceColumn="pro_name" DataSetColumn="pro_name" />
+              <Mapping SourceColumn="cat_name" DataSetColumn="cat_name" />
+              <Mapping SourceColumn="pro_sup" DataSetColumn="pro_sup" />
+              <Mapping SourceColumn="pro_upis" DataSetColumn="pro_upis" />
+              <Mapping SourceColumn="pro_qty" DataSetColumn="pro_qty" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="skin_cilinicConnectionString1 (Settings)" DbObjectName="skin_cilinic.dbo.sp_insert_cat" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_insert_cat" MethodsParameterType="CLR" Modifier="Public" Name="sp_insert_cat" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="sp_insert_cat">
@@ -932,6 +955,30 @@ SELECT user_id, user_password FROM tbl_user WHERE (user_id = @user_id)</CommandT
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pro_id" msprop:Generator_ColumnVarNameInTable="columnpro_id" msprop:Generator_ColumnPropNameInRow="pro_id" msprop:Generator_ColumnPropNameInTable="pro_idColumn" msprop:Generator_UserColumnName="pro_id" type="xs:int" />
+              <xs:element name="pro_name" msprop:Generator_ColumnVarNameInTable="columnpro_name" msprop:Generator_ColumnPropNameInRow="pro_name" msprop:Generator_ColumnPropNameInTable="pro_nameColumn" msprop:Generator_UserColumnName="pro_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cat_name" msprop:Generator_ColumnVarNameInTable="columncat_name" msprop:Generator_ColumnPropNameInRow="cat_name" msprop:Generator_ColumnPropNameInTable="cat_nameColumn" msprop:Generator_UserColumnName="cat_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pro_sup" msprop:Generator_ColumnVarNameInTable="columnpro_sup" msprop:Generator_ColumnPropNameInRow="pro_sup" msprop:Generator_ColumnPropNameInTable="pro_supColumn" msprop:Generator_UserColumnName="pro_sup" type="xs:double" minOccurs="0" />
+              <xs:element name="pro_upis" msprop:Generator_ColumnVarNameInTable="columnpro_upis" msprop:Generator_ColumnPropNameInRow="pro_upis" msprop:Generator_ColumnPropNameInTable="pro_upisColumn" msprop:Generator_UserColumnName="pro_upis" type="xs:double" minOccurs="0" />
+              <xs:element name="pro_qty" msprop:Generator_ColumnVarNameInTable="columnpro_qty" msprop:Generator_ColumnPropNameInRow="pro_qty" msprop:Generator_ColumnPropNameInTable="pro_qtyColumn" msprop:Generator_UserColumnName="pro_qty" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -968,6 +1015,10 @@ SELECT user_id, user_password FROM tbl_user WHERE (user_id = @user_id)</CommandT
     </xs:unique>
     <xs:unique name="fn_get_product_by_cat_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:fn_get_product_by_cat" />
+      <xs:field xpath="mstns:pro_id" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
       <xs:field xpath="mstns:pro_id" />
     </xs:unique>
   </xs:element>

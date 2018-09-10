@@ -108,12 +108,32 @@ namespace Skincare_Management_System
 
         private void frm_Stock_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //SqlCommand cmd = new SqlCommand("select *from tbl_product",SkinCareConnection.Conn);
             SqlDataAdapter data = new SqlDataAdapter("select *from tbl_product",SkinCareConnection.Conn);
+=======
+            SqlCommand cmd = new SqlCommand(@"select pro.pro_id,pro.pro_name,cate.cat_name,pro.pro_sup,pro.pro_upis,pro.pro_qty
+                                            from tbl_product pro inner join tbl_catagory cate
+                                            on pro.cat_id = cate.cat_id", SkinCareConnection.Conn);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+>>>>>>> 6bc6012b6a77631dd3c85cb913fb0cce61d7b369
             DataSet ds = new DataSet();
             data.Fill(ds);
             dgv_product_frmstock.DataSource = ds.Tables[0];
 
+            //string catname = "select min(cat_name)from tbl_catagory where cat_id=cat_id";
+            //dgv_product_frmstock.ColumnAdded(catname);
+            ///*datatable dt =new datatable();
+            // * data.fill(dt);
+            // * dgv_product_frmstock.datasource=dt;
+            // /* 
+
+        }
+
+        private void btn_print_frmstock_Click(object sender, EventArgs e)
+        {
+            frmPrintStockReport f = new frmPrintStockReport();
+            f.Show();
         }
     }
 }
