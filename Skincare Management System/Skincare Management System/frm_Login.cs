@@ -53,5 +53,20 @@ namespace Skincare_Management_System
             }
             
         }
+        private void frm_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Login_Click(this, new EventArgs());
+            }
+        }
+
+        private void txt_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Login_Click(this, new EventArgs());
+            }
+        }
     }
 }

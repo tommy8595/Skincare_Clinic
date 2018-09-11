@@ -352,22 +352,7 @@ namespace Skincare_Management_System
             }
         }
 
-        private void frm_ImportMedicine_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (dataGridView1.Rows.Count != 0 && dataGridView1.Rows != null)
-            {
-                if (MessageBox.Show("Do you want to discard inserted data?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    Application.Exit();
-                }
-                else
-                {
-                    e.Cancel = false;
-                }
-                
-            }
-            
-        }
+      
 
         private void comboBox1_DropDown(object sender, EventArgs e)
         {

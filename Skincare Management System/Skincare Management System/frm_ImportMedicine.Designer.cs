@@ -428,8 +428,7 @@
             this.Name = "frm_ImportMedicine";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Skincare - Import Medicine";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_ImportMedicine_FormClosing);
+            this.Text = "Skincare - Import Medicine";           
             this.Load += new System.EventHandler(this.frm_ImportMedicine_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).EndInit();

@@ -86,6 +86,7 @@
             this.txt_Password.Size = new System.Drawing.Size(554, 48);
             this.txt_Password.TabIndex = 1;
             this.txt_Password.Text = "Password";
+            this.txt_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Password_KeyDown);
             // 
             // txt_Username
             // 
@@ -109,6 +110,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skincare - Login";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Login_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

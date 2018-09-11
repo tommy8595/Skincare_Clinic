@@ -108,7 +108,7 @@ namespace Skincare_Management_System
 
         private void frm_Stock_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand(@"select pro.pro_id,pro.pro_name,cate.cat_name,pro.pro_sup,pro.pro_upis,pro.pro_qty
+            SqlCommand cmd = new SqlCommand(@"select pro.pro_id as [Product ID],pro.pro_name,cate.cat_name,pro.pro_sup,pro.pro_upis,pro.pro_qty
                                             from tbl_product pro inner join tbl_catagory cate
                                             on pro.cat_id = cate.cat_id", SkinCareConnection.Conn);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
