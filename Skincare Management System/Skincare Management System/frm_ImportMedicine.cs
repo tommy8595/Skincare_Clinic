@@ -139,7 +139,7 @@ namespace Skincare_Management_System
         public float getPrice(int ID) 
         {
             float id=0.0F;
-            str = "Data Source=DESKTOP-5UTC9R5;Initial Catalog=skin_cilinic;Integrated Security=True";
+            str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
             con = new SqlConnection(str);
             con.Open();
             string q = "SELECT pro_upis FROM tbl_product where pro_id= " + ID.ToString();
@@ -222,7 +222,7 @@ namespace Skincare_Management_System
 
 
 
-                    str = "Data Source=DESKTOP-5UTC9R5;Initial Catalog=skin_cilinic;Integrated Security=True";
+                    str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                     con = new SqlConnection(str);
                     con.Open();
                     dt = new DataTable();
@@ -298,7 +298,6 @@ namespace Skincare_Management_System
             string getString = comboBox1.SelectedItem.ToString();
             split = getString.Split('.');
             string SelectedString = split[0];
-            string t = "";
             cboName.Items.Clear();
             if (SelectedString != "")
             {
@@ -375,7 +374,7 @@ namespace Skincare_Management_System
             try
             {
                 comboBox1.Items.Clear();
-                str = "Data Source=DESKTOP-5UTC9R5;Initial Catalog=skin_cilinic;Integrated Security=True";
+                str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                 con = new SqlConnection(str);
                 con.Open();
                 string q = "SELECT cat_id,cat_name FROM tbl_catagory";
