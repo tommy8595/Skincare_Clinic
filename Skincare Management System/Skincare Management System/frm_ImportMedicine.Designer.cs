@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ImportMedicine));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Setting = new System.Windows.Forms.Button();
             this.btn_LogOut = new System.Windows.Forms.Button();
@@ -40,16 +43,20 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Register = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboName = new System.Windows.Forms.ComboBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.Medicine_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicine_Category_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicine_Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicine_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicine_Sell_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -174,12 +181,48 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Medicine_Name,
+            this.Medicine_Category_ID,
+            this.Medicine_Qty,
+            this.Medicine_ID,
+            this.Medicine_Sell_Price});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView1.Location = new System.Drawing.Point(389, 235);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1093, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(1110, 465);
             this.dataGridView1.TabIndex = 18;
             // 
             // btn_Back
@@ -216,21 +259,22 @@
             this.btn_Register.UseVisualStyleBackColor = false;
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
-            // button1
+            // btn_save
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(1162, 731);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 45);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_save.BackColor = System.Drawing.Color.White;
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_save.FlatAppearance.BorderSize = 2;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_save.Location = new System.Drawing.Point(1162, 731);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(137, 45);
+            this.btn_save.TabIndex = 34;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -241,12 +285,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(1345, 161);
+            this.button2.Location = new System.Drawing.Point(1030, 168);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 35;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -257,15 +302,6 @@
             this.label3.Size = new System.Drawing.Size(129, 31);
             this.label3.TabIndex = 36;
             this.label3.Text = "Category";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1030, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(452, 38);
-            this.textBox1.TabIndex = 39;
             // 
             // label4
             // 
@@ -281,49 +317,92 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(903, 167);
+            this.label2.Location = new System.Drawing.Point(383, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 31);
             this.label2.TabIndex = 40;
             this.label2.Text = "Quantity";
             // 
-            // textBox4
+            // txtQuantity
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(550, 165);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(285, 38);
-            this.textBox4.TabIndex = 43;
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuantity.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Location = new System.Drawing.Point(550, 168);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(285, 38);
+            this.txtQuantity.TabIndex = 45;
+            this.txtQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantity_KeyDown);
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
-            // label5
+            // comboBox1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(383, 167);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 31);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Import Price";
+            this.comboBox1.DropDownHeight = 100;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Location = new System.Drawing.Point(550, 89);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 39);
+            this.comboBox1.TabIndex = 46;
+            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // listBox1
+            // cboName
             // 
-            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 31;
-            this.listBox1.Location = new System.Drawing.Point(550, 97);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(285, 35);
-            this.listBox1.TabIndex = 44;
+            this.cboName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboName.DropDownHeight = 100;
+            this.cboName.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboName.FormattingEnabled = true;
+            this.cboName.IntegralHeight = false;
+            this.cboName.Location = new System.Drawing.Point(1030, 89);
+            this.cboName.Name = "cboName";
+            this.cboName.Size = new System.Drawing.Size(285, 39);
+            this.cboName.TabIndex = 47;
+            this.cboName.SelectedIndexChanged += new System.EventHandler(this.cboName_SelectedIndexChanged);
             // 
-            // textBox2
+            // lblTotal
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(1030, 165);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 38);
-            this.textBox2.TabIndex = 45;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTotal.Location = new System.Drawing.Point(892, 735);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 31);
+            this.lblTotal.TabIndex = 48;
+            // 
+            // Medicine_Name
+            // 
+            this.Medicine_Name.HeaderText = "Product Name";
+            this.Medicine_Name.Name = "Medicine_Name";
+            this.Medicine_Name.ReadOnly = true;
+            this.Medicine_Name.Width = 300;
+            // 
+            // Medicine_Category_ID
+            // 
+            this.Medicine_Category_ID.HeaderText = "Product Category";
+            this.Medicine_Category_ID.Name = "Medicine_Category_ID";
+            this.Medicine_Category_ID.ReadOnly = true;
+            this.Medicine_Category_ID.Width = 300;
+            // 
+            // Medicine_Qty
+            // 
+            this.Medicine_Qty.HeaderText = "Quantity";
+            this.Medicine_Qty.Name = "Medicine_Qty";
+            this.Medicine_Qty.ReadOnly = true;
+            // 
+            // Medicine_ID
+            // 
+            this.Medicine_ID.HeaderText = "Product ID";
+            this.Medicine_ID.Name = "Medicine_ID";
+            this.Medicine_ID.ReadOnly = true;
+            this.Medicine_ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Medicine_ID.Visible = false;
+            // 
+            // Medicine_Sell_Price
+            // 
+            this.Medicine_Sell_Price.HeaderText = "Import Price";
+            this.Medicine_Sell_Price.Name = "Medicine_Sell_Price";
+            this.Medicine_Sell_Price.ReadOnly = true;
             // 
             // frm_ImportMedicine
             // 
@@ -331,16 +410,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1541, 821);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.cboName);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.dataGridView1);
@@ -351,6 +429,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skincare - Import Medicine";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_ImportMedicine_FormClosing);
+            this.Load += new System.EventHandler(this.frm_ImportMedicine_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -372,15 +452,19 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Register;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboName;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicine_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicine_Category_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicine_Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicine_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicine_Sell_Price;
     }
 }

@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_save_register = new System.Windows.Forms.Button();
             this.btn_back_register = new System.Windows.Forms.Button();
-            this.lst_category_register = new System.Windows.Forms.ListBox();
+            this.cboCat = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -67,6 +67,7 @@
             this.txt_importprice_register.Name = "txt_importprice_register";
             this.txt_importprice_register.Size = new System.Drawing.Size(361, 38);
             this.txt_importprice_register.TabIndex = 17;
+            this.txt_importprice_register.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_importprice_register_KeyPress);
             // 
             // txt_sellprice_register
             // 
@@ -76,6 +77,7 @@
             this.txt_sellprice_register.Name = "txt_sellprice_register";
             this.txt_sellprice_register.Size = new System.Drawing.Size(361, 38);
             this.txt_sellprice_register.TabIndex = 18;
+            this.txt_sellprice_register.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sellprice_register_KeyPress);
             // 
             // label1
             // 
@@ -122,6 +124,7 @@
             this.btn_save_register.TabIndex = 29;
             this.btn_save_register.Text = "Save";
             this.btn_save_register.UseVisualStyleBackColor = false;
+            this.btn_save_register.Click += new System.EventHandler(this.btn_save_register_Click);
             // 
             // btn_back_register
             // 
@@ -140,15 +143,15 @@
             this.btn_back_register.UseVisualStyleBackColor = false;
             this.btn_back_register.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // lst_category_register
+            // cboCat
             // 
-            this.lst_category_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lst_category_register.FormattingEnabled = true;
-            this.lst_category_register.ItemHeight = 31;
-            this.lst_category_register.Location = new System.Drawing.Point(339, 54);
-            this.lst_category_register.Name = "lst_category_register";
-            this.lst_category_register.Size = new System.Drawing.Size(361, 35);
-            this.lst_category_register.TabIndex = 45;
+            this.cboCat.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cboCat.FormattingEnabled = true;
+            this.cboCat.Location = new System.Drawing.Point(339, 59);
+            this.cboCat.Name = "cboCat";
+            this.cboCat.Size = new System.Drawing.Size(361, 39);
+            this.cboCat.TabIndex = 30;
+            this.cboCat.SelectedIndexChanged += new System.EventHandler(this.cboCat_SelectedIndexChanged);
             // 
             // frm_Register
             // 
@@ -156,7 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lst_category_register);
+            this.Controls.Add(this.cboCat);
             this.Controls.Add(this.btn_save_register);
             this.Controls.Add(this.btn_back_register);
             this.Controls.Add(this.label4);
@@ -172,6 +175,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Product";
+            this.Load += new System.EventHandler(this.frm_Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +192,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_save_register;
         private System.Windows.Forms.Button btn_back_register;
-        private System.Windows.Forms.ListBox lst_category_register;
+        private System.Windows.Forms.ComboBox cboCat;
     }
 }
