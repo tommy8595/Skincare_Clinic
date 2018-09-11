@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
@@ -103,6 +104,31 @@ namespace Skincare_Management_System
         {
             frm_Register register = new frm_Register();
             register.Show();
+        }
+
+        private void frm_Stock_Load(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand(@"select pro.pro_id,pro.pro_name,cate.cat_name,pro.pro_sup,pro.pro_upis,pro.pro_qty
+                                            from tbl_product pro inner join tbl_catagory cate
+                                            on pro.cat_id = cate.cat_id", SkinCareConnection.Conn);
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            data.Fill(ds);
+            dgv_product_frmstock.DataSource = ds.Tables[0];
+
+            //string catname = "select min(cat_name)from tbl_catagory where cat_id=cat_id";
+            //dgv_product_frmstock.ColumnAdded(catname);
+            ///*datatable dt =new datatable();
+            // * data.fill(dt);
+            // * dgv_product_frmstock.datasource=dt;
+            // /* 
+
+        }
+
+        private void btn_print_frmstock_Click(object sender, EventArgs e)
+        {
+            frmPrintStockReport f = new frmPrintStockReport();
+            f.Show();
         }
     }
 }
