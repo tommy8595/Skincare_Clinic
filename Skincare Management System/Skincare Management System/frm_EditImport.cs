@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Skincare_Management_System
 {
-    public partial class frm_Register : Form
+    public partial class frm_EditImport : Form
     {
-        public frm_Register()
+        public frm_EditImport()
         {
             InitializeComponent();
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
+        private void btn_back_edimp_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }
