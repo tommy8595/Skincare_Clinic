@@ -15,6 +15,11 @@ namespace Skincare_Management_System
     public partial class frm_ImportDetail : Form
     {
         int imd = 0;
+        int iid = 0;
+        int pid = 0;
+        string proName = "";
+        int iq = 0;
+
         public frm_ImportDetail(int imid)
         {
             InitializeComponent();
@@ -112,32 +117,47 @@ namespace Skincare_Management_System
 
         private void frm_ImportDetail_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
-                conn = new SqlConnection(str);
-                conn.Open();
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.ToString());
-            }
-            string q = "select * from dbo.fn_get_import(" + imd+")";
-            SqlDataAdapter data = new SqlDataAdapter(q, conn);
-            dt = new DataTable();
-            data.Fill(dt);
-            dgv_imp_detail.DataSource = dt;
+            Requery();
         }
 
         private void btn_edit_impdetail_Click(object sender, EventArgs e)
         {
-            frm_EditImport EdImp = new frm_EditImport();
+            int i = dgv_imp_detail.CurrentRow.Index;
+            iid = int.Parse(dgv_imp_detail.Rows[i].Cells[0].Value.ToString());
+            proName = dgv_imp_detail.Rows[i].Cells[1].Value.ToString();
+            iq = int.Parse(dgv_imp_detail.Rows[i].Cells[2].Value.ToString());
+            pid = int.Parse(dgv_imp_detail.Rows[i].Cells[3].Value.ToString());
+
+            frm_EditImport EdImp = new frm_EditImport(iid,proName,iq,pid);
             EdImp.Show();
         }
 
         private void dgv_imp_detail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        public void Requery() {
+            try
+            {
+                string str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
+                conn = new SqlConnection(str);
+                conn.Open();
+            }
+            catch (SqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            string q = "select * from dbo.fn_get_import(" + imd + ")";
+            SqlDataAdapter data = new SqlDataAdapter(q, conn);
+            dt = new DataTable();
+            data.Fill(dt);
+            dgv_imp_detail.DataSource = dt;
+            conn.Close();
+        }
+
+        private void dgv_imp_detail_MouseEnter(object sender, EventArgs e)
+        {
+            Requery();
         }
     }
 }

@@ -54,6 +54,7 @@
             this.txt_name_edimp.Location = new System.Drawing.Point(254, 88);
             this.txt_name_edimp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_name_edimp.Name = "txt_name_edimp";
+            this.txt_name_edimp.ReadOnly = true;
             this.txt_name_edimp.Size = new System.Drawing.Size(271, 32);
             this.txt_name_edimp.TabIndex = 20;
             // 
@@ -77,6 +78,7 @@
             this.txt_qty_edimp.Name = "txt_qty_edimp";
             this.txt_qty_edimp.Size = new System.Drawing.Size(271, 32);
             this.txt_qty_edimp.TabIndex = 22;
+            this.txt_qty_edimp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qty_edimp_KeyPress);
             // 
             // btn_save_edimp
             // 
@@ -94,6 +96,7 @@
             this.btn_save_edimp.TabIndex = 31;
             this.btn_save_edimp.Text = "Save";
             this.btn_save_edimp.UseVisualStyleBackColor = false;
+            this.btn_save_edimp.Click += new System.EventHandler(this.btn_save_edimp_Click);
             // 
             // btn_back_edimp
             // 
@@ -131,6 +134,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Import";
+            this.Load += new System.EventHandler(this.frm_EditImport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

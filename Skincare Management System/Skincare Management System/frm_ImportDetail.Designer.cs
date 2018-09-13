@@ -42,6 +42,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_edit_impdetail = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -193,7 +194,8 @@
             this.dgv_imp_detail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4});
             this.dgv_imp_detail.Location = new System.Drawing.Point(292, 71);
             this.dgv_imp_detail.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_imp_detail.Name = "dgv_imp_detail";
@@ -202,6 +204,7 @@
             this.dgv_imp_detail.Size = new System.Drawing.Size(820, 498);
             this.dgv_imp_detail.TabIndex = 18;
             this.dgv_imp_detail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_imp_detail_CellContentClick);
+            this.dgv_imp_detail.MouseEnter += new System.EventHandler(this.dgv_imp_detail_MouseEnter);
             // 
             // Column1
             // 
@@ -223,6 +226,13 @@
             this.Column3.HeaderText = "Quantity";
             this.Column3.Name = "Column3";
             this.Column3.Width = 400;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "pro_id";
+            this.Column4.HeaderText = "Product ID";
+            this.Column4.Name = "Column4";
+            this.Column4.Visible = false;
             // 
             // btn_Back
             // 
@@ -296,11 +306,12 @@
         private System.Windows.Forms.Button btn_Patient;
         private System.Windows.Forms.PictureBox pic_Home;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv_imp_detail;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_edit_impdetail;
+        private System.Windows.Forms.DataGridView dgv_imp_detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
