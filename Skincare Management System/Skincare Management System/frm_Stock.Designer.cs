@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Stock));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Setting = new System.Windows.Forms.Button();
             this.btn_LogOut = new System.Windows.Forms.Button();
@@ -41,9 +44,12 @@
             this.btn_register_stock = new System.Windows.Forms.Button();
             this.btn_edit_stock = new System.Windows.Forms.Button();
             this.btn_back_stock = new System.Windows.Forms.Button();
+            this.dgv_product_frmstock = new System.Windows.Forms.DataGridView();
+            this.btn_print_frmstock = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_product_frmstock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -223,12 +229,65 @@
             this.btn_back_stock.UseVisualStyleBackColor = false;
             this.btn_back_stock.Click += new System.EventHandler(this.btn_back_stock_Click);
             // 
+            // dgv_product_frmstock
+            // 
+            this.dgv_product_frmstock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_product_frmstock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_product_frmstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_product_frmstock.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_product_frmstock.Location = new System.Drawing.Point(389, 87);
+            this.dgv_product_frmstock.Name = "dgv_product_frmstock";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_product_frmstock.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_product_frmstock.RowTemplate.Height = 24;
+            this.dgv_product_frmstock.Size = new System.Drawing.Size(1093, 613);
+            this.dgv_product_frmstock.TabIndex = 32;
+            // 
+            // btn_print_frmstock
+            // 
+            this.btn_print_frmstock.BackColor = System.Drawing.Color.White;
+            this.btn_print_frmstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_print_frmstock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_print_frmstock.FlatAppearance.BorderSize = 2;
+            this.btn_print_frmstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_print_frmstock.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print_frmstock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_print_frmstock.Location = new System.Drawing.Point(979, 731);
+            this.btn_print_frmstock.Name = "btn_print_frmstock";
+            this.btn_print_frmstock.Size = new System.Drawing.Size(137, 45);
+            this.btn_print_frmstock.TabIndex = 33;
+            this.btn_print_frmstock.Text = "Print";
+            this.btn_print_frmstock.UseVisualStyleBackColor = false;
+            this.btn_print_frmstock.Click += new System.EventHandler(this.btn_print_frmstock_Click);
+            // 
             // frm_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.Controls.Add(this.btn_print_frmstock);
+            this.Controls.Add(this.dgv_product_frmstock);
             this.Controls.Add(this.btn_back_stock);
             this.Controls.Add(this.btn_edit_stock);
             this.Controls.Add(this.btn_register_stock);
@@ -240,9 +299,11 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skincare - Stock";
+            this.Load += new System.EventHandler(this.frm_Stock_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_stock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_product_frmstock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +323,7 @@
         private System.Windows.Forms.Button btn_register_stock;
         private System.Windows.Forms.Button btn_edit_stock;
         private System.Windows.Forms.Button btn_back_stock;
+        private System.Windows.Forms.DataGridView dgv_product_frmstock;
+        private System.Windows.Forms.Button btn_print_frmstock;
     }
 }

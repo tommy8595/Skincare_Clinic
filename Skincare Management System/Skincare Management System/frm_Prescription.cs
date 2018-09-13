@@ -21,7 +21,7 @@ namespace Skincare_Management_System
 
         private void openReceipt()
         {
-            
+            Application.Run(new frm_Receipt());
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -33,6 +33,11 @@ namespace Skincare_Management_System
             th = new Thread(openReceipt);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+        }
+
+        private void frm_Prescription_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

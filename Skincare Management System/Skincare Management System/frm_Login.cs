@@ -19,20 +19,7 @@ namespace Skincare_Management_System
             SkinCareConnection.OpenConnection();
             InitializeComponent();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_user");
-            cmd.Connection = SkinCareConnection.Conn;
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    MessageBox.Show(reader[0].ToString());
-                }
-            }
-            else
-            {
-                MessageBox.Show("No Rows");
-            }
+            txt_Password.PasswordChar = '*';
         }
 
         Thread th;
@@ -44,10 +31,42 @@ namespace Skincare_Management_System
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            this.Close();
-            th = new Thread(openHome);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            SqlCommand cmd = new SqlCommand("SELECT dbo.fn_check_login(@u,@p)",SkinCareConnection.Conn);
+            cmd.Parameters.Add(new SqlParameter("@u", txt_Username.Text.Trim()));
+            cmd.Parameters.Add(new SqlParameter("@p", txt_Password.Text.Trim()));
+
+            bool HasUser = (bool)cmd.ExecuteScalar();
+            if (HasUser)
+            {
+
+                ObjectUpdateUser.username = txt_Username.Text.Trim();
+                ObjectUpdateUser.password = txt_Password.Text.Trim();
+
+                this.Close();
+                th = new Thread(openHome);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Password or Username");
+            }
+            
+        }
+        private void frm_Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Login_Click(this, new EventArgs());
+            }
+        }
+
+        private void txt_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Login_Click(this, new EventArgs());
+            }
         }
     }
 }

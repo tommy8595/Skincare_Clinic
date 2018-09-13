@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_pass_ChangeUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_save_update_username = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -74,22 +74,22 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Password";
             // 
-            // button6
+            // btn_save_update_username
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button6.FlatAppearance.BorderSize = 2;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button6.Location = new System.Drawing.Point(339, 350);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 45);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_save_update_username.BackColor = System.Drawing.Color.White;
+            this.btn_save_update_username.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save_update_username.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_save_update_username.FlatAppearance.BorderSize = 2;
+            this.btn_save_update_username.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save_update_username.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_update_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_save_update_username.Location = new System.Drawing.Point(339, 350);
+            this.btn_save_update_username.Name = "btn_save_update_username";
+            this.btn_save_update_username.Size = new System.Drawing.Size(137, 45);
+            this.btn_save_update_username.TabIndex = 24;
+            this.btn_save_update_username.Text = "Save";
+            this.btn_save_update_username.UseVisualStyleBackColor = false;
+            this.btn_save_update_username.Click += new System.EventHandler(this.btn_save_update_username_Click);
             // 
             // btn_Back
             // 
@@ -115,7 +115,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_Back);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_save_update_username);
             this.Controls.Add(this.txt_pass_ChangeUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_user_ChangeUser);
@@ -137,7 +137,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_pass_ChangeUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_save_update_username;
         private System.Windows.Forms.Button btn_Back;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
@@ -33,12 +34,22 @@ namespace Skincare_Management_System
             Application.Run(new frm_Setting());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_save_changepass_Click(object sender, EventArgs e)
         {
-            //string connectionString =;
-            //SqlConnection con = new SqlConnection(connectionString);
-            //SqlCommand sql = new SqlCommand("Update User set Password=@NewPassword),con");
-            //sql.Parameter.AddWithValue("@NewPassword",txt_pass_ChangePassword);
+            string newpass = txt_pass_ChangePassword.Text;
+            string confirmpass = txt_confirm_changepassword.Text;
+            SkinCareConnection.OpenConnection();
+            if (newpass==confirmpass)
+            {
+                SqlCommand cmd = new SqlCommand("sp_update_user", SkinCareConnection.Conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@ou", ObjectUpdateUser.username));
+                cmd.Parameters.Add(new SqlParameter("@u", ObjectUpdateUser.username));
+                cmd.Parameters.Add(new SqlParameter("@p", txt_confirm_changepassword.Text));
+                cmd.ExecuteNonQuery();
+                this.Close();
+            }
+            SkinCareConnection.CloseConnection();
         }
 
        
