@@ -8,17 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
     public partial class frm_ImportDetail : Form
     {
-        public frm_ImportDetail()
+        int imd = 0;
+        int iid = 0;
+        int pid = 0;
+        string proName = "";
+        int iq = 0;
+
+        public frm_ImportDetail(int imid)
         {
             InitializeComponent();
+            imd = imid;
         }
-
+        
         Thread th;
+        SqlConnection conn;
+        DataTable dt;
 
         private void pic_Home_Click(object sender, EventArgs e)
         {
@@ -103,6 +113,51 @@ namespace Skincare_Management_System
         private void openImportHistory()
         {
             Application.Run(new frm_ImportHistory());
+        }
+
+        private void frm_ImportDetail_Load(object sender, EventArgs e)
+        {
+            Requery();
+        }
+
+        private void btn_edit_impdetail_Click(object sender, EventArgs e)
+        {
+            int i = dgv_imp_detail.CurrentRow.Index;
+            iid = int.Parse(dgv_imp_detail.Rows[i].Cells[0].Value.ToString());
+            proName = dgv_imp_detail.Rows[i].Cells[1].Value.ToString();
+            iq = int.Parse(dgv_imp_detail.Rows[i].Cells[2].Value.ToString());
+            pid = int.Parse(dgv_imp_detail.Rows[i].Cells[3].Value.ToString());
+
+            frm_EditImport EdImp = new frm_EditImport(iid,proName,iq,pid);
+            EdImp.Show();
+        }
+
+        private void dgv_imp_detail_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        public void Requery() {
+            try
+            {
+                string str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
+                conn = new SqlConnection(str);
+                conn.Open();
+            }
+            catch (SqlException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            string q = "select * from dbo.fn_get_import(" + imd + ")";
+            SqlDataAdapter data = new SqlDataAdapter(q, conn);
+            dt = new DataTable();
+            data.Fill(dt);
+            dgv_imp_detail.DataSource = dt;
+            conn.Close();
+        }
+
+        private void dgv_imp_detail_MouseEnter(object sender, EventArgs e)
+        {
+            Requery();
         }
     }
 }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
+
 
 namespace Skincare_Management_System
 {
@@ -19,6 +21,7 @@ namespace Skincare_Management_System
         }
 
         Thread th;
+       
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
@@ -91,11 +94,7 @@ namespace Skincare_Management_System
             setting.Show();
         }
 
-        private void frm_Patient_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        public static string cun="";
         private void openHistory()
         {
             Application.Run(new frm_History());
@@ -103,16 +102,167 @@ namespace Skincare_Management_System
 
         private void btn_Prescription_Click(object sender, EventArgs e)
         {
-            frm_Prescription prescription = new frm_Prescription();
-            prescription.Show();
+            try
+            {
+                class1.id = int.Parse(txt_id_patient.Text);
+                class1.name = txt_name_patient.Text;
+                frm_Prescription prescription = new frm_Prescription();
+                prescription.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btn_history_patient_Click(object sender, EventArgs e)
         {
-            this.Close();
-            th = new Thread(openHistory);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            try
+            {
+                class1.id = int.Parse(txt_id_patient.Text);
+                class1.name = txt_name_patient.Text;
+                frm_Prescription prescription = new frm_Prescription();
+                prescription.Show();
+                this.Close();
+                th = new Thread(openHistory);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void btn_add_patient_Click(object sender, EventArgs e)
+        {
+
+            class_connection.insert_customer(txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
+                txt_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+            class_connection.reset_controll(this);
+
+        }
+        private void txt_id_patient_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                if (txt_id_patient.Text.Length == 0)
+                {
+                    txt_address_patient.Text = "";
+                    txt_gender_patient.Text = "";
+                    txt_occupation_patient.Text = "";
+                    txt_name_patient.Text = "";
+
+                    dt_dob_patient.Text = "";
+
+                }
+                else
+                {
+                    SqlDataReader s_dr = class_connection.get_customer_id(int.Parse(txt_id_patient.Text.Trim()));
+                    while (s_dr.Read())
+                    {
+                        txt_id_patient.Text = s_dr["cus_id"].ToString();
+                        txt_name_patient.Text = s_dr["cus_name"].ToString();
+                        txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                        txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
+                        txt_address_patient.Text = s_dr["cus_address"].ToString();
+                        txt_phone_patient.Text = s_dr["cus_phone"].ToString();
+                        dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+
+                    }
+
+
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    SqlDataReader s_dr = class_connection.get_customer_id(int.Parse(txt_id_patient.Text.Trim()));
+
+
+                    while (s_dr.Read())
+                    {
+                        txt_id_patient.Text = s_dr["cus_id"].ToString();
+                        txt_name_patient.Text = (s_dr["cus_name"].ToString());
+                        txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                        txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
+                        txt_address_patient.Text = s_dr["cus_address"].ToString();
+                        txt_phone_patient.Text = s_dr["cus_phone"].ToString();
+                        dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
+        private void txt_phone_patient_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                if (txt_phone_patient.Text.Length == 0)
+                {
+                    txt_address_patient.Text = "";
+                    txt_gender_patient.Text = "";
+                    txt_occupation_patient.Text = "";
+                    txt_name_patient.Text = "";
+                    txt_id_patient.Text = "";
+                    dt_dob_patient.Text = "";
+
+                }
+                else
+                {
+                    SqlDataReader s_dr = class_connection.get_customer_phone(txt_phone_patient.Text);
+                    while (s_dr.Read())
+                    {
+                        txt_id_patient.Text = s_dr["cus_id"].ToString();
+                        txt_name_patient.Text = s_dr["cus_name"].ToString();
+                        txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                        txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
+                        txt_address_patient.Text = s_dr["cus_address"].ToString();
+                        dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+
+                    }
+
+
+                }
+
+            }
+            else
+            {
+                SqlDataReader s_dr = class_connection.get_customer_phone(txt_phone_patient.Text);
+                while (s_dr.Read())
+                {
+                    txt_id_patient.Text = s_dr["cus_id"].ToString();
+                    txt_name_patient.Text = s_dr["cus_name"].ToString();
+                    txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                    txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
+                    txt_address_patient.Text = s_dr["cus_address"].ToString();
+                    dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+
+                }
+
+
+            }
+        }
+
+        private void btn_edit_patient_Click(object sender, EventArgs e)
+        {
+            class_connection.update_customer(int.Parse(txt_id_patient.Text), txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
+               txt_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+            MessageBox.Show("Update Successful");
+
+        }
+
+        private void frm_Patient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

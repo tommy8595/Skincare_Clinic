@@ -115,14 +115,6 @@ namespace Skincare_Management_System
             DataSet ds = new DataSet();
             data.Fill(ds);
             dgv_product_frmstock.DataSource = ds.Tables[0];
-
-            //string catname = "select min(cat_name)from tbl_catagory where cat_id=cat_id";
-            //dgv_product_frmstock.ColumnAdded(catname);
-            ///*datatable dt =new datatable();
-            // * data.fill(dt);
-            // * dgv_product_frmstock.datasource=dt;
-            // /* 
-
         }
 
         private void btn_print_frmstock_Click(object sender, EventArgs e)

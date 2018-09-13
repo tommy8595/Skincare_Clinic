@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class1.cs" />
+    <Compile Include="class_connection.cs" />
     <Compile Include="frmPrintStockReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +89,12 @@
     </Compile>
     <Compile Include="frm_AddHistory.Designer.cs">
       <DependentUpon>frm_AddHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_EditImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EditImport.Designer.cs">
+      <DependentUpon>frm_EditImport.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_History.cs">
       <SubType>Form</SubType>
@@ -223,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AddHistory.resx">
       <DependentUpon>frm_AddHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_EditImport.resx">
+      <DependentUpon>frm_EditImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_History.resx">
       <DependentUpon>frm_History.cs</DependentUpon>

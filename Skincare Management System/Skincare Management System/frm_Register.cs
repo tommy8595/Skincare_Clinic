@@ -33,7 +33,6 @@ namespace Skincare_Management_System
          
             this.Close();
         }
-
         private void openImportMedicine()
         {
             Application.Run(new frm_ImportMedicine());
@@ -44,7 +43,7 @@ namespace Skincare_Management_System
             try
             {
                 if( string.IsNullOrEmpty((txt_importprice_register.Text)) || string.IsNullOrEmpty(txt_name_register.Text) || string.IsNullOrEmpty(txt_sellprice_register.Text)
-                    || string.IsNullOrEmpty(cboCat.Text))
+                    || string.IsNullOrEmpty(lst_category_register.Text))
                 {
                     MessageBox.Show("Please enter all field!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -53,9 +52,9 @@ namespace Skincare_Management_System
                     str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                     con = new SqlConnection(str);
                     con.Open();
-                    if (cboCat.SelectedIndex != (cboCat.Items.Count - 1))
+                    if (lst_category_register.SelectedIndex != (lst_category_register.Items.Count - 1))
                     {                      
-                        spl = cboCat.Text.Split('.');                       
+                        spl = lst_category_register.Text.Split('.');                       
                         SqlCommand cmd = new SqlCommand("dbo.sp_insert_product", con);
                         cmd.CommandType = CommandType.StoredProcedure;
                         
@@ -68,7 +67,7 @@ namespace Skincare_Management_System
                         txt_importprice_register.Clear();
                         txt_name_register.Clear();
                         txt_sellprice_register.Clear();
-                        cboCat.Text = "";
+                        lst_category_register.Text = "";
                         MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         con.Close();
                         this.Close();                        
@@ -80,7 +79,7 @@ namespace Skincare_Management_System
                         
                    
                         cmd.Parameters.AddWithValue("@pn", txt_name_register.Text);
-                        cmd.Parameters.AddWithValue("@cn", cboCat.Text);
+                        cmd.Parameters.AddWithValue("@cn", lst_category_register.Text);
                         cmd.Parameters.AddWithValue("@ps", txt_sellprice_register.Text);
                         cmd.Parameters.AddWithValue("@pu", txt_importprice_register.Text);
                         cmd.Parameters.AddWithValue("@q", 0);
@@ -88,7 +87,7 @@ namespace Skincare_Management_System
                         txt_importprice_register.Clear();
                         txt_name_register.Clear();
                         txt_sellprice_register.Clear();
-                        cboCat.Text = "";
+                        lst_category_register.Text = "";
                         con.Close();
                         MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();                        
@@ -105,7 +104,7 @@ namespace Skincare_Management_System
 
         private void frm_Register_Load(object sender, EventArgs e)
         {
-            cboCat.Text = "Choose Or Add New...";
+            lst_category_register.Text = "Choose Or Add New...";
             str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
             con = new SqlConnection(str);
             con.Open();
@@ -113,19 +112,19 @@ namespace Skincare_Management_System
             SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
             while (dr.Read())
             {
-                cboCat.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
+                lst_category_register.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
             }
-            cboCat.Items.Add("Add New...");
+            lst_category_register.Items.Add("Add New...");
             dr.Close();
             con.Close();
         }
 
         private void cboCat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboCat.SelectedIndex==(cboCat.Items.Count-1))
+            if (lst_category_register.SelectedIndex==(lst_category_register.Items.Count-1))
             {
-                cboCat.Items.Clear();
-                cboCat.Focus();               
+                lst_category_register.Items.Clear();
+                lst_category_register.Focus();               
             }
         }
 

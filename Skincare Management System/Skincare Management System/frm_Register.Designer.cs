@@ -37,16 +37,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_save_register = new System.Windows.Forms.Button();
             this.btn_back_register = new System.Windows.Forms.Button();
-            this.cboCat = new System.Windows.Forms.ComboBox();
+            this.lst_category_register = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 54);
+            this.label2.Location = new System.Drawing.Point(52, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 31);
+            this.label2.Size = new System.Drawing.Size(103, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "Category";
             // 
@@ -54,18 +55,20 @@
             // 
             this.txt_name_register.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_register.Location = new System.Drawing.Point(339, 130);
+            this.txt_name_register.Location = new System.Drawing.Point(254, 106);
+            this.txt_name_register.Margin = new System.Windows.Forms.Padding(2);
             this.txt_name_register.Name = "txt_name_register";
-            this.txt_name_register.Size = new System.Drawing.Size(361, 38);
+            this.txt_name_register.Size = new System.Drawing.Size(271, 32);
             this.txt_name_register.TabIndex = 16;
             // 
             // txt_importprice_register
             // 
             this.txt_importprice_register.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_importprice_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_importprice_register.Location = new System.Drawing.Point(339, 208);
+            this.txt_importprice_register.Location = new System.Drawing.Point(254, 169);
+            this.txt_importprice_register.Margin = new System.Windows.Forms.Padding(2);
             this.txt_importprice_register.Name = "txt_importprice_register";
-            this.txt_importprice_register.Size = new System.Drawing.Size(361, 38);
+            this.txt_importprice_register.Size = new System.Drawing.Size(271, 32);
             this.txt_importprice_register.TabIndex = 17;
             this.txt_importprice_register.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_importprice_register_KeyPress);
             // 
@@ -73,9 +76,10 @@
             // 
             this.txt_sellprice_register.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_sellprice_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sellprice_register.Location = new System.Drawing.Point(339, 286);
+            this.txt_sellprice_register.Location = new System.Drawing.Point(254, 232);
+            this.txt_sellprice_register.Margin = new System.Windows.Forms.Padding(2);
             this.txt_sellprice_register.Name = "txt_sellprice_register";
-            this.txt_sellprice_register.Size = new System.Drawing.Size(361, 38);
+            this.txt_sellprice_register.Size = new System.Drawing.Size(271, 32);
             this.txt_sellprice_register.TabIndex = 18;
             this.txt_sellprice_register.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sellprice_register_KeyPress);
             // 
@@ -83,9 +87,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 132);
+            this.label1.Location = new System.Drawing.Point(52, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 31);
+            this.label1.Size = new System.Drawing.Size(71, 23);
             this.label1.TabIndex = 19;
             this.label1.Text = "Name";
             // 
@@ -93,9 +98,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 210);
+            this.label3.Location = new System.Drawing.Point(52, 171);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 31);
+            this.label3.Size = new System.Drawing.Size(127, 23);
             this.label3.TabIndex = 20;
             this.label3.Text = "Import Price";
             // 
@@ -103,9 +109,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 288);
+            this.label4.Location = new System.Drawing.Point(52, 234);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 31);
+            this.label4.Size = new System.Drawing.Size(96, 23);
             this.label4.TabIndex = 21;
             this.label4.Text = "Sell Price";
             // 
@@ -118,9 +125,10 @@
             this.btn_save_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_save_register.Location = new System.Drawing.Point(339, 357);
+            this.btn_save_register.Location = new System.Drawing.Point(254, 290);
+            this.btn_save_register.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save_register.Name = "btn_save_register";
-            this.btn_save_register.Size = new System.Drawing.Size(137, 45);
+            this.btn_save_register.Size = new System.Drawing.Size(103, 37);
             this.btn_save_register.TabIndex = 29;
             this.btn_save_register.Text = "Save";
             this.btn_save_register.UseVisualStyleBackColor = false;
@@ -135,31 +143,32 @@
             this.btn_back_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_back_register.Location = new System.Drawing.Point(563, 357);
+            this.btn_back_register.Location = new System.Drawing.Point(422, 290);
+            this.btn_back_register.Margin = new System.Windows.Forms.Padding(2);
             this.btn_back_register.Name = "btn_back_register";
-            this.btn_back_register.Size = new System.Drawing.Size(137, 45);
+            this.btn_back_register.Size = new System.Drawing.Size(103, 37);
             this.btn_back_register.TabIndex = 28;
             this.btn_back_register.Text = "Back";
             this.btn_back_register.UseVisualStyleBackColor = false;
             this.btn_back_register.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // cboCat
+            // lst_category_register
             // 
-            this.cboCat.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(339, 59);
-            this.cboCat.Name = "cboCat";
-            this.cboCat.Size = new System.Drawing.Size(361, 39);
-            this.cboCat.TabIndex = 30;
-            this.cboCat.SelectedIndexChanged += new System.EventHandler(this.cboCat_SelectedIndexChanged);
+            this.lst_category_register.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lst_category_register.FormattingEnabled = true;
+            this.lst_category_register.Location = new System.Drawing.Point(254, 44);
+            this.lst_category_register.Name = "lst_category_register";
+            this.lst_category_register.Size = new System.Drawing.Size(361, 31);
+            this.lst_category_register.TabIndex = 30;
+            this.lst_category_register.SelectedIndexChanged += new System.EventHandler(this.cboCat_SelectedIndexChanged);
             // 
             // frm_Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cboCat);
+            this.Controls.Add(this.lst_category_register);
             this.Controls.Add(this.btn_save_register);
             this.Controls.Add(this.btn_back_register);
             this.Controls.Add(this.label4);
@@ -169,6 +178,7 @@
             this.Controls.Add(this.txt_importprice_register);
             this.Controls.Add(this.txt_name_register);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Register";
@@ -192,6 +202,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_save_register;
         private System.Windows.Forms.Button btn_back_register;
-        private System.Windows.Forms.ComboBox cboCat;
+        private System.Windows.Forms.ComboBox lst_category_register;
     }
 }
