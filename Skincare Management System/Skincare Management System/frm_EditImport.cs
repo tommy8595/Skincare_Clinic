@@ -23,15 +23,10 @@ namespace Skincare_Management_System
         public frm_EditImport(int iid, string proName, int pid, int iqty)
         {
             InitializeComponent();
-            if (iid != 0 && proName != "" && pid != 0 && iqty != 0)
-            {
-                ii = iid;
-                pName = proName;
-                pi = pid;
-                iq = iqty;
-            }
-            else
-                MessageBox.Show("Error in data editing");
+            ii = iid;
+            pName = proName;
+            pi = pid;
+            iq = iqty;
         }
 
         private void btn_back_edimp_Click(object sender, EventArgs e)
@@ -59,7 +54,7 @@ namespace Skincare_Management_System
             cmd.Parameters.AddWithValue("@iq", int.Parse(txt_qty_edimp.Text));
             cmd.ExecuteNonQuery();
             conn.Close();
-                        
+         
                 this.Close();
             }
             catch (SqlException x)

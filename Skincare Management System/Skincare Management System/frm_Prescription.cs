@@ -73,7 +73,7 @@ namespace Skincare_Management_System
 
         private void openMedicine()
         {
-            Application.Run(new frm_Prescription());
+            Application.Run(new frm_Receipt());
         }
 
         private void btn_Report_Click(object sender, EventArgs e)
