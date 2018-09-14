@@ -144,17 +144,17 @@ namespace Skincare_Management_System
                 string str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                 conn = new SqlConnection(str);
                 conn.Open();
+                string q = "SELECT imp_id,imp_date,imp_total FROM tbl_import";
+                SqlDataAdapter data = new SqlDataAdapter(q, conn);
+                dt = new DataTable();
+                data.Fill(dt);
+                dgv_imp_his.DataSource = dt;
+                conn.Close();
             }
             catch(SqlException exc)
             {
                 MessageBox.Show(exc.Message);
             }
-            string q = "SELECT imp_id,imp_date,imp_total FROM tbl_import";
-            SqlDataAdapter data = new SqlDataAdapter(q,conn);
-            dt = new DataTable();
-            data.Fill(dt);
-            dgv_imp_his.DataSource = dt;
-            conn.Close();
         }
 
         private void dgv_imp_his_DoubleClick(object sender, EventArgs e)

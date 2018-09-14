@@ -23,10 +23,15 @@ namespace Skincare_Management_System
         public frm_EditImport(int iid, string proName, int pid, int iqty)
         {
             InitializeComponent();
-            ii = iid;
-            pName = proName;
-            pi = pid;
-            iq = iqty;
+            if (iid != 0 && proName != "" && pid != 0 && iqty != 0)
+            {
+                ii = iid;
+                pName = proName;
+                pi = pid;
+                iq = iqty;
+            }
+            else
+                MessageBox.Show("Error please go back and select item");
         }
 
         private void btn_back_edimp_Click(object sender, EventArgs e)
