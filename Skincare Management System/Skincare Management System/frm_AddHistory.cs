@@ -19,7 +19,7 @@ namespace Skincare_Management_System
         }
 
         Thread th;
-
+      
         private void pic_Home_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -106,5 +106,20 @@ namespace Skincare_Management_System
             th.Start();
         }
 
+        private void frm_AddHistory_Load(object sender, EventArgs e)
+        {
+            cbo_level.SelectedIndex = 0;
+            txt_id_patient.Text = class1.id.ToString();
+            txt_name_addhistory.Text = class1.name;
+            txt_name_addhistory.Enabled = false;
+            txt_id_patient.Enabled = false;
+        }
+
+        private void btn_save_addhistory_Click(object sender, EventArgs e)
+        {
+            class_connection.insert_history(class1.id,rt_history_addhistory.Text,rt_se_addhistory.Text,txt_location_addhistory.Text,rt_investigation_addhistory.Text,rt_diagnosis_addhistory.Text,cbo_level.Text);
+            MessageBox.Show("You have Saved");
+            class_connection.reset_controll(this);
+        }
     }
 }

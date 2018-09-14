@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class1.cs" />
+    <Compile Include="class_connection.cs" />
     <Compile Include="frmPrintStockReport.cs">
       <SubType>Form</SubType>
     </Compile>
