@@ -125,5 +125,16 @@ namespace Skincare_Management_System
             frm_ReportPatient rp = new frm_ReportPatient();
             rp.Show();
         }
+
+        private void frm_History_Load(object sender, EventArgs e)
+        {
+            txt_id_history.Text = class1.id.ToString();
+            txt_name_history.Text = class1.name.ToString();
+            txt_id_history.Enabled = false;
+            txt_name_history.Enabled = false;
+            DataTable dt = new DataTable();
+            dt.Load(class_connection.get_history_id(class1.id));
+            dgv_history.DataSource = dt;
+        }
     }
 }

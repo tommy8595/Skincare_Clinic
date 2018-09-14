@@ -421,7 +421,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Year(Now()) - Year(First(Fields!cus_dob.Value, "DataSet2"))</Value>
                 <Style />
               </TextRun>
             </TextRuns>
