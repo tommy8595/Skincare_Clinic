@@ -137,10 +137,6 @@ namespace Skincare_Management_System
                 MessageBox.Show("Please select Item to Edit");
         }
 
-        private void dgv_imp_detail_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         public void Requery() {
             try
             {

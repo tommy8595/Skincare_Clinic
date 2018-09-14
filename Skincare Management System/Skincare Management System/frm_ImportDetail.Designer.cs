@@ -203,7 +203,6 @@
             this.dgv_imp_detail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_imp_detail.Size = new System.Drawing.Size(820, 498);
             this.dgv_imp_detail.TabIndex = 18;
-            this.dgv_imp_detail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_imp_detail_CellContentClick);
             this.dgv_imp_detail.MouseEnter += new System.EventHandler(this.dgv_imp_detail_MouseEnter);
             // 
             // Column1
