@@ -47,6 +47,13 @@
             this.btn_add_history = new System.Windows.Forms.Button();
             this.btn_back_history = new System.Windows.Forms.Button();
             this.btn_print_history = new System.Windows.Forms.Button();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.History = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SkinExamination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Investigation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diagnostic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_history)).BeginInit();
@@ -224,6 +231,14 @@
             // 
             this.dgv_history.BackgroundColor = System.Drawing.Color.White;
             this.dgv_history.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_history.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.History,
+            this.SkinExamination,
+            this.Investigation,
+            this.Location,
+            this.Diagnostic,
+            this.Level});
             this.dgv_history.Location = new System.Drawing.Point(584, 211);
             this.dgv_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_history.Name = "dgv_history";
@@ -314,6 +329,48 @@
             this.btn_print_history.UseVisualStyleBackColor = false;
             this.btn_print_history.Click += new System.EventHandler(this.btn_print_history_Click);
             // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
+            // History
+            // 
+            this.History.DataPropertyName = "History";
+            this.History.HeaderText = "History";
+            this.History.Name = "History";
+            // 
+            // SkinExamination
+            // 
+            this.SkinExamination.DataPropertyName = "Skin Examination";
+            this.SkinExamination.HeaderText = "Skin Examination";
+            this.SkinExamination.Name = "SkinExamination";
+            // 
+            // Investigation
+            // 
+            this.Investigation.DataPropertyName = "Investigation";
+            this.Investigation.HeaderText = "Investigation";
+            this.Investigation.Name = "Investigation";
+            // 
+            // Location
+            // 
+            this.Location.DataPropertyName = "Location";
+            this.Location.HeaderText = "Location";
+            this.Location.Name = "Location";
+            // 
+            // Diagnostic
+            // 
+            this.Diagnostic.DataPropertyName = "Diagnostics";
+            this.Diagnostic.HeaderText = "Diagnostic";
+            this.Diagnostic.Name = "Diagnostic";
+            // 
+            // Level
+            // 
+            this.Level.DataPropertyName = "Level";
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            // 
             // frm_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -368,5 +425,12 @@
         private System.Windows.Forms.Button btn_add_history;
         private System.Windows.Forms.Button btn_back_history;
         private System.Windows.Forms.Button btn_print_history;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn History;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SkinExamination;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Investigation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Level;
     }
 }
