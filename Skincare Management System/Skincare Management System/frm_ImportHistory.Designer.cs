@@ -190,7 +190,6 @@
             this.dgv_imp_his.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_imp_his.Size = new System.Drawing.Size(820, 498);
             this.dgv_imp_his.TabIndex = 15;
-            this.dgv_imp_his.DoubleClick += new System.EventHandler(this.dgv_imp_his_DoubleClick);
             // 
             // Column1
             // 

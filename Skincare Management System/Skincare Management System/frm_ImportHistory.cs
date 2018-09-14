@@ -127,14 +127,19 @@ namespace Skincare_Management_System
 
         private void btn_imp_his_detail_Click(object sender, EventArgs e)
         {
-           
-            int i = dgv_imp_his.CurrentRow.Index;
-            imid = int.Parse(dgv_imp_his.Rows[i].Cells[0].Value.ToString());
-     
-            this.Close();
-            th = new Thread(openImportDetail);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            if (dgv_imp_his.CurrentRow.Index != -1)
+            {
+                int i = dgv_imp_his.CurrentRow.Index;
+                imid = int.Parse(dgv_imp_his.Rows[i].Cells[0].Value.ToString());
+
+                this.Close();
+                th = new Thread(openImportDetail);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+            else
+                MessageBox.Show("Please select Import");
+
         }
 
         private void frm_ImportHistory_Load(object sender, EventArgs e)
@@ -144,22 +149,18 @@ namespace Skincare_Management_System
                 string str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                 conn = new SqlConnection(str);
                 conn.Open();
+                string q = "SELECT imp_id,imp_date,imp_total FROM tbl_import";
+                SqlDataAdapter data = new SqlDataAdapter(q, conn);
+                dt = new DataTable();
+                data.Fill(dt);
+                dgv_imp_his.DataSource = dt;
+                conn.Close();
             }
             catch(SqlException exc)
             {
                 MessageBox.Show(exc.Message);
             }
-            string q = "SELECT imp_id,imp_date,imp_total FROM tbl_import";
-            SqlDataAdapter data = new SqlDataAdapter(q,conn);
-            dt = new DataTable();
-            data.Fill(dt);
-            dgv_imp_his.DataSource = dt;
-            conn.Close();
-        }
-
-        private void dgv_imp_his_DoubleClick(object sender, EventArgs e)
-        {
-           
+            
         }
     }
 }
