@@ -23,7 +23,7 @@ namespace Skincare_Management_System
             // TODO: This line of code loads data into the 'dataSetForReceipt.Prescription' table. You can move, or remove it, as needed.
             try
             {
-                this.receiptTableAdapter.Fill(this.dataSetForReceipt.Receipt, 1);
+                this.receiptTableAdapter.Fill(this.dataSetForReceipt.Receipt, class1.id);
                 this.reportViewer1.RefreshReport();
             }catch(Exception ex)
             {
