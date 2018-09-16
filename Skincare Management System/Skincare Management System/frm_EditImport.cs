@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
-    public partial class frm_EditImport : Form
+    public partial class frm_EditStock : Form
     {
         SqlConnection conn;
         SqlCommand cmd;
@@ -20,7 +20,7 @@ namespace Skincare_Management_System
         string pName = "";
         int pi = 0;
         int iq = 0;
-        public frm_EditImport(int iid, string proName, int pid, int iqty)
+        public frm_EditStock(int iid, string proName, int pid, int iqty)
         {
             InitializeComponent();
             if (iid != 0 && proName != "" && pid != 0 && iqty != 0)
