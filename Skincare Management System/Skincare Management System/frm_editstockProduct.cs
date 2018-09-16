@@ -48,8 +48,9 @@ namespace Skincare_Management_System
                 str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                 conn = new SqlConnection(str);
                 conn.Open();
-                cmd = new SqlCommand("dbo.sp_update_product", conn);
+                cmd = new SqlCommand("dbo.update_product", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("pi", pid);
                 cmd.Parameters.AddWithValue("@pn", txt_name_EditStock.Text);
                 cmd.Parameters.AddWithValue("@ps", int.Parse(txt_sup_EditStock.Text));
                 cmd.Parameters.AddWithValue("@up", int.Parse(txt_upis_EditStock.Text));
