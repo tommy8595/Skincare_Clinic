@@ -127,14 +127,18 @@ namespace Skincare_Management_System
 
         private void btn_imp_his_detail_Click(object sender, EventArgs e)
         {
-           
-            int i = dgv_imp_his.CurrentRow.Index;
-            imid = int.Parse(dgv_imp_his.Rows[i].Cells[0].Value.ToString());
-     
-            this.Close();
-            th = new Thread(openImportDetail);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            if (dgv_imp_his.CurrentRow.Index != 0)
+            {
+                int i = dgv_imp_his.CurrentRow.Index;
+                imid = int.Parse(dgv_imp_his.Rows[i].Cells[0].Value.ToString());
+
+                this.Close();
+                th = new Thread(openImportDetail);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+            else
+                MessageBox.Show("Please select Import");
         }
 
         private void frm_ImportHistory_Load(object sender, EventArgs e)
@@ -155,11 +159,6 @@ namespace Skincare_Management_System
             {
                 MessageBox.Show(exc.Message);
             }
-        }
-
-        private void dgv_imp_his_DoubleClick(object sender, EventArgs e)
-        {
-           
         }
     }
 }
