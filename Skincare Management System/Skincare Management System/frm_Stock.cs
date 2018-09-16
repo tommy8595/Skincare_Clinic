@@ -125,8 +125,20 @@ namespace Skincare_Management_System
 
         private void btn_edit_stock_Click(object sender, EventArgs e)
         {
-            frm_EditStock f = new frm_EditStock();
-            f.Show();
+            if (dgv_product_frmstock.CurrentRow.Index!=-1)
+            {
+                int i = dgv_product_frmstock.CurrentRow.Index;
+                int pi = int.Parse(dgv_product_frmstock.Rows[i].Cells[0].Value.ToString());//product id
+                string pn = dgv_product_frmstock.Rows[i].Cells[1].Value.ToString();//product name
+                int ps = int.Parse(dgv_product_frmstock.Rows[i].Cells[2].Value.ToString());//product sell price
+                int up = int.Parse(dgv_product_frmstock.Rows[i].Cells[3].Value.ToString());//product import price
+                frm_editstockProduct f = new frm_editstockProduct( pi,  pn,  ps, up);
+                f.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select Item to Edit");
+            }
         }
     }
 }
