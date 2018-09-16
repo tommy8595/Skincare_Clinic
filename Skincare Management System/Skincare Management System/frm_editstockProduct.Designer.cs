@@ -149,6 +149,7 @@
             this.Controls.Add(this.txt_name_EditStock);
             this.Name = "frm_editstockProduct";
             this.Text = "frm_editstockProduct";
+            this.Load += new System.EventHandler(this.frm_editstockProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
