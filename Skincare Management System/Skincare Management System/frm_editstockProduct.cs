@@ -56,8 +56,9 @@ namespace Skincare_Management_System
                 cmd.Parameters.AddWithValue("@up", int.Parse(txt_upis_EditStock.Text));
                 cmd.ExecuteNonQuery();
                 conn.Close();
-
+                MessageBox.Show("Updated");
                 this.Close();
+                
             }
             catch (SqlException x)
             {
@@ -78,5 +79,6 @@ namespace Skincare_Management_System
             txt_sup_EditStock.Text = ps1.ToString();
             txt_upis_EditStock.Text = up1.ToString();
         }
+        
     }
 }
