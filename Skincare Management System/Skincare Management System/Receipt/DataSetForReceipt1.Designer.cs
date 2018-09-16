@@ -20,17 +20,17 @@ namespace Skincare_Management_System.Receipt {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetPrescription")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetForReceipt")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetPrescription : global::System.Data.DataSet {
+    public partial class DataSetForReceipt : global::System.Data.DataSet {
         
-        private PrescriptionDataTable tablePrescription;
+        private ReceiptDataTable tableReceipt;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataSetPrescription() {
+        public DataSetForReceipt() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Skincare_Management_System.Receipt {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DataSetPrescription(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetForReceipt(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Skincare_Management_System.Receipt {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Prescription"] != null)) {
-                    base.Tables.Add(new PrescriptionDataTable(ds.Tables["Prescription"]));
+                if ((ds.Tables["Receipt"] != null)) {
+                    base.Tables.Add(new ReceiptDataTable(ds.Tables["Receipt"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Skincare_Management_System.Receipt {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PrescriptionDataTable Prescription {
+        public ReceiptDataTable Receipt {
             get {
-                return this.tablePrescription;
+                return this.tableReceipt;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Skincare_Management_System.Receipt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetPrescription cln = ((DataSetPrescription)(base.Clone()));
+            DataSetForReceipt cln = ((DataSetForReceipt)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Skincare_Management_System.Receipt {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Prescription"] != null)) {
-                    base.Tables.Add(new PrescriptionDataTable(ds.Tables["Prescription"]));
+                if ((ds.Tables["Receipt"] != null)) {
+                    base.Tables.Add(new ReceiptDataTable(ds.Tables["Receipt"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Skincare_Management_System.Receipt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePrescription = ((PrescriptionDataTable)(base.Tables["Prescription"]));
+            this.tableReceipt = ((ReceiptDataTable)(base.Tables["Receipt"]));
             if ((initTable == true)) {
-                if ((this.tablePrescription != null)) {
-                    this.tablePrescription.InitVars();
+                if ((this.tableReceipt != null)) {
+                    this.tableReceipt.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Skincare_Management_System.Receipt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetPrescription";
+            this.DataSetName = "DataSetForReceipt";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetPrescription.xsd";
+            this.Namespace = "http://tempuri.org/DataSetForReceipt.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePrescription = new PrescriptionDataTable();
-            base.Tables.Add(this.tablePrescription);
+            this.tableReceipt = new ReceiptDataTable();
+            base.Tables.Add(this.tableReceipt);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePrescription() {
+        private bool ShouldSerializeReceipt() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Skincare_Management_System.Receipt {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetPrescription ds = new DataSetPrescription();
+            DataSetForReceipt ds = new DataSetForReceipt();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace Skincare_Management_System.Receipt {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PrescriptionRowChangeEventHandler(object sender, PrescriptionRowChangeEvent e);
+        public delegate void ReceiptRowChangeEventHandler(object sender, ReceiptRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PrescriptionDataTable : global::System.Data.TypedTableBase<PrescriptionRow> {
+        public partial class ReceiptDataTable : global::System.Data.TypedTableBase<ReceiptRow> {
             
             private global::System.Data.DataColumn columnord_id;
             
@@ -289,10 +289,22 @@ namespace Skincare_Management_System.Receipt {
             
             private global::System.Data.DataColumn columnpro_sup;
             
+            private global::System.Data.DataColumn columncus_id;
+            
+            private global::System.Data.DataColumn columncus_name;
+            
+            private global::System.Data.DataColumn columncus_gender;
+            
+            private global::System.Data.DataColumn columndiagnostics;
+            
+            private global::System.Data.DataColumn columnlevel;
+            
+            private global::System.Data.DataColumn columnage;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionDataTable() {
-                this.TableName = "Prescription";
+            public ReceiptDataTable() {
+                this.TableName = "Receipt";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +312,7 @@ namespace Skincare_Management_System.Receipt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PrescriptionDataTable(global::System.Data.DataTable table) {
+            internal ReceiptDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +329,7 @@ namespace Skincare_Management_System.Receipt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PrescriptionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReceiptDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -364,6 +376,54 @@ namespace Skincare_Management_System.Receipt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cus_idColumn {
+                get {
+                    return this.columncus_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cus_nameColumn {
+                get {
+                    return this.columncus_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cus_genderColumn {
+                get {
+                    return this.columncus_gender;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn diagnosticsColumn {
+                get {
+                    return this.columndiagnostics;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn levelColumn {
+                get {
+                    return this.columnlevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ageColumn {
+                get {
+                    return this.columnage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -373,56 +433,55 @@ namespace Skincare_Management_System.Receipt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionRow this[int index] {
+            public ReceiptRow this[int index] {
                 get {
-                    return ((PrescriptionRow)(this.Rows[index]));
+                    return ((ReceiptRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PrescriptionRowChangeEventHandler PrescriptionRowChanging;
+            public event ReceiptRowChangeEventHandler ReceiptRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PrescriptionRowChangeEventHandler PrescriptionRowChanged;
+            public event ReceiptRowChangeEventHandler ReceiptRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PrescriptionRowChangeEventHandler PrescriptionRowDeleting;
+            public event ReceiptRowChangeEventHandler ReceiptRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PrescriptionRowChangeEventHandler PrescriptionRowDeleted;
+            public event ReceiptRowChangeEventHandler ReceiptRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPrescriptionRow(PrescriptionRow row) {
+            public void AddReceiptRow(ReceiptRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionRow AddPrescriptionRow(int ord_id, string pro_name, int qty, string cat_name, double pro_sup) {
-                PrescriptionRow rowPrescriptionRow = ((PrescriptionRow)(this.NewRow()));
+            public ReceiptRow AddReceiptRow(int ord_id, string pro_name, int qty, string cat_name, double pro_sup, int cus_id, string cus_name, string cus_gender, string diagnostics, int level, int age) {
+                ReceiptRow rowReceiptRow = ((ReceiptRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ord_id,
                         pro_name,
                         qty,
                         cat_name,
-                        pro_sup};
-                rowPrescriptionRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPrescriptionRow);
-                return rowPrescriptionRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionRow FindByord_id(int ord_id) {
-                return ((PrescriptionRow)(this.Rows.Find(new object[] {
-                            ord_id})));
+                        pro_sup,
+                        cus_id,
+                        cus_name,
+                        cus_gender,
+                        diagnostics,
+                        level,
+                        age};
+                rowReceiptRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReceiptRow);
+                return rowReceiptRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PrescriptionDataTable cln = ((PrescriptionDataTable)(base.Clone()));
+                ReceiptDataTable cln = ((ReceiptDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,7 +489,7 @@ namespace Skincare_Management_System.Receipt {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PrescriptionDataTable();
+                return new ReceiptDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -441,6 +500,12 @@ namespace Skincare_Management_System.Receipt {
                 this.columnqty = base.Columns["qty"];
                 this.columncat_name = base.Columns["cat_name"];
                 this.columnpro_sup = base.Columns["pro_sup"];
+                this.columncus_id = base.Columns["cus_id"];
+                this.columncus_name = base.Columns["cus_name"];
+                this.columncus_gender = base.Columns["cus_gender"];
+                this.columndiagnostics = base.Columns["diagnostics"];
+                this.columnlevel = base.Columns["level"];
+                this.columnage = base.Columns["age"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -456,38 +521,52 @@ namespace Skincare_Management_System.Receipt {
                 base.Columns.Add(this.columncat_name);
                 this.columnpro_sup = new global::System.Data.DataColumn("pro_sup", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpro_sup);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnord_id}, true));
+                this.columncus_id = new global::System.Data.DataColumn("cus_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncus_id);
+                this.columncus_name = new global::System.Data.DataColumn("cus_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncus_name);
+                this.columncus_gender = new global::System.Data.DataColumn("cus_gender", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncus_gender);
+                this.columndiagnostics = new global::System.Data.DataColumn("diagnostics", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndiagnostics);
+                this.columnlevel = new global::System.Data.DataColumn("level", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlevel);
+                this.columnage = new global::System.Data.DataColumn("age", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnage);
                 this.columnord_id.AllowDBNull = false;
-                this.columnord_id.Unique = true;
                 this.columnpro_name.MaxLength = 2147483647;
                 this.columncat_name.MaxLength = 2147483647;
+                this.columncus_id.AllowDBNull = false;
+                this.columncus_name.MaxLength = 2147483647;
+                this.columncus_gender.MaxLength = 10;
+                this.columndiagnostics.MaxLength = 2147483647;
+                this.columnage.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionRow NewPrescriptionRow() {
-                return ((PrescriptionRow)(this.NewRow()));
+            public ReceiptRow NewReceiptRow() {
+                return ((ReceiptRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PrescriptionRow(builder);
+                return new ReceiptRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PrescriptionRow);
+                return typeof(ReceiptRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PrescriptionRowChanged != null)) {
-                    this.PrescriptionRowChanged(this, new PrescriptionRowChangeEvent(((PrescriptionRow)(e.Row)), e.Action));
+                if ((this.ReceiptRowChanged != null)) {
+                    this.ReceiptRowChanged(this, new ReceiptRowChangeEvent(((ReceiptRow)(e.Row)), e.Action));
                 }
             }
             
@@ -495,8 +574,8 @@ namespace Skincare_Management_System.Receipt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PrescriptionRowChanging != null)) {
-                    this.PrescriptionRowChanging(this, new PrescriptionRowChangeEvent(((PrescriptionRow)(e.Row)), e.Action));
+                if ((this.ReceiptRowChanging != null)) {
+                    this.ReceiptRowChanging(this, new ReceiptRowChangeEvent(((ReceiptRow)(e.Row)), e.Action));
                 }
             }
             
@@ -504,8 +583,8 @@ namespace Skincare_Management_System.Receipt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PrescriptionRowDeleted != null)) {
-                    this.PrescriptionRowDeleted(this, new PrescriptionRowChangeEvent(((PrescriptionRow)(e.Row)), e.Action));
+                if ((this.ReceiptRowDeleted != null)) {
+                    this.ReceiptRowDeleted(this, new ReceiptRowChangeEvent(((ReceiptRow)(e.Row)), e.Action));
                 }
             }
             
@@ -513,14 +592,14 @@ namespace Skincare_Management_System.Receipt {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PrescriptionRowDeleting != null)) {
-                    this.PrescriptionRowDeleting(this, new PrescriptionRowChangeEvent(((PrescriptionRow)(e.Row)), e.Action));
+                if ((this.ReceiptRowDeleting != null)) {
+                    this.ReceiptRowDeleting(this, new ReceiptRowChangeEvent(((ReceiptRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePrescriptionRow(PrescriptionRow row) {
+            public void RemoveReceiptRow(ReceiptRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -529,7 +608,7 @@ namespace Skincare_Management_System.Receipt {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetPrescription ds = new DataSetPrescription();
+                DataSetForReceipt ds = new DataSetForReceipt();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -547,7 +626,7 @@ namespace Skincare_Management_System.Receipt {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PrescriptionDataTable";
+                attribute2.FixedValue = "ReceiptDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -591,25 +670,25 @@ namespace Skincare_Management_System.Receipt {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PrescriptionRow : global::System.Data.DataRow {
+        public partial class ReceiptRow : global::System.Data.DataRow {
             
-            private PrescriptionDataTable tablePrescription;
+            private ReceiptDataTable tableReceipt;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PrescriptionRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReceiptRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePrescription = ((PrescriptionDataTable)(this.Table));
+                this.tableReceipt = ((ReceiptDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ord_id {
                 get {
-                    return ((int)(this[this.tablePrescription.ord_idColumn]));
+                    return ((int)(this[this.tableReceipt.ord_idColumn]));
                 }
                 set {
-                    this[this.tablePrescription.ord_idColumn] = value;
+                    this[this.tableReceipt.ord_idColumn] = value;
                 }
             }
             
@@ -618,14 +697,14 @@ namespace Skincare_Management_System.Receipt {
             public string pro_name {
                 get {
                     try {
-                        return ((string)(this[this.tablePrescription.pro_nameColumn]));
+                        return ((string)(this[this.tableReceipt.pro_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'pro_name\' in table \'Prescription\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pro_name\' in table \'Receipt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrescription.pro_nameColumn] = value;
+                    this[this.tableReceipt.pro_nameColumn] = value;
                 }
             }
             
@@ -634,14 +713,14 @@ namespace Skincare_Management_System.Receipt {
             public int qty {
                 get {
                     try {
-                        return ((int)(this[this.tablePrescription.qtyColumn]));
+                        return ((int)(this[this.tableReceipt.qtyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'qty\' in table \'Prescription\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'qty\' in table \'Receipt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrescription.qtyColumn] = value;
+                    this[this.tableReceipt.qtyColumn] = value;
                 }
             }
             
@@ -650,14 +729,14 @@ namespace Skincare_Management_System.Receipt {
             public string cat_name {
                 get {
                     try {
-                        return ((string)(this[this.tablePrescription.cat_nameColumn]));
+                        return ((string)(this[this.tableReceipt.cat_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cat_name\' in table \'Prescription\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cat_name\' in table \'Receipt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrescription.cat_nameColumn] = value;
+                    this[this.tableReceipt.cat_nameColumn] = value;
                 }
             }
             
@@ -666,63 +745,214 @@ namespace Skincare_Management_System.Receipt {
             public double pro_sup {
                 get {
                     try {
-                        return ((double)(this[this.tablePrescription.pro_supColumn]));
+                        return ((double)(this[this.tableReceipt.pro_supColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'pro_sup\' in table \'Prescription\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pro_sup\' in table \'Receipt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePrescription.pro_supColumn] = value;
+                    this[this.tableReceipt.pro_supColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int cus_id {
+                get {
+                    return ((int)(this[this.tableReceipt.cus_idColumn]));
+                }
+                set {
+                    this[this.tableReceipt.cus_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cus_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableReceipt.cus_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cus_name\' in table \'Receipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReceipt.cus_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cus_gender {
+                get {
+                    try {
+                        return ((string)(this[this.tableReceipt.cus_genderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cus_gender\' in table \'Receipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReceipt.cus_genderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string diagnostics {
+                get {
+                    try {
+                        return ((string)(this[this.tableReceipt.diagnosticsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'diagnostics\' in table \'Receipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReceipt.diagnosticsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int level {
+                get {
+                    try {
+                        return ((int)(this[this.tableReceipt.levelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'level\' in table \'Receipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReceipt.levelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int age {
+                get {
+                    try {
+                        return ((int)(this[this.tableReceipt.ageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'age\' in table \'Receipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReceipt.ageColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Ispro_nameNull() {
-                return this.IsNull(this.tablePrescription.pro_nameColumn);
+                return this.IsNull(this.tableReceipt.pro_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setpro_nameNull() {
-                this[this.tablePrescription.pro_nameColumn] = global::System.Convert.DBNull;
+                this[this.tableReceipt.pro_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsqtyNull() {
-                return this.IsNull(this.tablePrescription.qtyColumn);
+                return this.IsNull(this.tableReceipt.qtyColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetqtyNull() {
-                this[this.tablePrescription.qtyColumn] = global::System.Convert.DBNull;
+                this[this.tableReceipt.qtyColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Iscat_nameNull() {
-                return this.IsNull(this.tablePrescription.cat_nameColumn);
+                return this.IsNull(this.tableReceipt.cat_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setcat_nameNull() {
-                this[this.tablePrescription.cat_nameColumn] = global::System.Convert.DBNull;
+                this[this.tableReceipt.cat_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Ispro_supNull() {
-                return this.IsNull(this.tablePrescription.pro_supColumn);
+                return this.IsNull(this.tableReceipt.pro_supColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setpro_supNull() {
-                this[this.tablePrescription.pro_supColumn] = global::System.Convert.DBNull;
+                this[this.tableReceipt.pro_supColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscus_nameNull() {
+                return this.IsNull(this.tableReceipt.cus_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcus_nameNull() {
+                this[this.tableReceipt.cus_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscus_genderNull() {
+                return this.IsNull(this.tableReceipt.cus_genderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcus_genderNull() {
+                this[this.tableReceipt.cus_genderColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsdiagnosticsNull() {
+                return this.IsNull(this.tableReceipt.diagnosticsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetdiagnosticsNull() {
+                this[this.tableReceipt.diagnosticsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IslevelNull() {
+                return this.IsNull(this.tableReceipt.levelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetlevelNull() {
+                this[this.tableReceipt.levelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsageNull() {
+                return this.IsNull(this.tableReceipt.ageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetageNull() {
+                this[this.tableReceipt.ageColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -730,22 +960,22 @@ namespace Skincare_Management_System.Receipt {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PrescriptionRowChangeEvent : global::System.EventArgs {
+        public class ReceiptRowChangeEvent : global::System.EventArgs {
             
-            private PrescriptionRow eventRow;
+            private ReceiptRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionRowChangeEvent(PrescriptionRow row, global::System.Data.DataRowAction action) {
+            public ReceiptRowChangeEvent(ReceiptRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PrescriptionRow Row {
+            public ReceiptRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -761,7 +991,7 @@ namespace Skincare_Management_System.Receipt {
         }
     }
 }
-namespace Skincare_Management_System.Receipt.DataSetPrescriptionTableAdapters {
+namespace Skincare_Management_System.Receipt.DataSetForReceiptTableAdapters {
     
     
     /// <summary>
@@ -773,7 +1003,7 @@ namespace Skincare_Management_System.Receipt.DataSetPrescriptionTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PrescriptionTableAdapter : global::System.ComponentModel.Component {
+    public partial class ReceiptTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -787,7 +1017,7 @@ namespace Skincare_Management_System.Receipt.DataSetPrescriptionTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public PrescriptionTableAdapter() {
+        public ReceiptTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -884,12 +1114,18 @@ namespace Skincare_Management_System.Receipt.DataSetPrescriptionTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Prescription";
+            tableMapping.DataSetTable = "Receipt";
             tableMapping.ColumnMappings.Add("ord_id", "ord_id");
             tableMapping.ColumnMappings.Add("pro_name", "pro_name");
             tableMapping.ColumnMappings.Add("qty", "qty");
             tableMapping.ColumnMappings.Add("cat_name", "cat_name");
             tableMapping.ColumnMappings.Add("pro_sup", "pro_sup");
+            tableMapping.ColumnMappings.Add("cus_id", "cus_id");
+            tableMapping.ColumnMappings.Add("cus_name", "cus_name");
+            tableMapping.ColumnMappings.Add("cus_gender", "cus_gender");
+            tableMapping.ColumnMappings.Add("diagnostics", "diagnostics");
+            tableMapping.ColumnMappings.Add("level", "level");
+            tableMapping.ColumnMappings.Add("age", "age");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -897,7 +1133,7 @@ namespace Skincare_Management_System.Receipt.DataSetPrescriptionTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Skincare_Management_System.Properties.Settings.Default.skin_cilinicConnectionString2;
+            this._connection.ConnectionString = global::Skincare_Management_System.Properties.Settings.Default.skin_cilinicConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -906,36 +1142,30 @@ namespace Skincare_Management_System.Receipt.DataSetPrescriptionTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT tbl_order.ord_id, tbl_product.pro_name, tbl_order_detail.qty, tbl_catagory.cat_name, tbl_product.pro_sup
+            this._commandCollection[0].CommandText = @"SELECT tbl_order.ord_id, tbl_product.pro_name, tbl_order_detail.qty, tbl_catagory.cat_name, tbl_product.pro_sup, cus.cus_id, cus.cus_name, cus.cus_gender, his.diagnostics, his.level, YEAR(GETDATE()) - YEAR(cus.cus_dob) AS age
 FROM     tbl_order INNER JOIN
                   tbl_order_detail ON tbl_order.ord_id = tbl_order_detail.ord_id INNER JOIN
                   tbl_product ON tbl_order_detail.pro_id = tbl_product.pro_id INNER JOIN
-                  tbl_catagory ON tbl_product.cat_id = tbl_catagory.cat_id";
+                  tbl_catagory ON tbl_product.cat_id = tbl_catagory.cat_id INNER JOIN
+                  tbl_customer AS cus ON cus.cus_id = tbl_order.cus_id INNER JOIN
+                  tbl_history AS his ON his.cus_id = cus.cus_id
+WHERE  (cus.cus_id = @cus_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cus_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cus_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetPrescription.PrescriptionDataTable dataTable) {
+        public virtual int Fill(DataSetForReceipt.ReceiptDataTable dataTable, int cus_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(cus_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetPrescription.PrescriptionDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetPrescription.PrescriptionDataTable dataTable = new DataSetPrescription.PrescriptionDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
     }
     
@@ -1007,7 +1237,7 @@ FROM     tbl_order INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DataSetPrescription dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetForReceipt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1017,7 +1247,7 @@ FROM     tbl_order INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DataSetPrescription dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetForReceipt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1027,7 +1257,7 @@ FROM     tbl_order INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DataSetPrescription dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetForReceipt dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1061,7 +1291,7 @@ FROM     tbl_order INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DataSetPrescription dataSet) {
+        public virtual int UpdateAll(DataSetForReceipt dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

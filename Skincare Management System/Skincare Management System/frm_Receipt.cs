@@ -20,14 +20,10 @@ namespace Skincare_Management_System
 
         private void frm_Receipt_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSetPrescription.Prescription' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'dataSetPrescription.Prescription' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'dataSetForReceipt.Prescription' table. You can move, or remove it, as needed.
             try
             {
-
-                this.tbl_customerTableAdapter.Fill(this.skin_cilinicDataSet1.tbl_customer);
-                this.prescriptionTableAdapter.Fill(this.dataSetPrescription.Prescription);
-
+                this.receiptTableAdapter.Fill(this.dataSetForReceipt.Receipt, 1);
                 this.reportViewer1.RefreshReport();
             }catch(Exception ex)
             {
