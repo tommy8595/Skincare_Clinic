@@ -122,5 +122,11 @@ namespace Skincare_Management_System
             frmPrintStockReport f = new frmPrintStockReport();
             f.Show();
         }
+
+        private void btn_edit_stock_Click(object sender, EventArgs e)
+        {
+            frm_EditStock f = new frm_EditStock();
+            f.Show();
+        }
     }
 }

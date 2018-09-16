@@ -91,6 +91,12 @@
     <Compile Include="frm_EditImport.Designer.cs">
       <DependentUpon>frm_EditImport.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_EditStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EditStock.Designer.cs">
+      <DependentUpon>frm_EditStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_EditImport.resx">
       <DependentUpon>frm_EditImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_EditStock.resx">
+      <DependentUpon>frm_EditStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_History.resx">
       <DependentUpon>frm_History.cs</DependentUpon>
