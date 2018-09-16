@@ -49,6 +49,7 @@ namespace Skincare_Management_System
             cmd.Parameters.AddWithValue("@p", txt_New_pass.Text.Trim());
             cmd.Connection = SkinCareConnection.Conn;
             cmd.ExecuteNonQuery();
+            MessageBox.Show("New user has created");
         }
     }
 }

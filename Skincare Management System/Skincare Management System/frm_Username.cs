@@ -47,6 +47,7 @@ namespace Skincare_Management_System
             cmd.Parameters.Add(new SqlParameter("@p",ObjectUpdateUser.password));
             cmd.ExecuteNonQuery();
             this.Close();
+            MessageBox.Show("change user successfully");
         }
     }
 }

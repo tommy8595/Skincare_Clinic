@@ -108,7 +108,7 @@ namespace Skincare_Management_System
 
         private void frm_Stock_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand(@"select pro.pro_id as [Product ID],pro.pro_name,cate.cat_name,pro.pro_sup,pro.pro_upis,pro.pro_qty
+            SqlCommand cmd = new SqlCommand(@"select pro.pro_id as [ID],pro.pro_name as [Name],cate.cat_name[Category],pro.pro_sup as [Sell Price],pro.pro_upis as [Import Price],pro.pro_qty as [Qty]
                                             from tbl_product pro inner join tbl_catagory cate
                                             on pro.cat_id = cate.cat_id", SkinCareConnection.Conn);
             SqlDataAdapter data = new SqlDataAdapter(cmd);
@@ -120,6 +120,12 @@ namespace Skincare_Management_System
         private void btn_print_frmstock_Click(object sender, EventArgs e)
         {
             frmPrintStockReport f = new frmPrintStockReport();
+            f.Show();
+        }
+
+        private void btn_edit_stock_Click(object sender, EventArgs e)
+        {
+            frm_EditStock f = new frm_EditStock();
             f.Show();
         }
     }
