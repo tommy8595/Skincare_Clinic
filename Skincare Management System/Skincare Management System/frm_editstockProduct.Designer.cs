@@ -93,6 +93,7 @@
             this.txt_sup_EditStock.Name = "txt_sup_EditStock";
             this.txt_sup_EditStock.Size = new System.Drawing.Size(361, 38);
             this.txt_sup_EditStock.TabIndex = 34;
+            this.txt_sup_EditStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sup_EditStock_KeyPress);
             // 
             // label1
             // 
@@ -133,6 +134,7 @@
             this.txt_upis_EditStock.Name = "txt_upis_EditStock";
             this.txt_upis_EditStock.Size = new System.Drawing.Size(361, 38);
             this.txt_upis_EditStock.TabIndex = 38;
+            this.txt_upis_EditStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_upis_EditStock_KeyPress);
             // 
             // frm_EditImportProduct
             // 
