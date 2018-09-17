@@ -197,7 +197,11 @@ namespace Skincare_Management_System
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    if(txt_id_patient.Text.Length > 1) {
+                        txt_id_patient.Text = txt_id_patient.Text.Substring(0, txt_id_patient.Text.Length - 1);
+                    }
+                   
+                    MessageBox.Show("Please Input the number");
                 }
 
             }

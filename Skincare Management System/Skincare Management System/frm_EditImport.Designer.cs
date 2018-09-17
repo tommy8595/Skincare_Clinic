@@ -1,6 +1,6 @@
 ﻿namespace Skincare_Management_System
 {
-    partial class frm_EditStock
+    partial class frm_EditImport
     {
         /// <summary>
         /// Required designer variable.
@@ -39,46 +39,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 90);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 23);
+            this.label1.Size = new System.Drawing.Size(136, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "Product Name";
             // 
             // txt_name_edimp
             // 
             this.txt_name_edimp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_name_edimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name_edimp.Location = new System.Drawing.Point(254, 88);
             this.txt_name_edimp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_name_edimp.Name = "txt_name_edimp";
             this.txt_name_edimp.ReadOnly = true;
-            this.txt_name_edimp.Size = new System.Drawing.Size(271, 32);
+            this.txt_name_edimp.Size = new System.Drawing.Size(271, 30);
             this.txt_name_edimp.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(52, 172);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 23);
+            this.label2.Size = new System.Drawing.Size(85, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "Quantity";
             // 
             // txt_qty_edimp
             // 
             this.txt_qty_edimp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_qty_edimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_qty_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_qty_edimp.Location = new System.Drawing.Point(254, 170);
             this.txt_qty_edimp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_qty_edimp.Name = "txt_qty_edimp";
-            this.txt_qty_edimp.Size = new System.Drawing.Size(271, 32);
+            this.txt_qty_edimp.Size = new System.Drawing.Size(271, 30);
             this.txt_qty_edimp.TabIndex = 22;
-            this.txt_qty_edimp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qty_edimp_KeyPress);
             // 
             // btn_save_edimp
             // 
@@ -87,7 +86,7 @@
             this.btn_save_edimp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_save_edimp.FlatAppearance.BorderSize = 2;
             this.btn_save_edimp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save_edimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_edimp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_save_edimp.Location = new System.Drawing.Point(254, 248);
             this.btn_save_edimp.Margin = new System.Windows.Forms.Padding(2);
@@ -105,7 +104,7 @@
             this.btn_back_edimp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_back_edimp.FlatAppearance.BorderSize = 2;
             this.btn_back_edimp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back_edimp.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_edimp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_back_edimp.Location = new System.Drawing.Point(422, 248);
             this.btn_back_edimp.Margin = new System.Windows.Forms.Padding(2);

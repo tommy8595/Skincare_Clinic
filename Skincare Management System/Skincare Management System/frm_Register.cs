@@ -89,8 +89,7 @@ namespace Skincare_Management_System
                         txt_sellprice_register.Clear();
                         lst_category_register.Text = "";
                         con.Close();
-                        MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();                        
+                        MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);               
                     }
 
                 }

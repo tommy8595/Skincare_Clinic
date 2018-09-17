@@ -136,7 +136,7 @@ namespace Skincare_Management_System
                 string pn = dgv_product_frmstock.Rows[i].Cells[1].Value.ToString();//product name
                 double ps = double.Parse(dgv_product_frmstock.Rows[i].Cells[3].Value.ToString());//product sell price
                 double up = double.Parse(dgv_product_frmstock.Rows[i].Cells[4].Value.ToString());//product import price
-                frm_editstockProduct f = new frm_editstockProduct( pi,  pn,  ps, up);
+                frm_EditImportProduct f = new frm_EditImportProduct( pi,  pn,  ps, up);
                 DialogResult d = new DialogResult();
                 d=f.ShowDialog();
                 if (d == DialogResult.None)
