@@ -369,7 +369,7 @@
             this.btn_prescription_patient.ForeColor = System.Drawing.Color.White;
             this.btn_prescription_patient.Location = new System.Drawing.Point(629, 731);
             this.btn_prescription_patient.Name = "btn_prescription_patient";
-            this.btn_prescription_patient.Size = new System.Drawing.Size(137, 45);
+            this.btn_prescription_patient.Size = new System.Drawing.Size(163, 45);
             this.btn_prescription_patient.TabIndex = 12;
             this.btn_prescription_patient.Text = "Prescription";
             this.btn_prescription_patient.UseVisualStyleBackColor = false;
