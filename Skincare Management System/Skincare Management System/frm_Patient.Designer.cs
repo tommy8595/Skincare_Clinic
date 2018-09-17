@@ -393,6 +393,7 @@
             this.btn_add_patient.TabIndex = 9;
             this.btn_add_patient.Text = "Add";
             this.btn_add_patient.UseVisualStyleBackColor = false;
+            this.btn_add_patient.Click += new System.EventHandler(this.btn_add_patient_Click);
             // 
             // btn_edit_patient
             // 
@@ -409,6 +410,7 @@
             this.btn_edit_patient.TabIndex = 10;
             this.btn_edit_patient.Text = "Edit";
             this.btn_edit_patient.UseVisualStyleBackColor = false;
+            this.btn_edit_patient.Click += new System.EventHandler(this.btn_edit_patient_Click);
             // 
             // txt_id_patient
             // 
@@ -426,9 +428,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2312, 1283);
-            this.Controls.Add(this.txt_id_patient);
             this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.Controls.Add(this.txt_id_patient);
             this.Controls.Add(this.btn_edit_patient);
             this.Controls.Add(this.btn_add_patient);
             this.Controls.Add(this.btn_prescription_patient);
