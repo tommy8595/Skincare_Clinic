@@ -24,6 +24,9 @@ namespace Skincare_Management_System
         SqlConnection con;
         DataTable dt;
         string[] spl;
+        Receipt.DataSetForReceipt receipt;
+        int ord_id;
+        List<int> pro_id = new List<int>();
 
         private void openImportMedicine()
         {
@@ -73,7 +76,8 @@ namespace Skincare_Management_System
 
         private void openMedicine()
         {
-            Application.Run(new frm_Receipt());
+            if (txt_consultation.Text.Equals(null) || txt_consultation.Text.Equals("")) txt_consultation.Text = "0";
+            Application.Run(new frm_Receipt(receipt));
         }
 
         private void btn_Report_Click(object sender, EventArgs e)
@@ -152,6 +156,22 @@ namespace Skincare_Management_System
                  
                     cmd.Parameters.Add(t);
                     cmd.ExecuteNonQuery();
+
+                    /* Get Data From Datagridview to DataSetForReceipt into Prescription by Chhantana */
+                    receipt = new Receipt.DataSetForReceipt();
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        receipt.Prescripton.Rows.Add(
+                            (++ord_id),
+                            pro_id[i],
+                            dataGridView1[0, i].Value, // Product Name
+                            int.Parse(dataGridView1[2, i].Value.ToString().Trim()), // Qty
+                            dataGridView1[1, i].Value, // Category Name
+                            double.Parse(dataGridView1[4, i].Value.ToString().Trim()), // Price
+                            double.Parse(txt_consultation.Text.Trim()), // Consulation
+                            getTotal()); // Total
+                    }
+
                     dataGridView1.Rows.Clear();
                     con.Close();
                     if (MessageBox.Show("Your data have been saved successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
@@ -264,6 +284,7 @@ namespace Skincare_Management_System
                     {
 
                         cboName.Items.Add(dr.GetValue(0).ToString() + "    | " + dr.GetValue(1).ToString());
+                        pro_id.Add(dr.GetInt32(1));
                     }
 
                     dr.Close();
@@ -321,6 +342,12 @@ namespace Skincare_Management_System
                 }
             god:
 
+
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT MAX(tbl_order.ord_id) as ord_id FROM tbl_order ", SkinCareConnection.Conn);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                if (dt.Rows[0][0].ToString() != "") ord_id = int.Parse(dt.Rows[0][0].ToString());
+                else ord_id = 0;
 
                 cboName.Items.Clear();
                 comboBox1.Text = "Pick one...";

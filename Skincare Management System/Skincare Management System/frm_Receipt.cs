@@ -13,9 +13,14 @@ namespace Skincare_Management_System
 {
     public partial class frm_Receipt : Form
     {
-        public frm_Receipt()
+        public frm_Receipt(Receipt.DataSetForReceipt dataSetForReceipt)
         {
             InitializeComponent();
+
+            prescriptonBindingSource.DataSource = dataSetForReceipt.Prescripton.Rows;
+            ReportDataSource reportDataSource = new ReportDataSource("Prescription", prescriptonBindingSource);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+
         }
 
         private void frm_Receipt_Load(object sender, EventArgs e)
@@ -23,7 +28,7 @@ namespace Skincare_Management_System
             // TODO: This line of code loads data into the 'dataSetForReceipt.Prescription' table. You can move, or remove it, as needed.
             try
             {
-                this.receiptTableAdapter.Fill(this.dataSetForReceipt.Receipt, class1.id);
+                this.patientTableAdapter.Fill(this.dataSetForReceipt.Patient, class1.id);
                 this.reportViewer1.RefreshReport();
             }catch(Exception ex)
             {
