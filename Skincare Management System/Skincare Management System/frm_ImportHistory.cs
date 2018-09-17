@@ -127,11 +127,7 @@ namespace Skincare_Management_System
 
         private void btn_imp_his_detail_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (dgv_imp_his.CurrentRow.Index != -1)
-=======
-            if (dgv_imp_his.CurrentRow.Index != 0)
->>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
             {
                 int i = dgv_imp_his.CurrentRow.Index;
                 imid = int.Parse(dgv_imp_his.Rows[i].Cells[0].Value.ToString());
@@ -143,10 +139,6 @@ namespace Skincare_Management_System
             }
             else
                 MessageBox.Show("Please select Import");
-<<<<<<< HEAD
-
-=======
->>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
         }
 
         private void frm_ImportHistory_Load(object sender, EventArgs e)
@@ -167,10 +159,6 @@ namespace Skincare_Management_System
             {
                 MessageBox.Show(exc.Message);
             }
-<<<<<<< HEAD
-            
-=======
->>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
         }
     }
 }

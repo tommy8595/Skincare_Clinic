@@ -39,6 +39,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_LogOut = new System.Windows.Forms.Button();
             this.btn_Setting = new System.Windows.Forms.Button();
+            this.lbl_cs = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Patient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Medicine)).BeginInit();
@@ -174,12 +175,26 @@
             this.btn_Setting.UseVisualStyleBackColor = false;
             this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
             // 
+            // lbl_cs
+            // 
+            this.lbl_cs.AutoSize = true;
+            this.lbl_cs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_cs.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cs.ForeColor = System.Drawing.Color.White;
+            this.lbl_cs.Location = new System.Drawing.Point(60, 758);
+            this.lbl_cs.Name = "lbl_cs";
+            this.lbl_cs.Size = new System.Drawing.Size(147, 31);
+            this.lbl_cs.TabIndex = 70;
+            this.lbl_cs.Text = "Contact Us";
+            this.lbl_cs.Click += new System.EventHandler(this.lbl_cs_Click);
+            // 
             // frm_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.Controls.Add(this.lbl_cs);
             this.Controls.Add(this.btn_Setting);
             this.Controls.Add(this.btn_LogOut);
             this.Controls.Add(this.pictureBox5);
@@ -216,5 +231,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btn_LogOut;
         private System.Windows.Forms.Button btn_Setting;
+        private System.Windows.Forms.Label lbl_cs;
     }
 }
