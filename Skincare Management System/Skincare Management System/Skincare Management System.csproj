@@ -208,10 +208,10 @@
     <Compile Include="ObjectUpdateUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receipt\DataSetPrescription.Designer.cs">
+    <Compile Include="Receipt\DataSetForReceipt1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetPrescription.xsd</DependentUpon>
+      <DependentUpon>DataSetForReceipt.xsd</DependentUpon>
     </Compile>
     <Compile Include="SkinCareConnection.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -322,16 +322,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Receipt\DataSetPrescription.xsc">
-      <DependentUpon>DataSetPrescription.xsd</DependentUpon>
+    <None Include="Receipt\DataSetForReceipt.xsc">
+      <DependentUpon>DataSetForReceipt.xsd</DependentUpon>
     </None>
-    <None Include="Receipt\DataSetPrescription.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Receipt\DataSetForReceipt.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetPrescription.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetForReceipt1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="Receipt\DataSetPrescription.xss">
-      <DependentUpon>DataSetPrescription.xsd</DependentUpon>
+    <None Include="Receipt\DataSetForReceipt.xss">
+      <DependentUpon>DataSetForReceipt.xsd</DependentUpon>
     </None>
     <None Include="skin_cilinicDataSet.xsc">
       <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
