@@ -1,6 +1,6 @@
 ﻿namespace Skincare_Management_System
 {
-    partial class frm_editstockProduct
+    partial class frm_EditImportProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -134,7 +134,7 @@
             this.txt_upis_EditStock.Size = new System.Drawing.Size(361, 38);
             this.txt_upis_EditStock.TabIndex = 38;
             // 
-            // frm_editstockProduct
+            // frm_EditImportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,9 +147,9 @@
             this.Controls.Add(this.txt_sup_EditStock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_name_EditStock);
-            this.Name = "frm_editstockProduct";
-            this.Text = "frm_editstockProduct";
-            this.Load += new System.EventHandler(this.frm_editstockProduct_Load);
+            this.Name = "frm_EditImportProduct";
+            this.Text = "frm_EditImportProduct";
+            this.Load += new System.EventHandler(this.frm_EditImportProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -201,19 +201,15 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(936, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-=======
             this.label2.Location = new System.Drawing.Point(623, 117);
->>>>>>> 31a8e2a7d6b32f6c1367ccc320cc86b2bdca69d1
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "ID";
             // 
-<<<<<<< HEAD
-=======
             // txt_id_patient
             // 
             this.txt_id_patient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -224,7 +220,6 @@
             this.txt_id_patient.TabIndex = 1;
             this.txt_id_patient.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_id_patient_KeyUp);
             // 
->>>>>>> 31a8e2a7d6b32f6c1367ccc320cc86b2bdca69d1
             // label3
             // 
             this.label3.AutoSize = true;
@@ -431,12 +426,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(2312, 1283);
             this.Controls.Add(this.txt_id_patient);
-=======
             this.ClientSize = new System.Drawing.Size(1541, 821);
->>>>>>> 31a8e2a7d6b32f6c1367ccc320cc86b2bdca69d1
             this.Controls.Add(this.btn_edit_patient);
             this.Controls.Add(this.btn_add_patient);
             this.Controls.Add(this.btn_prescription_patient);

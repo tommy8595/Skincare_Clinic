@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
-    public partial class frm_EditStock : Form
+    public partial class frm_EditImport : Form
     {
         SqlConnection conn;
         SqlCommand cmd;
@@ -20,22 +20,9 @@ namespace Skincare_Management_System
         string pName = "";
         int pi = 0;
         int iq = 0;
-<<<<<<< HEAD
-      
         public frm_EditImport(int iid, string proName, int pid, int iqty)
         {
             InitializeComponent();
-
-            ii = iid;
-            pName = proName;
-            pi = pid;
-            iq = iqty;
-
-=======
-        public frm_EditStock(int iid, string proName, int pid, int iqty)
-        {
-            InitializeComponent();
->>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
             if (iid != 0 && proName != "" && pid != 0 && iqty != 0)
             {
                 ii = iid;
@@ -44,26 +31,9 @@ namespace Skincare_Management_System
                 iq = iqty;
             }
             else
-<<<<<<< HEAD
-                MessageBox.Show("Error in data editing");
-=======
                 MessageBox.Show("Error please go back and select item");
->>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
         }
-        private void text_id_patient_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verify that the pressed key isn't CTRL or any non-numeric digit
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
 
-            // If you want, you can allow decimal (float) numbers
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
         private void btn_back_edimp_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -79,6 +49,7 @@ namespace Skincare_Management_System
         {
             try
             {
+                
             str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
             conn = new SqlConnection(str);
             conn.Open();
@@ -89,6 +60,7 @@ namespace Skincare_Management_System
             cmd.Parameters.AddWithValue("@iq", int.Parse(txt_qty_edimp.Text));
             cmd.ExecuteNonQuery();
             conn.Close();
+         
                 this.Close();
             }
             catch (SqlException x)
@@ -109,12 +81,6 @@ namespace Skincare_Management_System
             {
                 e.Handled = true;
             }
-        }
-
-
-        private void frm_EditImport_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
