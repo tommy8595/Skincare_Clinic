@@ -145,7 +145,6 @@ namespace Skincare_Management_System
         {
             try
             {
-                this.dgv_imp_his.Columns[2].DefaultCellStyle.Format = "c";
                 string str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                 conn = new SqlConnection(str);
                 conn.Open();
@@ -155,7 +154,6 @@ namespace Skincare_Management_System
                 data.Fill(dt);
                 dgv_imp_his.DataSource = dt;
                 conn.Close();
-                this.dgv_imp_his.Sort(dgv_imp_his.Columns[0], ListSortDirection.Descending);
             }
             catch(SqlException exc)
             {

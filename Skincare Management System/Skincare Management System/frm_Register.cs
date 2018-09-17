@@ -56,7 +56,8 @@ namespace Skincare_Management_System
                     {                      
                         spl = lst_category_register.Text.Split('.');                       
                         SqlCommand cmd = new SqlCommand("dbo.sp_insert_product", con);
-                        cmd.CommandType = CommandType.StoredProcedure;                    
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        
                         cmd.Parameters.AddWithValue("@pn", txt_name_register.Text);
                         cmd.Parameters.AddWithValue("@ci", spl[0]);
                         cmd.Parameters.AddWithValue("@ps", txt_sellprice_register.Text);
@@ -68,7 +69,8 @@ namespace Skincare_Management_System
                         txt_sellprice_register.Clear();
                         lst_category_register.Text = "";
                         MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        con.Close(); 
+                        con.Close();
+                        this.Close();                        
                     }
                     else
                     {

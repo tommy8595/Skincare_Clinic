@@ -151,7 +151,6 @@ namespace Skincare_Management_System
                 conn.Open();
                 string q = "select * from dbo.fn_get_import(" + imd + ")";
                 SqlDataAdapter data = new SqlDataAdapter(q, conn);
-                
                 dt = new DataTable();
                 data.Fill(dt);
                 dgv_imp_detail.DataSource = dt;

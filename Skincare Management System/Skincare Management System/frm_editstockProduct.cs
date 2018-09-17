@@ -79,29 +79,6 @@ namespace Skincare_Management_System
             txt_sup_EditStock.Text = ps1.ToString();
             txt_upis_EditStock.Text = up1.ToString();
         }
-
-        private void txt_sup_EditStock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == 8)
-            {
-                return;
-            }
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_upis_EditStock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == 8)
-            {
-                return;
-            }
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                e.Handled = true;
-            }
-        }
+        
     }
 }

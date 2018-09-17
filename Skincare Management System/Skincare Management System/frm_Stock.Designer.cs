@@ -260,7 +260,6 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_product_frmstock.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_product_frmstock.RowTemplate.Height = 24;
-            this.dgv_product_frmstock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_product_frmstock.Size = new System.Drawing.Size(1093, 613);
             this.dgv_product_frmstock.TabIndex = 32;
             // 
