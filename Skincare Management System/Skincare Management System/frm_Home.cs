@@ -113,5 +113,11 @@ namespace Skincare_Management_System
             frm_Setting setting = new frm_Setting();
             setting.Show();
         }
+
+        private void lbl_cs_Click(object sender, EventArgs e)
+        {
+            frm_ContactUs cs = new frm_ContactUs();
+            cs.Show();
+        }
     }
 }
