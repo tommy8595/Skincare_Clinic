@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
-    public partial class frm_EditStock : Form
+    public partial class frm_EditImport : Form
     {
         SqlConnection conn;
         SqlCommand cmd;
@@ -20,7 +20,7 @@ namespace Skincare_Management_System
         string pName = "";
         int pi = 0;
         int iq = 0;
-        public frm_EditStock(int iid, string proName, int pid, int iqty)
+        public frm_EditImport(int iid, string proName, int pid, int iqty)
         {
             InitializeComponent();
             if (iid != 0 && proName != "" && pid != 0 && iqty != 0)
@@ -49,18 +49,26 @@ namespace Skincare_Management_System
         {
             try
             {
-            str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
-            conn = new SqlConnection(str);
-            conn.Open();
-            cmd = new SqlCommand("dbo.sp_update_import",conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ii", ii);
-            cmd.Parameters.AddWithValue("@pi", pi);
-            cmd.Parameters.AddWithValue("@iq", int.Parse(txt_qty_edimp.Text));
-            cmd.ExecuteNonQuery();
-            conn.Close();
-         
-                this.Close();
+                if (txt_qty_edimp.Text=="")
+                {
+                    MessageBox.Show("Please enter quantity", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_qty_edimp.Focus();
+                }
+                else
+                {
+                    str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
+                    conn = new SqlConnection(str);
+                    conn.Open();
+                    cmd = new SqlCommand("dbo.sp_update_import", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ii", ii);
+                    cmd.Parameters.AddWithValue("@pi", pi);
+                    cmd.Parameters.AddWithValue("@iq", int.Parse(txt_qty_edimp.Text));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Your data have been saved!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
             }
             catch (SqlException x)
             {
@@ -81,5 +89,6 @@ namespace Skincare_Management_System
                 e.Handled = true;
             }
         }
+
     }
 }

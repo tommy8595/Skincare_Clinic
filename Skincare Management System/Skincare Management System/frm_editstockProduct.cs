@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Skincare_Management_System
 {
-    public partial class frm_editstockProduct : Form
+    public partial class frm_EditImportProduct : Form
     {
         SqlConnection conn;
         SqlCommand cmd;
@@ -21,7 +21,7 @@ namespace Skincare_Management_System
         private int pid;
         private string proname;
 
-        public frm_editstockProduct(int pi, string pn,double ps,double up)
+        public frm_EditImportProduct(int pi, string pn,double ps,double up)
         {
             InitializeComponent();
             if (pi != 0 && pn != "" && ps != 0 && up != 0)
@@ -35,7 +35,7 @@ namespace Skincare_Management_System
                 MessageBox.Show("Error please go back and select item");
         }
 
-        //public frm_editstockProduct(int pi, string pn, int ps, int up) : this(pi, pn)
+        //public frm_EditImportProduct(int pi, string pn, int ps, int up) : this(pi, pn)
         //{
         //    this.ps = ps;
         //    this.up = up;
@@ -73,12 +73,35 @@ namespace Skincare_Management_System
             this.Close();
         }
 
-        private void frm_editstockProduct_Load(object sender, EventArgs e)
+        private void frm_EditImportProduct_Load(object sender, EventArgs e)
         {
             txt_name_EditStock.Text = proname;
             txt_sup_EditStock.Text = ps1.ToString();
             txt_upis_EditStock.Text = up1.ToString();
         }
-        
+
+        private void txt_sup_EditStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == 8)
+            {
+                return;
+            }
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_upis_EditStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == 8)
+            {
+                return;
+            }
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

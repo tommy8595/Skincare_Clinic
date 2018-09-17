@@ -135,7 +135,8 @@ namespace Skincare_Management_System
                 iq = int.Parse(dgv_imp_detail.Rows[i].Cells[2].Value.ToString());
                 pid = int.Parse(dgv_imp_detail.Rows[i].Cells[3].Value.ToString());
 
-                frm_EditStock EdImp = new frm_EditStock(iid, proName, iq, pid);
+                frm_EditImport EdImp = new frm_EditImport(iid, proName, iq, pid);
+
                 EdImp.Show();
             }
             else
@@ -150,6 +151,7 @@ namespace Skincare_Management_System
                 conn.Open();
                 string q = "select * from dbo.fn_get_import(" + imd + ")";
                 SqlDataAdapter data = new SqlDataAdapter(q, conn);
+                
                 dt = new DataTable();
                 data.Fill(dt);
                 dgv_imp_detail.DataSource = dt;
@@ -159,6 +161,7 @@ namespace Skincare_Management_System
             {
                 MessageBox.Show(exc.Message);
             }
+
         }
 
         private void dgv_imp_detail_MouseEnter(object sender, EventArgs e)

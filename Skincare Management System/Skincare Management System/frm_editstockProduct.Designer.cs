@@ -1,6 +1,6 @@
 ﻿namespace Skincare_Management_System
 {
-    partial class frm_editstockProduct
+    partial class frm_EditImportProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -93,6 +93,7 @@
             this.txt_sup_EditStock.Name = "txt_sup_EditStock";
             this.txt_sup_EditStock.Size = new System.Drawing.Size(361, 38);
             this.txt_sup_EditStock.TabIndex = 34;
+            this.txt_sup_EditStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_sup_EditStock_KeyPress);
             // 
             // label1
             // 
@@ -133,8 +134,9 @@
             this.txt_upis_EditStock.Name = "txt_upis_EditStock";
             this.txt_upis_EditStock.Size = new System.Drawing.Size(361, 38);
             this.txt_upis_EditStock.TabIndex = 38;
+            this.txt_upis_EditStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_upis_EditStock_KeyPress);
             // 
-            // frm_editstockProduct
+            // frm_EditImportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,9 +149,9 @@
             this.Controls.Add(this.txt_sup_EditStock);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_name_EditStock);
-            this.Name = "frm_editstockProduct";
-            this.Text = "frm_editstockProduct";
-            this.Load += new System.EventHandler(this.frm_editstockProduct_Load);
+            this.Name = "frm_EditImportProduct";
+            this.Text = "frm_EditImportProduct";
+            this.Load += new System.EventHandler(this.frm_EditImportProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

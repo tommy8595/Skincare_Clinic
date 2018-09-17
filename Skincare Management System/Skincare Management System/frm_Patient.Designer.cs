@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_history_patient = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_id_patient = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dt_date_patient = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,6 +57,7 @@
             this.btn_prescription_patient = new System.Windows.Forms.Button();
             this.btn_add_patient = new System.Windows.Forms.Button();
             this.btn_edit_patient = new System.Windows.Forms.Button();
+            this.txt_id_patient = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -201,7 +201,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(936, 178);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Location = new System.Drawing.Point(623, 117);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 29);
             this.label2.TabIndex = 3;
@@ -407,11 +410,24 @@
             this.btn_edit_patient.Text = "Edit";
             this.btn_edit_patient.UseVisualStyleBackColor = false;
             // 
+            // txt_id_patient
+            // 
+            this.txt_id_patient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_id_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id_patient.Location = new System.Drawing.Point(1041, 178);
+            this.txt_id_patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_id_patient.Name = "txt_id_patient";
+            this.txt_id_patient.Size = new System.Drawing.Size(137, 53);
+            this.txt_id_patient.TabIndex = 22;
+            this.txt_id_patient.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_id_patient_KeyUp);
+            // 
             // frm_Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(2312, 1283);
+            this.Controls.Add(this.txt_id_patient);
             this.ClientSize = new System.Drawing.Size(1541, 821);
             this.Controls.Add(this.btn_edit_patient);
             this.Controls.Add(this.btn_add_patient);
@@ -431,7 +447,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dt_date_patient);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_id_patient);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_history_patient);
             this.Controls.Add(this.label1);
@@ -461,7 +476,6 @@
         private System.Windows.Forms.PictureBox pic_Home;
         private System.Windows.Forms.Button btn_history_patient;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_id_patient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dt_date_patient;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -481,5 +495,6 @@
         private System.Windows.Forms.Button btn_add_patient;
         private System.Windows.Forms.Button btn_edit_patient;
         private System.Windows.Forms.Button btn_Setting;
+        private System.Windows.Forms.TextBox txt_id_patient;
     }
 }

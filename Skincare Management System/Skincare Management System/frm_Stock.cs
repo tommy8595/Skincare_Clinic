@@ -108,17 +108,11 @@ namespace Skincare_Management_System
 
         private void frm_Stock_Load(object sender, EventArgs e)
         {
-            //SqlCommand cmd = new SqlCommand(@"select pro.pro_id as [ID],pro.pro_name as [Name],cate.cat_name[Category],pro.pro_sup as [Sell Price],pro.pro_upis as [Import Price],pro.pro_qty as [Qty]
-            //                                from tbl_product pro inner join tbl_catagory cate
-            //                                on pro.cat_id = cate.cat_id", SkinCareConnection.Conn);
-            //SqlDataAdapter data = new SqlDataAdapter(cmd);
-            //DataSet ds = new DataSet();
-            //data.Fill(ds);
-            //dgv_product_frmstock.DataSource = ds.Tables[0];
-            //dgv_product_frmstock.Refresh();
             refresh_frmstock();
             dgv_product_frmstock.Update();
-            
+            this.dgv_product_frmstock.Columns[3].DefaultCellStyle.Format = "c";
+            this.dgv_product_frmstock.Columns[4].DefaultCellStyle.Format = "c";
+
         }
 
         private void btn_print_frmstock_Click(object sender, EventArgs e)
@@ -136,7 +130,7 @@ namespace Skincare_Management_System
                 string pn = dgv_product_frmstock.Rows[i].Cells[1].Value.ToString();//product name
                 double ps = double.Parse(dgv_product_frmstock.Rows[i].Cells[3].Value.ToString());//product sell price
                 double up = double.Parse(dgv_product_frmstock.Rows[i].Cells[4].Value.ToString());//product import price
-                frm_editstockProduct f = new frm_editstockProduct( pi,  pn,  ps, up);
+                frm_EditImportProduct f = new frm_EditImportProduct( pi,  pn,  ps, up);
                 DialogResult d = new DialogResult();
                 d=f.ShowDialog();
                 if (d == DialogResult.None)
