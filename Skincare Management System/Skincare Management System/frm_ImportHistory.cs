@@ -127,7 +127,7 @@ namespace Skincare_Management_System
 
         private void btn_imp_his_detail_Click(object sender, EventArgs e)
         {
-            if (dgv_imp_his.CurrentRow.Index != 0)
+            if (dgv_imp_his.CurrentRow.Index != -1)
             {
                 int i = dgv_imp_his.CurrentRow.Index;
                 imid = int.Parse(dgv_imp_his.Rows[i].Cells[0].Value.ToString());
