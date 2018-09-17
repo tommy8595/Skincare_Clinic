@@ -48,6 +48,7 @@ namespace Skincare_Management_System
                 cmd.Parameters.Add(new SqlParameter("@p", txt_confirm_changepassword.Text));
                 cmd.ExecuteNonQuery();
                 this.Close();
+                MessageBox.Show("change password sucessfully");
             }
             SkinCareConnection.CloseConnection();
         }

@@ -23,7 +23,12 @@ namespace Skincare_Management_System
         public frm_ImportDetail(int imid)
         {
             InitializeComponent();
-            imd = imid;
+            if (imid != 0)
+            {
+                imd = imid;
+            }
+            else
+                MessageBox.Show("Error please go back and select Import");
         }
         
         Thread th;
@@ -130,17 +135,17 @@ namespace Skincare_Management_System
                 iq = int.Parse(dgv_imp_detail.Rows[i].Cells[2].Value.ToString());
                 pid = int.Parse(dgv_imp_detail.Rows[i].Cells[3].Value.ToString());
 
+<<<<<<< HEAD
                 frm_EditImport EdImp = new frm_EditImport(iid, proName, iq, pid);
+=======
+                frm_EditStock EdImp = new frm_EditStock(iid, proName, iq, pid);
+>>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
                 EdImp.Show();
             }
             else
                 MessageBox.Show("Please select Item to Edit");
         }
 
-        private void dgv_imp_detail_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         public void Requery() {
             try
             {
@@ -158,7 +163,10 @@ namespace Skincare_Management_System
             {
                 MessageBox.Show(exc.Message);
             }
+<<<<<<< HEAD
             
+=======
+>>>>>>> 47ed95d0bac1ccae44d613ca017df44195aa111c
         }
 
         private void dgv_imp_detail_MouseEnter(object sender, EventArgs e)

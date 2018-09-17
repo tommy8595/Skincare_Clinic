@@ -211,6 +211,7 @@
             this.btn_edit_stock.TabIndex = 28;
             this.btn_edit_stock.Text = "Edit";
             this.btn_edit_stock.UseVisualStyleBackColor = false;
+            this.btn_edit_stock.Click += new System.EventHandler(this.btn_edit_stock_Click);
             // 
             // btn_back_stock
             // 
@@ -238,7 +239,6 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_product_frmstock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_product_frmstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

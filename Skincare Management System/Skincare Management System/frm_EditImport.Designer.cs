@@ -1,6 +1,6 @@
 ﻿namespace Skincare_Management_System
 {
-    partial class frm_EditImport
+    partial class frm_EditStock
     {
         /// <summary>
         /// Required designer variable.
