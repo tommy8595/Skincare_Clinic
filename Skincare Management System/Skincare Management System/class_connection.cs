@@ -16,7 +16,7 @@ namespace Skincare_Management_System
 
         public static SqlConnection connection()
         {
-            string connection_string = @"Data Source=.,1433;Initial Catalog=skin_cilinic;Integrated Security=True";
+            string connection_string = @"Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
             SqlConnection con = new SqlConnection(connection_string);
             try
             {
@@ -110,6 +110,17 @@ namespace Skincare_Management_System
             cmd.Dispose();
 
         }
+        public static SqlDataReader get_customer_max_id()
+        {
+
+            SqlDataReader sdr;
+            string q = "select max(cus_id) from tbl_customer";
+            //SqlCommand cmd = new SqlCommand("select max(cus_id) from tbl_customer", connection()).ExecuteReader());
+            sdr = new SqlCommand(q, connection()).ExecuteReader();
+            return sdr;
+
+        }
+
         public static SqlDataReader get_customer_id(int cid)
         {
 
@@ -150,7 +161,6 @@ namespace Skincare_Management_System
         }
         public static SqlDataReader get_customer_phone(string cp)
         {
-           
             SqlDataReader sdr = null;
             SqlCommand cmd = new SqlCommand("sp_get_customer_phone", connection());
             cmd.CommandType = CommandType.StoredProcedure;
