@@ -31,15 +31,41 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.prescriptonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetForReceipt = new Skincare_Management_System.Receipt.DataSetForReceipt();
             this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetForReceipt = new Skincare_Management_System.Receipt.DataSetForReceipt();
+            this.prescriptonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new Skincare_Management_System.Receipt.DataSetForReceiptTableAdapters.PatientTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.prescriptonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetForReceipt)).BeginInit();
+            this.dataSetForReceipt1 = new Skincare_Management_System.Receipt.DataSetForReceipt();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetForReceipt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prescriptonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetForReceipt1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this.dataSetForReceipt;
+            // 
+            // dataSetForReceipt
+            // 
+            this.dataSetForReceipt.DataSetName = "DataSetForReceipt";
+            this.dataSetForReceipt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // prescriptonBindingSource
+            // 
+            this.prescriptonBindingSource.DataMember = "Prescripton";
+            this.prescriptonBindingSource.DataSource = this.dataSetForReceipt;
+            // 
+            // patientTableAdapter
+            // 
+            this.patientTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataSetForReceipt1
+            // 
+            this.dataSetForReceipt1.DataSetName = "DataSetForReceipt";
+            this.dataSetForReceipt1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -53,29 +79,9 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skincare_Management_System.Receipt.ReportReceipt.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-           
             this.reportViewer1.Size = new System.Drawing.Size(1030, 640);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // prescriptonBindingSource
-            // 
-            this.prescriptonBindingSource.DataMember = "Prescripton";
-            this.prescriptonBindingSource.DataSource = this.dataSetForReceipt;
-            // 
-            // dataSetForReceipt
-            // 
-            this.dataSetForReceipt.DataSetName = "DataSetForReceipt";
-            this.dataSetForReceipt.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataMember = "Patient";
-            this.patientBindingSource.DataSource = this.dataSetForReceipt;
-            // 
-            // patientTableAdapter
-            // 
-            this.patientTableAdapter.ClearBeforeFill = true;
             // 
             // frm_Receipt
             // 
@@ -88,19 +94,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skincare - Receipt";
             this.Load += new System.EventHandler(this.frm_Receipt_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.prescriptonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetForReceipt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetForReceipt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prescriptonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetForReceipt1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource prescriptonBindingSource;
         private Receipt.DataSetForReceipt dataSetForReceipt;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private Receipt.DataSetForReceiptTableAdapters.PatientTableAdapter patientTableAdapter;
+        private Receipt.DataSetForReceipt dataSetForReceipt1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
