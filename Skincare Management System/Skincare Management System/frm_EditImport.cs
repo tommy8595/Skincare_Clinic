@@ -49,19 +49,26 @@ namespace Skincare_Management_System
         {
             try
             {
-                
-            str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
-            conn = new SqlConnection(str);
-            conn.Open();
-            cmd = new SqlCommand("dbo.sp_update_import",conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ii", ii);
-            cmd.Parameters.AddWithValue("@pi", pi);
-            cmd.Parameters.AddWithValue("@iq", int.Parse(txt_qty_edimp.Text));
-            cmd.ExecuteNonQuery();
-            conn.Close();
-         
-                this.Close();
+                if (txt_qty_edimp.Text=="")
+                {
+                    MessageBox.Show("Please enter quantity", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_qty_edimp.Focus();
+                }
+                else
+                {
+                    str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
+                    conn = new SqlConnection(str);
+                    conn.Open();
+                    cmd = new SqlCommand("dbo.sp_update_import", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ii", ii);
+                    cmd.Parameters.AddWithValue("@pi", pi);
+                    cmd.Parameters.AddWithValue("@iq", int.Parse(txt_qty_edimp.Text));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Your data have been saved!", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
             }
             catch (SqlException x)
             {
@@ -82,5 +89,6 @@ namespace Skincare_Management_System
                 e.Handled = true;
             }
         }
+
     }
 }

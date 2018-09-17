@@ -40,10 +40,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 90);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(69, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 25);
+            this.label1.Size = new System.Drawing.Size(175, 29);
             this.label1.TabIndex = 21;
             this.label1.Text = "Product Name";
             // 
@@ -51,21 +50,20 @@
             // 
             this.txt_name_edimp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_edimp.Location = new System.Drawing.Point(254, 88);
-            this.txt_name_edimp.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_name_edimp.Location = new System.Drawing.Point(339, 108);
+            this.txt_name_edimp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_name_edimp.Name = "txt_name_edimp";
             this.txt_name_edimp.ReadOnly = true;
-            this.txt_name_edimp.Size = new System.Drawing.Size(271, 30);
+            this.txt_name_edimp.Size = new System.Drawing.Size(361, 36);
             this.txt_name_edimp.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 172);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(69, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
+            this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 23;
             this.label2.Text = "Quantity";
             // 
@@ -73,11 +71,12 @@
             // 
             this.txt_qty_edimp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_qty_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_qty_edimp.Location = new System.Drawing.Point(254, 170);
-            this.txt_qty_edimp.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_qty_edimp.Location = new System.Drawing.Point(339, 209);
+            this.txt_qty_edimp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_qty_edimp.Name = "txt_qty_edimp";
-            this.txt_qty_edimp.Size = new System.Drawing.Size(271, 30);
+            this.txt_qty_edimp.Size = new System.Drawing.Size(361, 36);
             this.txt_qty_edimp.TabIndex = 22;
+            this.txt_qty_edimp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_qty_edimp_KeyPress);
             // 
             // btn_save_edimp
             // 
@@ -88,10 +87,10 @@
             this.btn_save_edimp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_edimp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_save_edimp.Location = new System.Drawing.Point(254, 248);
-            this.btn_save_edimp.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_save_edimp.Location = new System.Drawing.Point(339, 305);
+            this.btn_save_edimp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save_edimp.Name = "btn_save_edimp";
-            this.btn_save_edimp.Size = new System.Drawing.Size(103, 37);
+            this.btn_save_edimp.Size = new System.Drawing.Size(137, 46);
             this.btn_save_edimp.TabIndex = 31;
             this.btn_save_edimp.Text = "Save";
             this.btn_save_edimp.UseVisualStyleBackColor = false;
@@ -106,10 +105,10 @@
             this.btn_back_edimp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back_edimp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_edimp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_back_edimp.Location = new System.Drawing.Point(422, 248);
-            this.btn_back_edimp.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_back_edimp.Location = new System.Drawing.Point(563, 305);
+            this.btn_back_edimp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_back_edimp.Name = "btn_back_edimp";
-            this.btn_back_edimp.Size = new System.Drawing.Size(103, 37);
+            this.btn_back_edimp.Size = new System.Drawing.Size(137, 46);
             this.btn_back_edimp.TabIndex = 30;
             this.btn_back_edimp.Text = "Back";
             this.btn_back_edimp.UseVisualStyleBackColor = false;
@@ -117,16 +116,17 @@
             // 
             // frm_EditImport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_save_edimp);
             this.Controls.Add(this.btn_back_edimp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_qty_edimp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_name_edimp);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_EditImport";
