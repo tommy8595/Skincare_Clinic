@@ -139,7 +139,7 @@ namespace Skincare_Management_System
         {
 
             class_connection.insert_customer(txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
-                txt_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+                cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
             class_connection.reset_controll(this);
             SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
             sqlDataReader.Read();
@@ -154,7 +154,7 @@ namespace Skincare_Management_System
                 if (txt_id_patient.Text.Length == 0)
                 {
                     txt_address_patient.Text = "";
-                    txt_gender_patient.Text = "";
+                    cbo_gender_patient.Text = "";
                     txt_occupation_patient.Text = "";
                     txt_name_patient.Text = "";
                     txt_phone_patient.Text = "";
@@ -168,7 +168,7 @@ namespace Skincare_Management_System
                     {
                         txt_id_patient.Text = s_dr["cus_id"].ToString();
                         txt_name_patient.Text = s_dr["cus_name"].ToString();
-                        txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                        cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
@@ -191,7 +191,7 @@ namespace Skincare_Management_System
                     {
                         txt_id_patient.Text = s_dr["cus_id"].ToString();
                         txt_name_patient.Text = (s_dr["cus_name"].ToString());
-                        txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                        cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
@@ -222,7 +222,7 @@ namespace Skincare_Management_System
                 if (txt_id_patient.Text.Length != 0)
                 {
                     txt_address_patient.Text = "";
-                    txt_gender_patient.Text = "";
+                    cbo_gender_patient.Text = "";
                     txt_occupation_patient.Text = "";
                     txt_name_patient.Text = "";
                     txt_id_patient.Text = "";
@@ -236,7 +236,7 @@ namespace Skincare_Management_System
                     {
                         txt_id_patient.Text = s_dr["cus_id"].ToString();
                         txt_name_patient.Text = s_dr["cus_name"].ToString();
-                        txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                        cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         dt_dob_patient.Text = s_dr["cus_dob"].ToString();
@@ -254,7 +254,7 @@ namespace Skincare_Management_System
                 {
                     txt_id_patient.Text = s_dr["cus_id"].ToString();
                     txt_name_patient.Text = s_dr["cus_name"].ToString();
-                    txt_gender_patient.Text = s_dr["cus_gender"].ToString();
+                    cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
                     txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                     txt_address_patient.Text = s_dr["cus_address"].ToString();
                     dt_dob_patient.Text = s_dr["cus_dob"].ToString();
@@ -268,7 +268,7 @@ namespace Skincare_Management_System
         private void btn_edit_patient_Click(object sender, EventArgs e)
         {
             class_connection.update_customer(int.Parse(txt_id_patient.Text), txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
-               txt_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+               cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
             MessageBox.Show("Update Successful");
 
         }
