@@ -17,10 +17,21 @@ namespace Skincare_Management_System
             InitializeComponent();
 
         }
+        int his_id=0;
+        int id = 0;
+        string name;
+        public frm_ReportPatient(int his_id,int id,string name)
+        {
+            InitializeComponent();
+            this.his_id = his_id;
+            this.id = id;
+            this.name = name;
+
+        }
 
         private void frm_ReportPatient_Load(object sender, EventArgs e)
         {
-            this.sp_select_history1TableAdapter1.Fill(this.skin_cilinicDataSet11.sp_select_history1, class1.id, 2);
+            MessageBox.Show(his_id.ToString()+id.ToString()+name);
             this.reportViewer1.RefreshReport();
         }
     }

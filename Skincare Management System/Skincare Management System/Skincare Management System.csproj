@@ -11,6 +11,22 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ridh\Desktop\skin\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +46,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>72EF37FD7029DF503BCF7384C6DF8A57248EEEB8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Skincare Management System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -69,12 +97,6 @@
   <ItemGroup>
     <Compile Include="class1.cs" />
     <Compile Include="class_connection.cs" />
-    <Compile Include="frmPrintStockReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrintStockReport.Designer.cs">
-      <DependentUpon>frmPrintStockReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +187,12 @@
     <Compile Include="frm_Prescription.Designer.cs">
       <DependentUpon>frm_Prescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PrintStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PrintStockReport.Designer.cs">
+      <DependentUpon>frm_PrintStockReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Receipt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +238,9 @@
     <Compile Include="ObjectUpdateUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt\DataSetForReceipt.cs">
+      <DependentUpon>DataSetForReceipt.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Receipt\DataSetForReceipt1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -227,9 +258,6 @@
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="frmPrintStockReport.resx">
-      <DependentUpon>frmPrintStockReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_AddAccount.resx">
       <DependentUpon>frm_AddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Prescription.resx">
       <DependentUpon>frm_Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PrintStockReport.resx">
+      <DependentUpon>frm_PrintStockReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Receipt.resx">
       <DependentUpon>frm_Receipt.cs</DependentUpon>
@@ -334,9 +365,9 @@
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
     </None>
     <None Include="skin_cilinicDataSet1.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>skin_cilinicDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="skin_cilinicDataSet1.xss">
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
@@ -362,6 +393,18 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

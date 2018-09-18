@@ -1,6 +1,6 @@
 ﻿namespace Skincare_Management_System
 {
-    partial class frmPrintStockReport
+    partial class frm_PrintStockReport
     {
         /// <summary>
         /// Required designer variable.
@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            //this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.DataTable1TableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter();
+            this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
+            this.spprintstockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sp_print_stockTableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.sp_print_stockTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spprintstockBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable1BindingSource;
+            reportDataSource1.Value = this.spprintstockBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Skincare_Management_System.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            //this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
@@ -56,26 +56,26 @@
             this.skin_cilinicDataSet1.DataSetName = "skin_cilinicDataSet1";
             this.skin_cilinicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DataTable1BindingSource
+            // spprintstockBindingSource
             // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.skin_cilinicDataSet1;
+            this.spprintstockBindingSource.DataMember = "sp_print_stock";
+            this.spprintstockBindingSource.DataSource = this.skin_cilinicDataSet1;
             // 
-            // DataTable1TableAdapter
+            // sp_print_stockTableAdapter
             // 
-            //this.DataTable1TableAdapter.ClearBeforeFill = true;
+            this.sp_print_stockTableAdapter.ClearBeforeFill = true;
             // 
-            // frmPrintStockReport
+            // frm_PrintStockReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmPrintStockReport";
-            this.Text = "frmPrintStockReport";
-            this.Load += new System.EventHandler(this.frmPrintStockReport_Load);
+            this.Name = "frm_PrintStockReport";
+            this.Text = "frm_PrintStockReport";
+            this.Load += new System.EventHandler(this.frm_PrintStockReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spprintstockBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,8 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private skin_cilinicDataSet1 skin_cilinicDataSet1;
-        //private skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private System.Windows.Forms.BindingSource spprintstockBindingSource;
+        private skin_cilinicDataSet1TableAdapters.sp_print_stockTableAdapter sp_print_stockTableAdapter;
     }
 }

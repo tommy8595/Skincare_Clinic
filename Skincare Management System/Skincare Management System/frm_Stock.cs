@@ -117,7 +117,7 @@ namespace Skincare_Management_System
 
         private void btn_print_frmstock_Click(object sender, EventArgs e)
         {
-            frmPrintStockReport f = new frmPrintStockReport();
+            frm_PrintStockReport f = new frm_PrintStockReport();
             f.Show();
         }
 
