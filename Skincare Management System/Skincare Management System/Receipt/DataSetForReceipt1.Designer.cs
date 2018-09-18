@@ -460,6 +460,13 @@ namespace Skincare_Management_System.Receipt {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PatientRow FindBycus_id(int cus_id) {
+                return ((PatientRow)(this.Rows.Find(new object[] {
+                            cus_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 PatientDataTable cln = ((PatientDataTable)(base.Clone()));
                 cln.InitVars();
@@ -498,7 +505,10 @@ namespace Skincare_Management_System.Receipt {
                 base.Columns.Add(this.columnlevel);
                 this.columnage = new global::System.Data.DataColumn("age", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnage);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncus_id}, true));
                 this.columncus_id.AllowDBNull = false;
+                this.columncus_id.Unique = true;
                 this.columncus_name.MaxLength = 2147483647;
                 this.columncus_gender.MaxLength = 10;
                 this.columndiagnostics.MaxLength = 2147483647;
@@ -1591,18 +1601,25 @@ namespace Skincare_Management_System.Receipt.DataSetForReceiptTableAdapters {
             this._commandCollection[0].CommandText = @"SELECT cus.cus_id, cus.cus_name, cus.cus_gender, his.diagnostics, his.level, YEAR(GETDATE()) - YEAR(cus.cus_dob) AS age
 FROM     tbl_customer AS cus INNER JOIN
                   tbl_history AS his ON cus.cus_id = his.cus_id
-WHERE  (cus.cus_id = @cus_id)";
+WHERE  (cus.cus_id = @cus_id) AND (his.his_id = @his_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cus_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cus_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@his_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "his_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetForReceipt.PatientDataTable dataTable, int cus_id) {
+        public virtual int Fill(DataSetForReceipt.PatientDataTable dataTable, int cus_id, global::System.Nullable<int> his_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(cus_id));
+            if ((his_id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(his_id.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
