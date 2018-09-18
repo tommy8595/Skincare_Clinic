@@ -32,7 +32,7 @@ namespace Skincare_Management_System
         private void frm_ReportPatient_Load(object sender, EventArgs e)
         {
             sp_select_history1TableAdapter1.Fill(skin_cilinicDataSet11.sp_select_history1,id,his_id);
-            MessageBox.Show(his_id.ToString()+id.ToString()+name);
+           
             this.reportViewer1.RefreshReport();
         }
     }
