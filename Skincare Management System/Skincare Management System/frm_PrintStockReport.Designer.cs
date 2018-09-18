@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
             this.spprintstockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.sp_print_stockTableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.sp_print_stockTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spprintstockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spprintstockBindingSource
+            // 
+            this.spprintstockBindingSource.DataMember = "sp_print_stock";
+            this.spprintstockBindingSource.DataSource = this.skin_cilinicDataSet1;
+            // 
+            // skin_cilinicDataSet1
+            // 
+            this.skin_cilinicDataSet1.DataSetName = "skin_cilinicDataSet1";
+            this.skin_cilinicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // skin_cilinicDataSet1
-            // 
-            this.skin_cilinicDataSet1.DataSetName = "skin_cilinicDataSet1";
-            this.skin_cilinicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // spprintstockBindingSource
-            // 
-            this.spprintstockBindingSource.DataMember = "sp_print_stock";
-            this.spprintstockBindingSource.DataSource = this.skin_cilinicDataSet1;
-            // 
             // sp_print_stockTableAdapter
             // 
             this.sp_print_stockTableAdapter.ClearBeforeFill = true;
@@ -74,8 +74,8 @@
             this.Name = "frm_PrintStockReport";
             this.Text = "frm_PrintStockReport";
             this.Load += new System.EventHandler(this.frm_PrintStockReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spprintstockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
