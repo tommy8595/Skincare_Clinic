@@ -141,6 +141,10 @@ namespace Skincare_Management_System
             class_connection.insert_customer(txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
                 txt_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
             class_connection.reset_controll(this);
+            SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
+            sqlDataReader.Read();
+            string id = sqlDataReader.GetValue(0).ToString();
+            MessageBox.Show("You have successful, The id is \t"+id);
 
         }
         private void txt_id_patient_KeyUp(object sender, KeyEventArgs e)
@@ -153,7 +157,7 @@ namespace Skincare_Management_System
                     txt_gender_patient.Text = "";
                     txt_occupation_patient.Text = "";
                     txt_name_patient.Text = "";
-
+                    txt_phone_patient.Text = "";
                     dt_dob_patient.Text = "";
 
                 }
@@ -197,10 +201,15 @@ namespace Skincare_Management_System
                 }
                 catch (Exception ex)
                 {
-                    if(txt_id_patient.Text.Length > 1) {
-                        txt_id_patient.Text = txt_id_patient.Text.Substring(0, txt_id_patient.Text.Length - 1);
-                    }
+                    if (txt_id_patient.Text.Length==1)
+                        txt_id_patient.Text = "0";
                    
+                    if (txt_id_patient.Text.Length > 1) 
+                    {
+                        txt_id_patient.Text = txt_id_patient.Text.Substring(0, txt_id_patient.Text.Length - 1);
+                       
+                    }
+                    
                     MessageBox.Show("Please Input the number");
                 }
 
@@ -210,7 +219,7 @@ namespace Skincare_Management_System
         {
             if (e.KeyCode == Keys.Back)
             {
-                if (txt_phone_patient.Text.Length == 0)
+                if (txt_id_patient.Text.Length != 0)
                 {
                     txt_address_patient.Text = "";
                     txt_gender_patient.Text = "";

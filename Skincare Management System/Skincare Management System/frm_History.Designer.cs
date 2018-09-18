@@ -54,6 +54,7 @@
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.history_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_history)).BeginInit();
@@ -238,7 +239,8 @@
             this.Investigation,
             this.Location,
             this.Diagnostic,
-            this.Level});
+            this.Level,
+            this.history_id});
             this.dgv_history.Location = new System.Drawing.Point(584, 211);
             this.dgv_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_history.Name = "dgv_history";
@@ -371,6 +373,13 @@
             this.Level.HeaderText = "Level";
             this.Level.Name = "Level";
             // 
+            // history_id
+            // 
+            this.history_id.DataPropertyName = "his_id";
+            this.history_id.HeaderText = "history_id";
+            this.history_id.Name = "history_id";
+            this.history_id.Visible = false;
+            // 
             // frm_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -432,5 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostic;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
+        private System.Windows.Forms.DataGridViewTextBoxColumn history_id;
     }
 }

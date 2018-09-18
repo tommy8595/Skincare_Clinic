@@ -101,7 +101,7 @@ namespace Skincare_Management_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
 
         private void btn_add_history_Click(object sender, EventArgs e)
@@ -122,7 +122,8 @@ namespace Skincare_Management_System
 
         private void btn_print_history_Click(object sender, EventArgs e)
         {
-            frm_ReportPatient rp = new frm_ReportPatient();
+            frm_ReportPatient rp = new frm_ReportPatient
+            (int.Parse(dgv_history.CurrentRow.Cells["history_id"].Value.ToString()),int.Parse(txt_id_history.Text),txt_name_history.Text);
             rp.Show();
         }
 
@@ -135,6 +136,7 @@ namespace Skincare_Management_System
             DataTable dt = new DataTable();
             dt.Load(class_connection.get_history_id(class1.id));
             dgv_history.DataSource = dt;
+            
         }
     }
 }
