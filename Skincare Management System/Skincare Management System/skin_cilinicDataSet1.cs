@@ -4,6 +4,9 @@
 
     partial class skin_cilinicDataSet1
     {
+        partial class sp_print_stockDataTable
+        {
+        }
     }
 }
 

@@ -123,7 +123,7 @@ namespace Skincare_Management_System
         private void btn_print_history_Click(object sender, EventArgs e)
         {
             frm_ReportPatient rp = new frm_ReportPatient
-            (int.Parse(dgv_history.CurrentRow.Cells["history_id"].Value.ToString()),int.Parse(txt_id_history.Text),txt_name_history.Text);
+            (int.Parse(dgv_history.CurrentRow.Cells[7].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
             rp.Show();
         }
 

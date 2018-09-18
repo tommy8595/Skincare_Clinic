@@ -17,8 +17,8 @@ namespace Skincare_Management_System
         {
             InitializeComponent();
 
-            prescriptonBindingSource.DataSource = dataSetForReceipt.Prescripton.Rows;
-            ReportDataSource reportDataSource = new ReportDataSource("Prescription", prescriptonBindingSource);
+            prescriptonBindingSource.DataSource = dataSetForReceipt.Prescripton;
+            ReportDataSource reportDataSource = new ReportDataSource("Prescripton",prescriptonBindingSource);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
 
         }
@@ -34,6 +34,7 @@ namespace Skincare_Management_System
             {
                 MessageBox.Show(ex.Message);
             }
+            this.reportViewer1.RefreshReport();
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

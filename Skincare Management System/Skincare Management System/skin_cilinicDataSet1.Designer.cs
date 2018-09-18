@@ -808,17 +808,17 @@ namespace Skincare_Management_System {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class sp_print_stockDataTable : global::System.Data.TypedTableBase<sp_print_stockRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnpro_id;
             
-            private global::System.Data.DataColumn columnName;
+            private global::System.Data.DataColumn columnpro_name;
             
-            private global::System.Data.DataColumn columnCategory;
+            private global::System.Data.DataColumn columncat_name;
             
-            private global::System.Data.DataColumn columnSell_Price;
+            private global::System.Data.DataColumn columnpro_sup;
             
-            private global::System.Data.DataColumn columnImport_Price;
+            private global::System.Data.DataColumn columnpro_upis;
             
-            private global::System.Data.DataColumn columnQTY;
+            private global::System.Data.DataColumn columnpro_qty;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -855,49 +855,49 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn pro_idColumn {
                 get {
-                    return this.columnID;
+                    return this.columnpro_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn pro_nameColumn {
                 get {
-                    return this.columnName;
+                    return this.columnpro_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CategoryColumn {
+            public global::System.Data.DataColumn cat_nameColumn {
                 get {
-                    return this.columnCategory;
+                    return this.columncat_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Sell_PriceColumn {
+            public global::System.Data.DataColumn pro_supColumn {
                 get {
-                    return this.columnSell_Price;
+                    return this.columnpro_sup;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Import_PriceColumn {
+            public global::System.Data.DataColumn pro_upisColumn {
                 get {
-                    return this.columnImport_Price;
+                    return this.columnpro_upis;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn QTYColumn {
+            public global::System.Data.DataColumn pro_qtyColumn {
                 get {
-                    return this.columnQTY;
+                    return this.columnpro_qty;
                 }
             }
             
@@ -938,15 +938,15 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_print_stockRow Addsp_print_stockRow(int ID, string Name, string Category, double Sell_Price, double Import_Price, int QTY) {
+            public sp_print_stockRow Addsp_print_stockRow(int pro_id, string pro_name, string cat_name, double pro_sup, double pro_upis, int pro_qty) {
                 sp_print_stockRow rowsp_print_stockRow = ((sp_print_stockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
-                        Name,
-                        Category,
-                        Sell_Price,
-                        Import_Price,
-                        QTY};
+                        pro_id,
+                        pro_name,
+                        cat_name,
+                        pro_sup,
+                        pro_upis,
+                        pro_qty};
                 rowsp_print_stockRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsp_print_stockRow);
                 return rowsp_print_stockRow;
@@ -954,9 +954,9 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_print_stockRow FindByID(int ID) {
+            public sp_print_stockRow FindBypro_id(int pro_id) {
                 return ((sp_print_stockRow)(this.Rows.Find(new object[] {
-                            ID})));
+                            pro_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -976,35 +976,35 @@ namespace Skincare_Management_System {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnName = base.Columns["Name"];
-                this.columnCategory = base.Columns["Category"];
-                this.columnSell_Price = base.Columns["Sell Price"];
-                this.columnImport_Price = base.Columns["Import Price"];
-                this.columnQTY = base.Columns["QTY"];
+                this.columnpro_id = base.Columns["pro_id"];
+                this.columnpro_name = base.Columns["pro_name"];
+                this.columncat_name = base.Columns["cat_name"];
+                this.columnpro_sup = base.Columns["pro_sup"];
+                this.columnpro_upis = base.Columns["pro_upis"];
+                this.columnpro_qty = base.Columns["pro_qty"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
-                this.columnCategory = new global::System.Data.DataColumn("Category", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCategory);
-                this.columnSell_Price = new global::System.Data.DataColumn("Sell Price", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSell_Price);
-                this.columnImport_Price = new global::System.Data.DataColumn("Import Price", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnImport_Price);
-                this.columnQTY = new global::System.Data.DataColumn("QTY", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQTY);
+                this.columnpro_id = new global::System.Data.DataColumn("pro_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpro_id);
+                this.columnpro_name = new global::System.Data.DataColumn("pro_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpro_name);
+                this.columncat_name = new global::System.Data.DataColumn("cat_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncat_name);
+                this.columnpro_sup = new global::System.Data.DataColumn("pro_sup", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpro_sup);
+                this.columnpro_upis = new global::System.Data.DataColumn("pro_upis", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpro_upis);
+                this.columnpro_qty = new global::System.Data.DataColumn("pro_qty", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpro_qty);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
-                this.columnName.MaxLength = 2147483647;
-                this.columnCategory.MaxLength = 2147483647;
+                                this.columnpro_id}, true));
+                this.columnpro_id.AllowDBNull = false;
+                this.columnpro_id.Unique = true;
+                this.columnpro_name.MaxLength = 2147483647;
+                this.columncat_name.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1593,153 +1593,153 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID {
+            public int pro_id {
                 get {
-                    return ((int)(this[this.tablesp_print_stock.IDColumn]));
+                    return ((int)(this[this.tablesp_print_stock.pro_idColumn]));
                 }
                 set {
-                    this[this.tablesp_print_stock.IDColumn] = value;
+                    this[this.tablesp_print_stock.pro_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Name {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_print_stock.NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'sp_print_stock\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_print_stock.NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Category {
+            public string pro_name {
                 get {
                     try {
-                        return ((string)(this[this.tablesp_print_stock.CategoryColumn]));
+                        return ((string)(this[this.tablesp_print_stock.pro_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Category\' in table \'sp_print_stock\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pro_name\' in table \'sp_print_stock\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_print_stock.CategoryColumn] = value;
+                    this[this.tablesp_print_stock.pro_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double Sell_Price {
+            public string cat_name {
                 get {
                     try {
-                        return ((double)(this[this.tablesp_print_stock.Sell_PriceColumn]));
+                        return ((string)(this[this.tablesp_print_stock.cat_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Sell Price\' in table \'sp_print_stock\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cat_name\' in table \'sp_print_stock\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_print_stock.Sell_PriceColumn] = value;
+                    this[this.tablesp_print_stock.cat_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double Import_Price {
+            public double pro_sup {
                 get {
                     try {
-                        return ((double)(this[this.tablesp_print_stock.Import_PriceColumn]));
+                        return ((double)(this[this.tablesp_print_stock.pro_supColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Import Price\' in table \'sp_print_stock\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pro_sup\' in table \'sp_print_stock\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_print_stock.Import_PriceColumn] = value;
+                    this[this.tablesp_print_stock.pro_supColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int QTY {
+            public double pro_upis {
                 get {
                     try {
-                        return ((int)(this[this.tablesp_print_stock.QTYColumn]));
+                        return ((double)(this[this.tablesp_print_stock.pro_upisColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'QTY\' in table \'sp_print_stock\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pro_upis\' in table \'sp_print_stock\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_print_stock.QTYColumn] = value;
+                    this[this.tablesp_print_stock.pro_upisColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNameNull() {
-                return this.IsNull(this.tablesp_print_stock.NameColumn);
+            public int pro_qty {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_print_stock.pro_qtyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pro_qty\' in table \'sp_print_stock\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_print_stock.pro_qtyColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNameNull() {
-                this[this.tablesp_print_stock.NameColumn] = global::System.Convert.DBNull;
+            public bool Ispro_nameNull() {
+                return this.IsNull(this.tablesp_print_stock.pro_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCategoryNull() {
-                return this.IsNull(this.tablesp_print_stock.CategoryColumn);
+            public void Setpro_nameNull() {
+                this[this.tablesp_print_stock.pro_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCategoryNull() {
-                this[this.tablesp_print_stock.CategoryColumn] = global::System.Convert.DBNull;
+            public bool Iscat_nameNull() {
+                return this.IsNull(this.tablesp_print_stock.cat_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsSell_PriceNull() {
-                return this.IsNull(this.tablesp_print_stock.Sell_PriceColumn);
+            public void Setcat_nameNull() {
+                this[this.tablesp_print_stock.cat_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetSell_PriceNull() {
-                this[this.tablesp_print_stock.Sell_PriceColumn] = global::System.Convert.DBNull;
+            public bool Ispro_supNull() {
+                return this.IsNull(this.tablesp_print_stock.pro_supColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsImport_PriceNull() {
-                return this.IsNull(this.tablesp_print_stock.Import_PriceColumn);
+            public void Setpro_supNull() {
+                this[this.tablesp_print_stock.pro_supColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetImport_PriceNull() {
-                this[this.tablesp_print_stock.Import_PriceColumn] = global::System.Convert.DBNull;
+            public bool Ispro_upisNull() {
+                return this.IsNull(this.tablesp_print_stock.pro_upisColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsQTYNull() {
-                return this.IsNull(this.tablesp_print_stock.QTYColumn);
+            public void Setpro_upisNull() {
+                this[this.tablesp_print_stock.pro_upisColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetQTYNull() {
-                this[this.tablesp_print_stock.QTYColumn] = global::System.Convert.DBNull;
+            public bool Ispro_qtyNull() {
+                return this.IsNull(this.tablesp_print_stock.pro_qtyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpro_qtyNull() {
+                this[this.tablesp_print_stock.pro_qtyColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1968,18 +1968,18 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sp_select_history1";
+            this._commandCollection[0].CommandText = "dbo.sp_select_history";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ci", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hi", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@his", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(skin_cilinicDataSet1.sp_select_history1DataTable dataTable, global::System.Nullable<int> ci, global::System.Nullable<int> hi) {
+        public virtual int Fill(skin_cilinicDataSet1.sp_select_history1DataTable dataTable, global::System.Nullable<int> ci, global::System.Nullable<int> his) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ci.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ci.Value));
@@ -1987,8 +1987,8 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((hi.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(hi.Value));
+            if ((his.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(his.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -2004,7 +2004,7 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual skin_cilinicDataSet1.sp_select_history1DataTable GetData(global::System.Nullable<int> ci, global::System.Nullable<int> hi) {
+        public virtual skin_cilinicDataSet1.sp_select_history1DataTable GetData(global::System.Nullable<int> ci, global::System.Nullable<int> his) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ci.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ci.Value));
@@ -2012,8 +2012,8 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((hi.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(hi.Value));
+            if ((his.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(his.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -2145,12 +2145,12 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "sp_print_stock";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("Category", "Category");
-            tableMapping.ColumnMappings.Add("Sell Price", "Sell Price");
-            tableMapping.ColumnMappings.Add("Import Price", "Import Price");
-            tableMapping.ColumnMappings.Add("QTY", "QTY");
+            tableMapping.ColumnMappings.Add("pro_id", "pro_id");
+            tableMapping.ColumnMappings.Add("pro_name", "pro_name");
+            tableMapping.ColumnMappings.Add("cat_name", "cat_name");
+            tableMapping.ColumnMappings.Add("pro_sup", "pro_sup");
+            tableMapping.ColumnMappings.Add("pro_upis", "pro_upis");
+            tableMapping.ColumnMappings.Add("pro_qty", "pro_qty");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2167,9 +2167,10 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT tbl_product.pro_id AS ID, tbl_product.pro_name AS Name, tbl_catagory.cat_name AS Category, tbl_product.pro_sup AS [Sell Price], tbl_product.pro_upis AS [Import Price], tbl_product.pro_qty AS QTY
-FROM     tbl_catagory INNER JOIN
-                  tbl_product ON tbl_catagory.cat_id = tbl_product.cat_id";
+            this._commandCollection[0].CommandText = "SELECT tbl_product.pro_id, tbl_product.pro_name, tbl_catagory.cat_name, tbl_produ" +
+                "ct.pro_sup, tbl_product.pro_upis, tbl_product.pro_qty\r\nFROM     tbl_catagory INN" +
+                "ER JOIN\r\n                  tbl_product ON tbl_catagory.cat_id = tbl_product.cat_" +
+                "id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
