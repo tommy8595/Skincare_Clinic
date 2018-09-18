@@ -147,7 +147,7 @@ namespace Skincare_Management_System
             }
             for(int i=1;i<8;i++)
             this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
-
+          
         }
     }
 }

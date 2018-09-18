@@ -252,6 +252,7 @@ namespace Skincare_Management_System
             }
             return total;
         }
+        public static int his_id = 0;
 
         public void frm_Prescription_Load(object sender, EventArgs e)
         {
@@ -261,7 +262,11 @@ namespace Skincare_Management_System
             comboBox1.Text = "Pick one..";
             cboName.Text = "Pick Category first.";
             txt_consultation.Text = "0";
-            
+            string q = "Select max(his_id) from tbl_history where cus_id= " + class1.id;
+            SqlDataReader dr = new SqlCommand(q, class_connection.connection()).ExecuteReader();
+            dr.Read();
+            his_id = int.Parse(dr.GetValue(0).ToString());
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -392,7 +397,7 @@ namespace Skincare_Management_System
                 throw;
             }
         }
-
+       
         private void txt_consultation_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&

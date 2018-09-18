@@ -74,7 +74,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 821);
+            this.panel1.Size = new System.Drawing.Size(492, 1303);
             this.panel1.TabIndex = 0;
             // 
             // btn_Setting
@@ -353,7 +353,7 @@
             this.btn_prescription_patient.Location = new System.Drawing.Point(944, 1142);
             this.btn_prescription_patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_prescription_patient.Name = "btn_prescription_patient";
-            this.btn_prescription_patient.Size = new System.Drawing.Size(163, 45);
+            this.btn_prescription_patient.Size = new System.Drawing.Size(267, 70);
             this.btn_prescription_patient.TabIndex = 12;
             this.btn_prescription_patient.Text = "Prescription";
             this.btn_prescription_patient.UseVisualStyleBackColor = false;
@@ -423,7 +423,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.ClientSize = new System.Drawing.Size(2279, 1303);
             this.Controls.Add(this.cbo_gender_patient);
             this.Controls.Add(this.txt_id_patient);
             this.Controls.Add(this.btn_edit_patient);
