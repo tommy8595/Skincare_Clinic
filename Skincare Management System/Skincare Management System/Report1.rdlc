@@ -361,7 +361,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!cus_name.Value, "DataSet2")</Value>
+                <Value>=First(Fields!cus_name.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -391,7 +391,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!cus_gender.Value, "DataSet2")</Value>
+                <Value>=First(Fields!cus_gender.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -421,7 +421,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Year(Now()) - Year(First(Fields!cus_dob.Value, "DataSet2"))</Value>
+                <Value>=Year(Now()) - Year(First(Fields!cus_dob.Value, "DataSet1"))</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -451,7 +451,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!cus_occupation.Value, "DataSet2")</Value>
+                <Value>=First(Fields!cus_occupation.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -481,7 +481,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!cus_address.Value, "DataSet2")</Value>
+                <Value>=First(Fields!cus_address.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -511,7 +511,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!cus_phone.Value, "DataSet2")</Value>
+                <Value>=First(Fields!cus_phone.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -690,7 +690,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=First(Fields!history.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -953,67 +953,16 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="skin_cilinicDataSet">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>1d99f9a6-831e-4bc5-8661-fcbf361c8c52</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="skin_cilinicDataSet1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3e09f835-17d4-4327-8a8b-a4e2b9f00672</rd:DataSourceID>
+      <rd:DataSourceID>433ebee3-8db2-4c9a-a835-16325256d4d3</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
-      <Query>
-        <DataSourceName>skin_cilinicDataSet1</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="cus_id">
-          <DataField>cus_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="skin_examination">
-          <DataField>skin_examination</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="inverstigation">
-          <DataField>inverstigation</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="location">
-          <DataField>location</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="diagnostics">
-          <DataField>diagnostics</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="his_id">
-          <DataField>his_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="level">
-          <DataField>level</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>skin_cilinicDataSet1</rd:DataSetName>
-        <rd:SchemaPath>D:\skin_care\Skincare Management System\Skincare Management System\skin_cilinicDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>tbl_history</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tbl_historyTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSet2">
       <Query>
         <DataSourceName>skin_cilinicDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1047,14 +996,50 @@
           <DataField>cus_occupation</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="cus_id1">
+          <DataField>cus_id1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="skin_examination">
+          <DataField>skin_examination</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="inverstigation">
+          <DataField>inverstigation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="location">
+          <DataField>location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="diagnostics">
+          <DataField>diagnostics</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="his_id">
+          <DataField>his_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="level">
+          <DataField>level</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="history">
+          <DataField>history</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>skin_cilinicDataSet1</rd:DataSetName>
-        <rd:SchemaPath>D:\skin_care\Skincare Management System\Skincare Management System\skin_cilinicDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>tbl_customer</rd:TableName>
+        <rd:SchemaPath>D:\skin care\Skincare Management System\Skincare Management System\skin_cilinicDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>sp_select_history1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tbl_customerTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>sp_select_history1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

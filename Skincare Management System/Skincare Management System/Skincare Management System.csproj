@@ -218,11 +218,6 @@
     <Compile Include="SkinCareConnection.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="skin_cilinicDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="skin_cilinicDataSet1.cs">
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
     </Compile>
@@ -335,24 +330,13 @@
     <None Include="Receipt\DataSetForReceipt.xss">
       <DependentUpon>DataSetForReceipt.xsd</DependentUpon>
     </None>
-    <None Include="skin_cilinicDataSet.xsc">
-      <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="skin_cilinicDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>skin_cilinicDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="skin_cilinicDataSet.xss">
-      <DependentUpon>skin_cilinicDataSet.xsd</DependentUpon>
-    </None>
     <None Include="skin_cilinicDataSet1.xsc">
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>
     </None>
     <None Include="skin_cilinicDataSet1.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>skin_cilinicDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="skin_cilinicDataSet1.xss">
       <DependentUpon>skin_cilinicDataSet1.xsd</DependentUpon>

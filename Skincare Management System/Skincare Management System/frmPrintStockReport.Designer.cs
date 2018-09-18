@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
+            //this.skin_cilinicDataSet1 = new Skincare_Management_System.skin_cilinicDataSet1();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable1TableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter();
+            //this.DataTable1TableAdapter = new Skincare_Management_System.skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.skin_cilinicDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             // 
             // DataTable1TableAdapter
             // 
-            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            //this.DataTable1TableAdapter.ClearBeforeFill = true;
             // 
             // frmPrintStockReport
             // 
@@ -85,6 +85,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private skin_cilinicDataSet1 skin_cilinicDataSet1;
-        private skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        //private skin_cilinicDataSet1TableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
     }
 }
