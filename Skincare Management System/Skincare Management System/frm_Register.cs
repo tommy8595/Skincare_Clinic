@@ -127,11 +127,14 @@ namespace Skincare_Management_System
 
         private void txt_importprice_register_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((int)e.KeyChar == 8)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
             {
-                return;
+                e.Handled = true;
             }
-            if (e.KeyChar < '0' || e.KeyChar > '9')
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
@@ -139,11 +142,14 @@ namespace Skincare_Management_System
 
         private void txt_sellprice_register_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((int)e.KeyChar == 8)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
             {
-                return;
+                e.Handled = true;
             }
-            if (e.KeyChar < '0' || e.KeyChar > '9')
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
