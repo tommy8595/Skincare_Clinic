@@ -56,8 +56,7 @@ namespace Skincare_Management_System
                     {                      
                         spl = lst_category_register.Text.Split('.');                       
                         SqlCommand cmd = new SqlCommand("dbo.sp_insert_product", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        
+                        cmd.CommandType = CommandType.StoredProcedure;                    
                         cmd.Parameters.AddWithValue("@pn", txt_name_register.Text);
                         cmd.Parameters.AddWithValue("@ci", spl[0]);
                         cmd.Parameters.AddWithValue("@ps", txt_sellprice_register.Text);
@@ -69,8 +68,7 @@ namespace Skincare_Management_System
                         txt_sellprice_register.Clear();
                         lst_category_register.Text = "";
                         MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        con.Close();
-                        this.Close();                        
+                        con.Close(); 
                     }
                     else
                     {
@@ -129,11 +127,14 @@ namespace Skincare_Management_System
 
         private void txt_importprice_register_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((int)e.KeyChar == 8)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
             {
-                return;
+                e.Handled = true;
             }
-            if (e.KeyChar < '0' || e.KeyChar > '9')
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
@@ -141,11 +142,14 @@ namespace Skincare_Management_System
 
         private void txt_sellprice_register_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((int)e.KeyChar == 8)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '.'))
             {
-                return;
+                e.Handled = true;
             }
-            if (e.KeyChar < '0' || e.KeyChar > '9')
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }
