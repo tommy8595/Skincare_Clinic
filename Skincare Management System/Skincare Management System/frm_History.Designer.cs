@@ -42,11 +42,6 @@
             this.txt_name_history = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_history = new System.Windows.Forms.DataGridView();
-            this.btn_edit_history = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_add_history = new System.Windows.Forms.Button();
-            this.btn_back_history = new System.Windows.Forms.Button();
-            this.btn_print_history = new System.Windows.Forms.Button();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.History = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SkinExamination = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +50,10 @@
             this.Diagnostic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.history_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_add_history = new System.Windows.Forms.Button();
+            this.btn_back_history = new System.Windows.Forms.Button();
+            this.btn_print_history = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_history)).BeginInit();
@@ -250,22 +249,54 @@
             this.dgv_history.TabIndex = 13;
             this.dgv_history.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btn_edit_history
+            // Date
             // 
-            this.btn_edit_history.BackColor = System.Drawing.Color.White;
-            this.btn_edit_history.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_edit_history.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_edit_history.FlatAppearance.BorderSize = 2;
-            this.btn_edit_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit_history.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_edit_history.Location = new System.Drawing.Point(1743, 1142);
-            this.btn_edit_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_edit_history.Name = "btn_edit_history";
-            this.btn_edit_history.Size = new System.Drawing.Size(206, 70);
-            this.btn_edit_history.TabIndex = 24;
-            this.btn_edit_history.Text = "Edit";
-            this.btn_edit_history.UseVisualStyleBackColor = false;
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
+            // History
+            // 
+            this.History.DataPropertyName = "History";
+            this.History.HeaderText = "History";
+            this.History.Name = "History";
+            // 
+            // SkinExamination
+            // 
+            this.SkinExamination.DataPropertyName = "Skin Examination";
+            this.SkinExamination.HeaderText = "Skin Examination";
+            this.SkinExamination.Name = "SkinExamination";
+            // 
+            // Investigation
+            // 
+            this.Investigation.DataPropertyName = "Investigation";
+            this.Investigation.HeaderText = "Investigation";
+            this.Investigation.Name = "Investigation";
+            // 
+            // Location
+            // 
+            this.Location.DataPropertyName = "Location";
+            this.Location.HeaderText = "Location";
+            this.Location.Name = "Location";
+            // 
+            // Diagnostic
+            // 
+            this.Diagnostic.DataPropertyName = "Diagnostics";
+            this.Diagnostic.HeaderText = "Diagnostic";
+            this.Diagnostic.Name = "Diagnostic";
+            // 
+            // Level
+            // 
+            this.Level.DataPropertyName = "Level";
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            // 
+            // history_id
+            // 
+            this.history_id.DataPropertyName = "his_id";
+            this.history_id.HeaderText = "history_id";
+            this.history_id.Name = "history_id";
+            this.history_id.Visible = false;
             // 
             // pictureBox1
             // 
@@ -322,7 +353,7 @@
             this.btn_print_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_print_history.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_print_history.Location = new System.Drawing.Point(1464, 1142);
+            this.btn_print_history.Location = new System.Drawing.Point(1743, 1142);
             this.btn_print_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_print_history.Name = "btn_print_history";
             this.btn_print_history.Size = new System.Drawing.Size(206, 70);
@@ -330,55 +361,6 @@
             this.btn_print_history.Text = "Print";
             this.btn_print_history.UseVisualStyleBackColor = false;
             this.btn_print_history.Click += new System.EventHandler(this.btn_print_history_Click);
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // History
-            // 
-            this.History.DataPropertyName = "History";
-            this.History.HeaderText = "History";
-            this.History.Name = "History";
-            // 
-            // SkinExamination
-            // 
-            this.SkinExamination.DataPropertyName = "Skin Examination";
-            this.SkinExamination.HeaderText = "Skin Examination";
-            this.SkinExamination.Name = "SkinExamination";
-            // 
-            // Investigation
-            // 
-            this.Investigation.DataPropertyName = "Investigation";
-            this.Investigation.HeaderText = "Investigation";
-            this.Investigation.Name = "Investigation";
-            // 
-            // Location
-            // 
-            this.Location.DataPropertyName = "Location";
-            this.Location.HeaderText = "Location";
-            this.Location.Name = "Location";
-            // 
-            // Diagnostic
-            // 
-            this.Diagnostic.DataPropertyName = "Diagnostics";
-            this.Diagnostic.HeaderText = "Diagnostic";
-            this.Diagnostic.Name = "Diagnostic";
-            // 
-            // Level
-            // 
-            this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.Name = "Level";
-            // 
-            // history_id
-            // 
-            this.history_id.DataPropertyName = "his_id";
-            this.history_id.HeaderText = "history_id";
-            this.history_id.Name = "history_id";
-            this.history_id.Visible = false;
             // 
             // frm_History
             // 
@@ -390,7 +372,6 @@
             this.Controls.Add(this.btn_back_history);
             this.Controls.Add(this.btn_add_history);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_edit_history);
             this.Controls.Add(this.dgv_history);
             this.Controls.Add(this.txt_name_history);
             this.Controls.Add(this.label4);
@@ -429,7 +410,6 @@
         private System.Windows.Forms.TextBox txt_name_history;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_history;
-        private System.Windows.Forms.Button btn_edit_history;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_add_history;
         private System.Windows.Forms.Button btn_back_history;
