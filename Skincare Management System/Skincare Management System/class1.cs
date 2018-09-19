@@ -10,6 +10,6 @@ namespace Skincare_Management_System
     {
         public static string name;
         public static int id;
-
+        public static int his_id;
     }
 }

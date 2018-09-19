@@ -22,13 +22,13 @@ namespace Skincare_Management_System
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
 
         }
-        int his_id = frm_Prescription.his_id;
+      
         private void frm_Receipt_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSetForReceipt.Prescription' table. You can move, or remove it, as needed.
             try
             {
-                this.patientTableAdapter.Fill(this.dataSetForReceipt.Patient, class1.id,his_id);
+                this.patientTableAdapter.Fill(this.dataSetForReceipt.Patient, class1.id,class1.his_id);
                 this.reportViewer1.RefreshReport();
                 
             }catch(Exception ex)

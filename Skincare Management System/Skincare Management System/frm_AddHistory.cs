@@ -117,9 +117,17 @@ namespace Skincare_Management_System
 
         private void btn_save_addhistory_Click(object sender, EventArgs e)
         {
-            class_connection.insert_history(class1.id,rt_history_addhistory.Text,rt_se_addhistory.Text,txt_location_addhistory.Text,rt_investigation_addhistory.Text,rt_diagnosis_addhistory.Text,cbo_level.Text);
+            class_connection.insert_history(class1.id, rt_history_addhistory.Text, rt_se_addhistory.Text, txt_location_addhistory.Text, rt_investigation_addhistory.Text, rt_diagnosis_addhistory.Text, cbo_level.Text);
             MessageBox.Show("You have Saved");
             class_connection.reset_controll(this);
+            th = new Thread(open_report_history);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+        
+        public void open_report_history()
+        {
+            Application.Run(new frm_History());
         }
     }
 }

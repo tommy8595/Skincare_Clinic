@@ -123,8 +123,22 @@ namespace Skincare_Management_System
         private void btn_print_history_Click(object sender, EventArgs e)
         {
             frm_ReportPatient rp = new frm_ReportPatient
-            (int.Parse(dgv_history.CurrentRow.Cells[7].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
+            (int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
             rp.Show();
+        }
+       
+        private void btn_Prescription_Click(object sender, EventArgs e)
+        {
+            class1.his_id = int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString());
+            try
+            {
+                frm_Prescription prescription = new frm_Prescription();
+                prescription.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void frm_History_Load(object sender, EventArgs e)
@@ -136,10 +150,9 @@ namespace Skincare_Management_System
             DataTable dt = new DataTable();
             dt.Load(class_connection.get_history_id(class1.id));
             dgv_history.DataSource = dt;
-           
+            this.dgv_history.Sort(dgv_history.Columns[0], ListSortDirection.Descending);
 
-            
-            for(int i=1;i<8;i++)
+            for (int i=1;i<8;i++)
             this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
             dgv_history.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             

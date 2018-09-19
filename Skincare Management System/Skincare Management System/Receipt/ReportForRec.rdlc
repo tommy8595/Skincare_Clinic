@@ -317,7 +317,8 @@
                             <TextRun>
                               <Value>=Fields!price.Value</Value>
                               <Style>
-                                <Format>C</Format>
+                                <Format>'$'0.00;('$'0.00)</Format>
+                                <rd:FormatSymbolCulture>en-UM</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -467,7 +468,8 @@
                             <TextRun>
                               <Value>=Fields!total.Value + Fields!consultation.Value</Value>
                               <Style>
-                                <Format>C</Format>
+                                <Format>'$'0.00;('$'0.00)</Format>
+                                <rd:FormatSymbolCulture>en-UM</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -488,7 +490,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

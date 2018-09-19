@@ -53,9 +53,10 @@
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.history_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_add_history = new System.Windows.Forms.Button();
             this.btn_back_history = new System.Windows.Forms.Button();
             this.btn_print_history = new System.Windows.Forms.Button();
+            this.btn_add_history = new System.Windows.Forms.Button();
+            this.btn_Prescription = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_history)).BeginInit();
@@ -73,8 +74,9 @@
             this.panel1.Controls.Add(this.pic_Home);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 811);
+            this.panel1.Size = new System.Drawing.Size(492, 1560);
             this.panel1.TabIndex = 2;
             // 
             // btn_Setting
@@ -88,9 +90,10 @@
             this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Setting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Setting.Location = new System.Drawing.Point(90, 655);
+            this.btn_Setting.Location = new System.Drawing.Point(135, 1023);
+            this.btn_Setting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(137, 45);
+            this.btn_Setting.Size = new System.Drawing.Size(206, 70);
             this.btn_Setting.TabIndex = 69;
             this.btn_Setting.UseVisualStyleBackColor = false;
             this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
@@ -103,9 +106,10 @@
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogOut.ForeColor = System.Drawing.Color.White;
-            this.btn_LogOut.Location = new System.Drawing.Point(90, 753);
+            this.btn_LogOut.Location = new System.Drawing.Point(135, 1177);
+            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Size = new System.Drawing.Size(137, 45);
+            this.btn_LogOut.Size = new System.Drawing.Size(206, 70);
             this.btn_LogOut.TabIndex = 13;
             this.btn_LogOut.Text = "Log Out";
             this.btn_LogOut.UseVisualStyleBackColor = true;
@@ -119,9 +123,10 @@
             this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Report.FlatAppearance.BorderSize = 0;
             this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Report.Location = new System.Drawing.Point(21, 461);
+            this.btn_Report.Location = new System.Drawing.Point(32, 720);
+            this.btn_Report.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Report.Name = "btn_Report";
-            this.btn_Report.Size = new System.Drawing.Size(284, 92);
+            this.btn_Report.Size = new System.Drawing.Size(426, 144);
             this.btn_Report.TabIndex = 3;
             this.btn_Report.UseVisualStyleBackColor = false;
             this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
@@ -134,9 +139,10 @@
             this.btn_Medicine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Medicine.FlatAppearance.BorderSize = 0;
             this.btn_Medicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Medicine.Location = new System.Drawing.Point(21, 319);
+            this.btn_Medicine.Location = new System.Drawing.Point(32, 498);
+            this.btn_Medicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Medicine.Name = "btn_Medicine";
-            this.btn_Medicine.Size = new System.Drawing.Size(284, 92);
+            this.btn_Medicine.Size = new System.Drawing.Size(426, 144);
             this.btn_Medicine.TabIndex = 3;
             this.btn_Medicine.UseVisualStyleBackColor = false;
             this.btn_Medicine.Click += new System.EventHandler(this.btn_Medicine_Click);
@@ -149,9 +155,10 @@
             this.btn_Patient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Patient.FlatAppearance.BorderSize = 0;
             this.btn_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Patient.Location = new System.Drawing.Point(21, 177);
+            this.btn_Patient.Location = new System.Drawing.Point(32, 277);
+            this.btn_Patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Patient.Name = "btn_Patient";
-            this.btn_Patient.Size = new System.Drawing.Size(284, 92);
+            this.btn_Patient.Size = new System.Drawing.Size(426, 144);
             this.btn_Patient.TabIndex = 2;
             this.btn_Patient.UseVisualStyleBackColor = false;
             this.btn_Patient.Click += new System.EventHandler(this.btn_Patient_Click);
@@ -160,9 +167,10 @@
             // 
             this.pic_Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Home.Image = ((System.Drawing.Image)(resources.GetObject("pic_Home.Image")));
-            this.pic_Home.Location = new System.Drawing.Point(2, 7);
+            this.pic_Home.Location = new System.Drawing.Point(3, 11);
+            this.pic_Home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pic_Home.Name = "pic_Home";
-            this.pic_Home.Size = new System.Drawing.Size(323, 75);
+            this.pic_Home.Size = new System.Drawing.Size(484, 117);
             this.pic_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Home.TabIndex = 1;
             this.pic_Home.TabStop = false;
@@ -173,9 +181,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.label1.Location = new System.Drawing.Point(382, 21);
+            this.label1.Location = new System.Drawing.Point(573, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 38);
+            this.label1.Size = new System.Drawing.Size(199, 61);
             this.label1.TabIndex = 3;
             this.label1.Text = "History";
             // 
@@ -183,18 +192,20 @@
             // 
             this.txt_id_history.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_id_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id_history.Location = new System.Drawing.Point(716, 26);
+            this.txt_id_history.Location = new System.Drawing.Point(1074, 41);
+            this.txt_id_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_id_history.Name = "txt_id_history";
-            this.txt_id_history.Size = new System.Drawing.Size(92, 36);
+            this.txt_id_history.Size = new System.Drawing.Size(137, 53);
             this.txt_id_history.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(659, 28);
+            this.label2.Location = new System.Drawing.Point(988, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 29);
+            this.label2.Size = new System.Drawing.Size(59, 46);
             this.label2.TabIndex = 5;
             this.label2.Text = "ID";
             // 
@@ -202,18 +213,20 @@
             // 
             this.txt_name_history.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_history.Location = new System.Drawing.Point(957, 26);
+            this.txt_name_history.Location = new System.Drawing.Point(1436, 41);
+            this.txt_name_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_name_history.Name = "txt_name_history";
-            this.txt_name_history.Size = new System.Drawing.Size(525, 36);
+            this.txt_name_history.Size = new System.Drawing.Size(786, 53);
             this.txt_name_history.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(853, 28);
+            this.label4.Location = new System.Drawing.Point(1280, 44);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 29);
+            this.label4.Size = new System.Drawing.Size(126, 46);
             this.label4.TabIndex = 11;
             this.label4.Text = "Name";
             // 
@@ -222,7 +235,7 @@
             this.dgv_history.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -240,17 +253,18 @@
             this.history_id});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_history.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_history.Location = new System.Drawing.Point(389, 135);
+            this.dgv_history.Location = new System.Drawing.Point(584, 211);
+            this.dgv_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_history.Name = "dgv_history";
             this.dgv_history.RowTemplate.Height = 24;
             this.dgv_history.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_history.Size = new System.Drawing.Size(1093, 565);
+            this.dgv_history.Size = new System.Drawing.Size(1640, 883);
             this.dgv_history.TabIndex = 13;
             this.dgv_history.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -306,28 +320,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(389, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(584, 153);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1093, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(1640, 3);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_add_history
-            // 
-            this.btn_add_history.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_add_history.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_history.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_add_history.FlatAppearance.BorderSize = 2;
-            this.btn_add_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_history.ForeColor = System.Drawing.Color.White;
-            this.btn_add_history.Location = new System.Drawing.Point(389, 734);
-            this.btn_add_history.Name = "btn_add_history";
-            this.btn_add_history.Size = new System.Drawing.Size(137, 45);
-            this.btn_add_history.TabIndex = 26;
-            this.btn_add_history.Text = "Add";
-            this.btn_add_history.UseVisualStyleBackColor = false;
-            this.btn_add_history.Click += new System.EventHandler(this.btn_add_history_Click);
             // 
             // btn_back_history
             // 
@@ -338,9 +336,10 @@
             this.btn_back_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_history.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_back_history.Location = new System.Drawing.Point(1345, 731);
+            this.btn_back_history.Location = new System.Drawing.Point(2018, 1142);
+            this.btn_back_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_back_history.Name = "btn_back_history";
-            this.btn_back_history.Size = new System.Drawing.Size(137, 45);
+            this.btn_back_history.Size = new System.Drawing.Size(206, 70);
             this.btn_back_history.TabIndex = 27;
             this.btn_back_history.Text = "Back";
             this.btn_back_history.UseVisualStyleBackColor = false;
@@ -355,20 +354,58 @@
             this.btn_print_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_print_history.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_print_history.Location = new System.Drawing.Point(1162, 731);
+            this.btn_print_history.Location = new System.Drawing.Point(1743, 1142);
+            this.btn_print_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_print_history.Name = "btn_print_history";
-            this.btn_print_history.Size = new System.Drawing.Size(137, 45);
+            this.btn_print_history.Size = new System.Drawing.Size(206, 70);
             this.btn_print_history.TabIndex = 28;
             this.btn_print_history.Text = "Print";
             this.btn_print_history.UseVisualStyleBackColor = false;
             this.btn_print_history.Click += new System.EventHandler(this.btn_print_history_Click);
             // 
+            // btn_add_history
+            // 
+            this.btn_add_history.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_add_history.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_history.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_add_history.FlatAppearance.BorderSize = 2;
+            this.btn_add_history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_history.ForeColor = System.Drawing.Color.White;
+            this.btn_add_history.Location = new System.Drawing.Point(584, 1147);
+            this.btn_add_history.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_add_history.Name = "btn_add_history";
+            this.btn_add_history.Size = new System.Drawing.Size(206, 70);
+            this.btn_add_history.TabIndex = 26;
+            this.btn_add_history.Text = "Add";
+            this.btn_add_history.UseVisualStyleBackColor = false;
+            this.btn_add_history.Click += new System.EventHandler(this.btn_add_history_Click);
+            // 
+            // btn_Prescription
+            // 
+            this.btn_Prescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_Prescription.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Prescription.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
+            this.btn_Prescription.FlatAppearance.BorderSize = 2;
+            this.btn_Prescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Prescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Prescription.ForeColor = System.Drawing.Color.White;
+            this.btn_Prescription.Location = new System.Drawing.Point(884, 1147);
+            this.btn_Prescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Prescription.Name = "btn_Prescription";
+            this.btn_Prescription.Size = new System.Drawing.Size(295, 70);
+            this.btn_Prescription.TabIndex = 29;
+            this.btn_Prescription.Text = "Prescription";
+            this.btn_Prescription.UseVisualStyleBackColor = false;
+            this.btn_Prescription.Click += new System.EventHandler(this.btn_Prescription_Click);
+            // 
             // frm_History
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1501, 811);
+            this.ClientSize = new System.Drawing.Size(2497, 1560);
+            this.Controls.Add(this.btn_Prescription);
             this.Controls.Add(this.btn_print_history);
             this.Controls.Add(this.btn_back_history);
             this.Controls.Add(this.btn_add_history);
@@ -380,6 +417,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frm_History";
             this.ShowIcon = false;
@@ -411,7 +449,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_history;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_add_history;
         private System.Windows.Forms.Button btn_back_history;
         private System.Windows.Forms.Button btn_print_history;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
@@ -422,5 +459,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostic;
         private System.Windows.Forms.DataGridViewTextBoxColumn Level;
         private System.Windows.Forms.DataGridViewTextBoxColumn history_id;
+        private System.Windows.Forms.Button btn_add_history;
+        private System.Windows.Forms.Button btn_Prescription;
     }
 }
