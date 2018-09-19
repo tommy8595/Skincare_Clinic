@@ -110,6 +110,7 @@ namespace Skincare_Management_System
             th = new Thread(openAddHistory);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+
         }
 
         private void btn_back_history_Click(object sender, EventArgs e)
@@ -132,6 +133,7 @@ namespace Skincare_Management_System
             try
             {
                 class1.his_id = int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString());
+                
             }catch(Exception ex)
             {
                 MessageBox.Show("Please Insert History First.");

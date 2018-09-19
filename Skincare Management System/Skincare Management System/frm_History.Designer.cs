@@ -44,11 +44,6 @@
             this.txt_name_history = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_history = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_back_history = new System.Windows.Forms.Button();
-            this.btn_print_history = new System.Windows.Forms.Button();
-            this.btn_add_history = new System.Windows.Forms.Button();
-            this.btn_Prescription = new System.Windows.Forms.Button();
             this.history_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.History = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +52,11 @@
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_back_history = new System.Windows.Forms.Button();
+            this.btn_print_history = new System.Windows.Forms.Button();
+            this.btn_add_history = new System.Windows.Forms.Button();
+            this.btn_Prescription = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_history)).BeginInit();
@@ -75,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 675);
+            this.panel1.Size = new System.Drawing.Size(328, 821);
             this.panel1.TabIndex = 2;
             // 
             // btn_Setting
@@ -255,6 +255,55 @@
             this.dgv_history.TabIndex = 13;
             this.dgv_history.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // history_id
+            // 
+            this.history_id.DataPropertyName = "his_id";
+            this.history_id.HeaderText = "history_id";
+            this.history_id.Name = "history_id";
+            this.history_id.Visible = false;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
+            // History
+            // 
+            this.History.DataPropertyName = "History";
+            this.History.HeaderText = "History";
+            this.History.Name = "History";
+            // 
+            // SkinExamination
+            // 
+            this.SkinExamination.DataPropertyName = "Skin Examination";
+            this.SkinExamination.HeaderText = "Skin Examination";
+            this.SkinExamination.Name = "SkinExamination";
+            // 
+            // Investigation
+            // 
+            this.Investigation.DataPropertyName = "Investigation";
+            this.Investigation.HeaderText = "Investigation";
+            this.Investigation.Name = "Investigation";
+            // 
+            // Location
+            // 
+            this.Location.DataPropertyName = "Location";
+            this.Location.HeaderText = "Location";
+            this.Location.Name = "Location";
+            // 
+            // Diagnostic
+            // 
+            this.Diagnostic.DataPropertyName = "Diagnostics";
+            this.Diagnostic.HeaderText = "Diagnostic";
+            this.Diagnostic.Name = "Diagnostic";
+            // 
+            // Level
+            // 
+            this.Level.DataPropertyName = "Level";
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
@@ -332,61 +381,12 @@
             this.btn_Prescription.UseVisualStyleBackColor = false;
             this.btn_Prescription.Click += new System.EventHandler(this.btn_Prescription_Click);
             // 
-            // history_id
-            // 
-            this.history_id.DataPropertyName = "his_id";
-            this.history_id.HeaderText = "history_id";
-            this.history_id.Name = "history_id";
-            this.history_id.Visible = false;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // History
-            // 
-            this.History.DataPropertyName = "History";
-            this.History.HeaderText = "History";
-            this.History.Name = "History";
-            // 
-            // SkinExamination
-            // 
-            this.SkinExamination.DataPropertyName = "Skin Examination";
-            this.SkinExamination.HeaderText = "Skin Examination";
-            this.SkinExamination.Name = "SkinExamination";
-            // 
-            // Investigation
-            // 
-            this.Investigation.DataPropertyName = "Investigation";
-            this.Investigation.HeaderText = "Investigation";
-            this.Investigation.Name = "Investigation";
-            // 
-            // Location
-            // 
-            this.Location.DataPropertyName = "Location";
-            this.Location.HeaderText = "Location";
-            this.Location.Name = "Location";
-            // 
-            // Diagnostic
-            // 
-            this.Diagnostic.DataPropertyName = "Diagnostics";
-            this.Diagnostic.HeaderText = "Diagnostic";
-            this.Diagnostic.Name = "Diagnostic";
-            // 
-            // Level
-            // 
-            this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.Name = "Level";
-            // 
             // frm_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1283, 675);
+            this.ClientSize = new System.Drawing.Size(1541, 821);
             this.Controls.Add(this.btn_Prescription);
             this.Controls.Add(this.btn_print_history);
             this.Controls.Add(this.btn_back_history);
