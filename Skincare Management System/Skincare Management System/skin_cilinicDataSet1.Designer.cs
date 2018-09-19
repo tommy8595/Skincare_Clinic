@@ -1968,18 +1968,18 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sp_select_history";
+            this._commandCollection[0].CommandText = "dbo.sp_select_history1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ci", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@his", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hi", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(skin_cilinicDataSet1.sp_select_history1DataTable dataTable, global::System.Nullable<int> ci, global::System.Nullable<int> his) {
+        public virtual int Fill(skin_cilinicDataSet1.sp_select_history1DataTable dataTable, global::System.Nullable<int> ci, global::System.Nullable<int> hi) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ci.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ci.Value));
@@ -1987,8 +1987,8 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((his.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(his.Value));
+            if ((hi.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(hi.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1998,29 +1998,6 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual skin_cilinicDataSet1.sp_select_history1DataTable GetData(global::System.Nullable<int> ci, global::System.Nullable<int> his) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ci.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ci.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((his.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(his.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            skin_cilinicDataSet1.sp_select_history1DataTable dataTable = new skin_cilinicDataSet1.sp_select_history1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
     }
     
