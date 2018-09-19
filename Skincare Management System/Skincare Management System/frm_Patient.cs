@@ -121,8 +121,6 @@ namespace Skincare_Management_System
             {
                 class1.id = int.Parse(txt_id_patient.Text);
                 class1.name = txt_name_patient.Text;
-                frm_Prescription prescription = new frm_Prescription();
-                prescription.Show();
                 this.Close();
                 th = new Thread(openHistory);
                 th.SetApartmentState(ApartmentState.STA);

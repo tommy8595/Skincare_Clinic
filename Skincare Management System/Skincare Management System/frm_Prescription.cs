@@ -265,7 +265,15 @@ namespace Skincare_Management_System
             string q = "Select max(his_id) from tbl_history where cus_id= " + class1.id;
             SqlDataReader dr = new SqlCommand(q, class_connection.connection()).ExecuteReader();
             dr.Read();
-            his_id = int.Parse(dr.GetValue(0).ToString());
+            try
+            {
+                his_id = int.Parse(dr.GetValue(0).ToString());
+                
+            }catch(Exception ex) { 
+         
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show(his_id.ToString());
 
         }
 
