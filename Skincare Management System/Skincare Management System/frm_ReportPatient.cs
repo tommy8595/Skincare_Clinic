@@ -30,6 +30,7 @@ namespace Skincare_Management_System
         }
 
         private void frm_ReportPatient_Load(object sender, EventArgs e)
+            //error 1
         {
             try
             {
