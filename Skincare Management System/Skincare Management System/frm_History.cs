@@ -129,7 +129,13 @@ namespace Skincare_Management_System
        
         private void btn_Prescription_Click(object sender, EventArgs e)
         {
-            class1.his_id = int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString());
+            try
+            {
+                class1.his_id = int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString());
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Please Insert History First.");
+            }
             try
             {
                 frm_Prescription prescription = new frm_Prescription();
@@ -152,10 +158,14 @@ namespace Skincare_Management_System
             dgv_history.DataSource = dt;
             this.dgv_history.Sort(dgv_history.Columns[0], ListSortDirection.Descending);
 
-            for (int i=1;i<8;i++)
-            this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
-            dgv_history.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            
+            //for (int i = 1; i < 8; i++)
+            //    this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+            //dgv_history.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            //dgv_history.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgv_history.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;          // wrapped to subsequent lines
+            this.dgv_history.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;         //Row height autosize
+          
+
 
         }
     }
