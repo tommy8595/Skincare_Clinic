@@ -11,6 +11,7 @@
               <TextRun>
                 <Value>Date</Value>
                 <Style>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -20,8 +21,8 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.06667in</Top>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Height>0.475in</Height>
+        <Width>1.49167in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -41,6 +42,7 @@
               <TextRun>
                 <Value>Name</Value>
                 <Style>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -50,8 +52,8 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.64167in</Top>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Height>0.475in</Height>
+        <Width>1.49167in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -72,6 +74,7 @@
               <TextRun>
                 <Value>Occupation</Value>
                 <Style>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -81,8 +84,8 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.25833in</Top>
-        <Height>0.25in</Height>
-        <Width>1in</Width>
+        <Height>0.475in</Height>
+        <Width>1.49167in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -358,7 +361,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Now()</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -367,8 +372,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.06667in</Top>
-        <Left>1.225in</Left>
+        <Top>0.26667in</Top>
+        <Left>1.65833in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>11</ZIndex>
@@ -391,15 +396,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!cus_name.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.64167in</Top>
-        <Left>1.225in</Left>
+        <Top>0.74167in</Top>
+        <Left>1.65833in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>12</ZIndex>
@@ -484,15 +491,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!cus_occupation.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>1.21667in</Top>
-        <Left>1.225in</Left>
+        <Top>1.41667in</Top>
+        <Left>1.65833in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>15</ZIndex>
@@ -575,7 +584,7 @@
               <TextRun>
                 <Value>=First(Fields!location.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -607,7 +616,7 @@
               <TextRun>
                 <Value>=First(Fields!skin_examination.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -639,7 +648,7 @@
               <TextRun>
                 <Value>=First(Fields!inverstigation.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -671,7 +680,7 @@
               <TextRun>
                 <Value>=First(Fields!diagnostics.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -735,7 +744,7 @@
               <TextRun>
                 <Value>=First(Fields!history.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -831,7 +840,7 @@
               <TextRun>
                 <Value>=First(Fields!level.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
