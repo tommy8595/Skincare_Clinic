@@ -110,6 +110,7 @@ namespace Skincare_Management_System
             th = new Thread(openAddHistory);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+
         }
 
         private void btn_back_history_Click(object sender, EventArgs e)
@@ -123,8 +124,29 @@ namespace Skincare_Management_System
         private void btn_print_history_Click(object sender, EventArgs e)
         {
             frm_ReportPatient rp = new frm_ReportPatient
-            (int.Parse(dgv_history.CurrentRow.Cells[7].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
+            (int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
             rp.Show();
+        }
+       
+        private void btn_Prescription_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                class1.his_id = int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString());
+                
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Please Insert History First.");
+            }
+            try
+            {
+                frm_Prescription prescription = new frm_Prescription();
+                prescription.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void frm_History_Load(object sender, EventArgs e)
@@ -136,18 +158,17 @@ namespace Skincare_Management_System
             DataTable dt = new DataTable();
             dt.Load(class_connection.get_history_id(class1.id));
             dgv_history.DataSource = dt;
-            foreach (DataGridViewColumn column in dgv_history.Columns)
-            {
-                column.Width = 130;
-            }
+            this.dgv_history.Sort(dgv_history.Columns[0], ListSortDirection.Descending);
 
-            foreach (DataGridViewRow row in dgv_history.Rows)
-            {
-                row.Height = 200;
-            }
-            for(int i=1;i<8;i++)
-            this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+            //for (int i = 1; i < 8; i++)
+            //    this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+            //dgv_history.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            //dgv_history.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgv_history.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;          // wrapped to subsequent lines
+            this.dgv_history.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;         //Row height autosize
           
+
+
         }
     }
 }

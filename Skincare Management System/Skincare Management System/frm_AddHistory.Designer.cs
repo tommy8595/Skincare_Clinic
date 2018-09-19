@@ -53,7 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_back_addhistory = new System.Windows.Forms.Button();
-            this.btn_print_addhistory = new System.Windows.Forms.Button();
             this.btn_save_addhistory = new System.Windows.Forms.Button();
             this.cbo_level = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -366,23 +365,6 @@
             this.btn_back_addhistory.UseVisualStyleBackColor = false;
             this.btn_back_addhistory.Click += new System.EventHandler(this.btn_back_addhistory_Click);
             // 
-            // btn_print_addhistory
-            // 
-            this.btn_print_addhistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_print_addhistory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_print_addhistory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_print_addhistory.FlatAppearance.BorderSize = 2;
-            this.btn_print_addhistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_print_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print_addhistory.ForeColor = System.Drawing.Color.White;
-            this.btn_print_addhistory.Location = new System.Drawing.Point(996, 1258);
-            this.btn_print_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_print_addhistory.Name = "btn_print_addhistory";
-            this.btn_print_addhistory.Size = new System.Drawing.Size(206, 70);
-            this.btn_print_addhistory.TabIndex = 9;
-            this.btn_print_addhistory.Text = "Print";
-            this.btn_print_addhistory.UseVisualStyleBackColor = false;
-            // 
             // btn_save_addhistory
             // 
             this.btn_save_addhistory.BackColor = System.Drawing.Color.White;
@@ -444,7 +426,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbo_level);
             this.Controls.Add(this.btn_save_addhistory);
-            this.Controls.Add(this.btn_print_addhistory);
             this.Controls.Add(this.btn_back_addhistory);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -504,7 +485,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_back_addhistory;
-        private System.Windows.Forms.Button btn_print_addhistory;
         private System.Windows.Forms.Button btn_save_addhistory;
         private System.Windows.Forms.ComboBox cbo_level;
         private System.Windows.Forms.Label label9;

@@ -100,20 +100,7 @@ namespace Skincare_Management_System
             Application.Run(new frm_History());
         }
 
-        private void btn_Prescription_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                class1.id = int.Parse(txt_id_patient.Text);
-                class1.name = txt_name_patient.Text;
-                frm_Prescription prescription = new frm_Prescription();
-                prescription.Show();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+      
 
         private void btn_history_patient_Click(object sender, EventArgs e)
         {
@@ -121,8 +108,7 @@ namespace Skincare_Management_System
             {
                 class1.id = int.Parse(txt_id_patient.Text);
                 class1.name = txt_name_patient.Text;
-                frm_Prescription prescription = new frm_Prescription();
-                prescription.Show();
+ 
                 this.Close();
                 th = new Thread(openHistory);
                 th.SetApartmentState(ApartmentState.STA);
@@ -144,7 +130,7 @@ namespace Skincare_Management_System
             SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
             sqlDataReader.Read();
             string id = sqlDataReader.GetValue(0).ToString();
-            MessageBox.Show("You have successful, The id is \t"+id);
+            MessageBox.Show("You have successful, The id is: "+id);
 
         }
         private void txt_id_patient_KeyUp(object sender, KeyEventArgs e)
@@ -159,7 +145,7 @@ namespace Skincare_Management_System
                     txt_name_patient.Text = "";
                     txt_phone_patient.Text = "";
                     dt_dob_patient.Text = "";
-
+                    btn_add_patient.Enabled = true;
                 }
                 else
                 {
@@ -173,7 +159,7 @@ namespace Skincare_Management_System
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
                         dt_dob_patient.Text = s_dr["cus_dob"].ToString();
-
+                        btn_add_patient.Enabled = false;
                     }
 
 
@@ -196,7 +182,7 @@ namespace Skincare_Management_System
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
                         dt_dob_patient.Text = s_dr["cus_dob"].ToString();
-
+                        btn_add_patient.Enabled = false;
                     }
                 }
                 catch (Exception ex)
