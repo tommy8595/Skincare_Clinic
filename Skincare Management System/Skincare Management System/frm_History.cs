@@ -136,18 +136,14 @@ namespace Skincare_Management_System
             DataTable dt = new DataTable();
             dt.Load(class_connection.get_history_id(class1.id));
             dgv_history.DataSource = dt;
-            foreach (DataGridViewColumn column in dgv_history.Columns)
-            {
-                column.Width = 130;
-            }
+           
 
-            foreach (DataGridViewRow row in dgv_history.Rows)
-            {
-                row.Height = 200;
-            }
+            
             for(int i=1;i<8;i++)
             this.dgv_history.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
-          
+            dgv_history.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            
+
         }
     }
 }

@@ -144,7 +144,7 @@ namespace Skincare_Management_System
             SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
             sqlDataReader.Read();
             string id = sqlDataReader.GetValue(0).ToString();
-            MessageBox.Show("You have successful, The id is \t"+id);
+            MessageBox.Show("You have successful, The id is: "+id);
 
         }
         private void txt_id_patient_KeyUp(object sender, KeyEventArgs e)
