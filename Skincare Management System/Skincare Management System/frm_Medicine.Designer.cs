@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Setting = new System.Windows.Forms.Button();
             this.btn_LogOut = new System.Windows.Forms.Button();
-            this.btn_Report = new System.Windows.Forms.Button();
             this.btn_Medicine = new System.Windows.Forms.Button();
             this.btn_Patient = new System.Windows.Forms.Button();
             this.pic_Home = new System.Windows.Forms.PictureBox();
@@ -48,14 +47,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.panel1.Controls.Add(this.btn_Setting);
             this.panel1.Controls.Add(this.btn_LogOut);
-            this.panel1.Controls.Add(this.btn_Report);
             this.panel1.Controls.Add(this.btn_Medicine);
             this.panel1.Controls.Add(this.btn_Patient);
             this.panel1.Controls.Add(this.pic_Home);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 821);
+            this.panel1.Size = new System.Drawing.Size(492, 1283);
             this.panel1.TabIndex = 1;
             // 
             // btn_Setting
@@ -67,11 +66,12 @@
             this.btn_Setting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_Setting.FlatAppearance.BorderSize = 2;
             this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Setting.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Setting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Setting.Location = new System.Drawing.Point(90, 655);
+            this.btn_Setting.Location = new System.Drawing.Point(135, 1023);
+            this.btn_Setting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(137, 45);
+            this.btn_Setting.Size = new System.Drawing.Size(206, 70);
             this.btn_Setting.TabIndex = 68;
             this.btn_Setting.UseVisualStyleBackColor = false;
             this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
@@ -82,30 +82,16 @@
             this.btn_LogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_LogOut.FlatAppearance.BorderSize = 2;
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LogOut.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogOut.ForeColor = System.Drawing.Color.White;
-            this.btn_LogOut.Location = new System.Drawing.Point(90, 753);
+            this.btn_LogOut.Location = new System.Drawing.Point(135, 1177);
+            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Size = new System.Drawing.Size(137, 45);
+            this.btn_LogOut.Size = new System.Drawing.Size(206, 70);
             this.btn_LogOut.TabIndex = 13;
             this.btn_LogOut.Text = "Log Out";
             this.btn_LogOut.UseVisualStyleBackColor = true;
             this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
-            // 
-            // btn_Report
-            // 
-            this.btn_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Report.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Report.BackgroundImage")));
-            this.btn_Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Report.FlatAppearance.BorderSize = 0;
-            this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Report.Location = new System.Drawing.Point(21, 461);
-            this.btn_Report.Name = "btn_Report";
-            this.btn_Report.Size = new System.Drawing.Size(284, 92);
-            this.btn_Report.TabIndex = 3;
-            this.btn_Report.UseVisualStyleBackColor = false;
-            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
             // btn_Medicine
             // 
@@ -115,9 +101,10 @@
             this.btn_Medicine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Medicine.FlatAppearance.BorderSize = 0;
             this.btn_Medicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Medicine.Location = new System.Drawing.Point(21, 319);
+            this.btn_Medicine.Location = new System.Drawing.Point(28, 596);
+            this.btn_Medicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Medicine.Name = "btn_Medicine";
-            this.btn_Medicine.Size = new System.Drawing.Size(284, 92);
+            this.btn_Medicine.Size = new System.Drawing.Size(426, 144);
             this.btn_Medicine.TabIndex = 3;
             this.btn_Medicine.UseVisualStyleBackColor = false;
             this.btn_Medicine.Click += new System.EventHandler(this.btn_Medicine_Click);
@@ -130,9 +117,10 @@
             this.btn_Patient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Patient.FlatAppearance.BorderSize = 0;
             this.btn_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Patient.Location = new System.Drawing.Point(21, 177);
+            this.btn_Patient.Location = new System.Drawing.Point(28, 375);
+            this.btn_Patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Patient.Name = "btn_Patient";
-            this.btn_Patient.Size = new System.Drawing.Size(284, 92);
+            this.btn_Patient.Size = new System.Drawing.Size(426, 144);
             this.btn_Patient.TabIndex = 2;
             this.btn_Patient.UseVisualStyleBackColor = false;
             this.btn_Patient.Click += new System.EventHandler(this.btn_Patient_Click);
@@ -141,9 +129,10 @@
             // 
             this.pic_Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Home.Image = ((System.Drawing.Image)(resources.GetObject("pic_Home.Image")));
-            this.pic_Home.Location = new System.Drawing.Point(2, 7);
+            this.pic_Home.Location = new System.Drawing.Point(3, 11);
+            this.pic_Home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pic_Home.Name = "pic_Home";
-            this.pic_Home.Size = new System.Drawing.Size(323, 75);
+            this.pic_Home.Size = new System.Drawing.Size(484, 117);
             this.pic_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Home.TabIndex = 1;
             this.pic_Home.TabStop = false;
@@ -156,9 +145,10 @@
             this.btn_Stock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Stock.FlatAppearance.BorderSize = 0;
             this.btn_Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Stock.Location = new System.Drawing.Point(606, 121);
+            this.btn_Stock.Location = new System.Drawing.Point(909, 189);
+            this.btn_Stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Stock.Name = "btn_Stock";
-            this.btn_Stock.Size = new System.Drawing.Size(637, 226);
+            this.btn_Stock.Size = new System.Drawing.Size(956, 353);
             this.btn_Stock.TabIndex = 2;
             this.btn_Stock.UseVisualStyleBackColor = false;
             this.btn_Stock.Click += new System.EventHandler(this.btn_Stock_Click);
@@ -170,9 +160,10 @@
             this.btn_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Import.FlatAppearance.BorderSize = 0;
             this.btn_Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Import.Location = new System.Drawing.Point(606, 413);
+            this.btn_Import.Location = new System.Drawing.Point(909, 645);
+            this.btn_Import.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Import.Name = "btn_Import";
-            this.btn_Import.Size = new System.Drawing.Size(637, 226);
+            this.btn_Import.Size = new System.Drawing.Size(956, 353);
             this.btn_Import.TabIndex = 3;
             this.btn_Import.UseVisualStyleBackColor = false;
             this.btn_Import.Click += new System.EventHandler(this.btn_Import_Click);
@@ -184,11 +175,12 @@
             this.btn_back_med.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_back_med.FlatAppearance.BorderSize = 2;
             this.btn_back_med.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back_med.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back_med.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_med.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_back_med.Location = new System.Drawing.Point(1345, 730);
+            this.btn_back_med.Location = new System.Drawing.Point(2018, 1141);
+            this.btn_back_med.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_back_med.Name = "btn_back_med";
-            this.btn_back_med.Size = new System.Drawing.Size(137, 45);
+            this.btn_back_med.Size = new System.Drawing.Size(206, 70);
             this.btn_back_med.TabIndex = 67;
             this.btn_back_med.Text = "Back";
             this.btn_back_med.UseVisualStyleBackColor = false;
@@ -196,14 +188,15 @@
             // 
             // frm_Medicine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.ClientSize = new System.Drawing.Size(2312, 1283);
             this.Controls.Add(this.btn_back_med);
             this.Controls.Add(this.btn_Import);
             this.Controls.Add(this.btn_Stock);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frm_Medicine";
             this.ShowIcon = false;
@@ -219,7 +212,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_LogOut;
-        private System.Windows.Forms.Button btn_Report;
         private System.Windows.Forms.Button btn_Medicine;
         private System.Windows.Forms.Button btn_Patient;
         private System.Windows.Forms.PictureBox pic_Home;

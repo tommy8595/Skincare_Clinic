@@ -114,7 +114,7 @@
             this.btn_Report.Size = new System.Drawing.Size(284, 92);
             this.btn_Report.TabIndex = 3;
             this.btn_Report.UseVisualStyleBackColor = false;
-            this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
+        
             // 
             // btn_Medicine
             // 

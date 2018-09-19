@@ -80,18 +80,7 @@ namespace Skincare_Management_System
             Application.Run(new frm_Receipt(receipt));
         }
 
-        private void btn_Report_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            th = new Thread(openReport);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }
 
-        private void openReport()
-        {
-            Application.Run(new frm_Report());
-        }
 
         private void btn_Setting_Click(object sender, EventArgs e)
         {

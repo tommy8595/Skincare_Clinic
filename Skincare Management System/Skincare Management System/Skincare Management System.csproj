@@ -204,12 +204,6 @@
     <Compile Include="frm_Register.Designer.cs">
       <DependentUpon>frm_Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Report.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Report.Designer.cs">
-      <DependentUpon>frm_Report.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_ReportPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,9 +304,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Register.resx">
       <DependentUpon>frm_Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Report.resx">
-      <DependentUpon>frm_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ReportPatient.resx">
       <DependentUpon>frm_ReportPatient.cs</DependentUpon>
