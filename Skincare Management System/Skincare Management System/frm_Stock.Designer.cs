@@ -114,7 +114,6 @@
             this.btn_Report.Size = new System.Drawing.Size(284, 92);
             this.btn_Report.TabIndex = 3;
             this.btn_Report.UseVisualStyleBackColor = false;
-        
             // 
             // btn_Medicine
             // 
@@ -295,6 +294,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_stock);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frm_Stock";
             this.ShowIcon = false;

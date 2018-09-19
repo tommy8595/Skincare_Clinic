@@ -61,9 +61,9 @@
             this.cboName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboName.FormattingEnabled = true;
             this.cboName.IntegralHeight = false;
-            this.cboName.Location = new System.Drawing.Point(821, 88);
+            this.cboName.Location = new System.Drawing.Point(893, 88);
             this.cboName.Name = "cboName";
-            this.cboName.Size = new System.Drawing.Size(285, 37);
+            this.cboName.Size = new System.Drawing.Size(398, 37);
             this.cboName.TabIndex = 59;
             this.cboName.SelectedIndexChanged += new System.EventHandler(this.cboName_SelectedIndexChanged);
             // 
@@ -75,7 +75,7 @@
             this.comboBox1.IntegralHeight = false;
             this.comboBox1.Location = new System.Drawing.Point(341, 88);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(285, 37);
+            this.comboBox1.Size = new System.Drawing.Size(394, 37);
             this.comboBox1.TabIndex = 58;
             this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -86,7 +86,7 @@
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.Location = new System.Drawing.Point(341, 167);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(285, 36);
+            this.txtQuantity.Size = new System.Drawing.Size(394, 36);
             this.txtQuantity.TabIndex = 57;
             this.txtQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantity_KeyDown);
             // 
@@ -104,7 +104,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(694, 97);
+            this.label4.Location = new System.Drawing.Point(766, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 29);
             this.label4.TabIndex = 55;
@@ -129,7 +129,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(821, 167);
+            this.button2.Location = new System.Drawing.Point(893, 161);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 53;
@@ -276,7 +276,7 @@
             // 
             this.txt_consultation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_consultation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_consultation.Location = new System.Drawing.Point(238, 730);
+            this.txt_consultation.Location = new System.Drawing.Point(381, 730);
             this.txt_consultation.Multiline = true;
             this.txt_consultation.Name = "txt_consultation";
             this.txt_consultation.Size = new System.Drawing.Size(133, 46);
@@ -287,7 +287,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(33, 738);
+            this.label8.Location = new System.Drawing.Point(176, 738);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(161, 29);
             this.label8.TabIndex = 63;
@@ -313,6 +313,7 @@
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Prescription";

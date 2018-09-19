@@ -40,7 +40,7 @@
             // 
             this.txt_user_ChangeUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_user_ChangeUser.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_user_ChangeUser.Location = new System.Drawing.Point(339, 88);
+            this.txt_user_ChangeUser.Location = new System.Drawing.Point(339, 115);
             this.txt_user_ChangeUser.Name = "txt_user_ChangeUser";
             this.txt_user_ChangeUser.Size = new System.Drawing.Size(361, 38);
             this.txt_user_ChangeUser.TabIndex = 6;
@@ -49,7 +49,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 90);
+            this.label2.Location = new System.Drawing.Point(67, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 31);
             this.label2.TabIndex = 5;
@@ -59,7 +59,7 @@
             // 
             this.txt_pass_ChangeUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_pass_ChangeUser.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass_ChangeUser.Location = new System.Drawing.Point(339, 173);
+            this.txt_pass_ChangeUser.Location = new System.Drawing.Point(339, 200);
             this.txt_pass_ChangeUser.Name = "txt_pass_ChangeUser";
             this.txt_pass_ChangeUser.Size = new System.Drawing.Size(361, 38);
             this.txt_pass_ChangeUser.TabIndex = 8;
@@ -68,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 175);
+            this.label1.Location = new System.Drawing.Point(67, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 31);
             this.label1.TabIndex = 7;
@@ -83,7 +83,7 @@
             this.btn_save_update_username.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_update_username.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_update_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_save_update_username.Location = new System.Drawing.Point(339, 350);
+            this.btn_save_update_username.Location = new System.Drawing.Point(339, 290);
             this.btn_save_update_username.Name = "btn_save_update_username";
             this.btn_save_update_username.Size = new System.Drawing.Size(137, 45);
             this.btn_save_update_username.TabIndex = 24;
@@ -100,7 +100,7 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Back.Location = new System.Drawing.Point(563, 350);
+            this.btn_Back.Location = new System.Drawing.Point(563, 290);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(137, 45);
             this.btn_Back.TabIndex = 25;

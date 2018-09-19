@@ -40,17 +40,16 @@
             // 
             this.txt_pass_ChangePassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_pass_ChangePassword.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass_ChangePassword.Location = new System.Drawing.Point(339, 88);
+            this.txt_pass_ChangePassword.Location = new System.Drawing.Point(339, 112);
             this.txt_pass_ChangePassword.Name = "txt_pass_ChangePassword";
             this.txt_pass_ChangePassword.Size = new System.Drawing.Size(361, 38);
             this.txt_pass_ChangePassword.TabIndex = 8;
-            
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 90);
+            this.label2.Location = new System.Drawing.Point(67, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 31);
             this.label2.TabIndex = 7;
@@ -60,7 +59,7 @@
             // 
             this.txt_confirm_changepassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_confirm_changepassword.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_confirm_changepassword.Location = new System.Drawing.Point(339, 173);
+            this.txt_confirm_changepassword.Location = new System.Drawing.Point(339, 197);
             this.txt_confirm_changepassword.Name = "txt_confirm_changepassword";
             this.txt_confirm_changepassword.Size = new System.Drawing.Size(361, 38);
             this.txt_confirm_changepassword.TabIndex = 12;
@@ -69,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 175);
+            this.label1.Location = new System.Drawing.Point(67, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 31);
             this.label1.TabIndex = 13;
@@ -84,7 +83,7 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Back.Location = new System.Drawing.Point(563, 350);
+            this.btn_Back.Location = new System.Drawing.Point(563, 287);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(137, 45);
             this.btn_Back.TabIndex = 26;
@@ -101,7 +100,7 @@
             this.btn_save_changepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_changepass.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_changepass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_save_changepass.Location = new System.Drawing.Point(339, 350);
+            this.btn_save_changepass.Location = new System.Drawing.Point(339, 287);
             this.btn_save_changepass.Name = "btn_save_changepass";
             this.btn_save_changepass.Size = new System.Drawing.Size(137, 45);
             this.btn_save_changepass.TabIndex = 27;
@@ -121,6 +120,7 @@
             this.Controls.Add(this.txt_confirm_changepassword);
             this.Controls.Add(this.txt_pass_ChangePassword);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Password";

@@ -71,9 +71,8 @@
             this.panel1.Controls.Add(this.pic_Home);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 1283);
+            this.panel1.Size = new System.Drawing.Size(328, 821);
             this.panel1.TabIndex = 4;
             // 
             // btn_Setting
@@ -87,10 +86,9 @@
             this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Setting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Setting.Location = new System.Drawing.Point(135, 1023);
-            this.btn_Setting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Setting.Location = new System.Drawing.Point(90, 655);
             this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(206, 70);
+            this.btn_Setting.Size = new System.Drawing.Size(137, 45);
             this.btn_Setting.TabIndex = 69;
             this.btn_Setting.UseVisualStyleBackColor = false;
             this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
@@ -103,10 +101,9 @@
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogOut.ForeColor = System.Drawing.Color.White;
-            this.btn_LogOut.Location = new System.Drawing.Point(135, 1177);
-            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_LogOut.Location = new System.Drawing.Point(90, 753);
             this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Size = new System.Drawing.Size(206, 70);
+            this.btn_LogOut.Size = new System.Drawing.Size(137, 45);
             this.btn_LogOut.TabIndex = 13;
             this.btn_LogOut.Text = "Log Out";
             this.btn_LogOut.UseVisualStyleBackColor = true;
@@ -120,10 +117,9 @@
             this.btn_Medicine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Medicine.FlatAppearance.BorderSize = 0;
             this.btn_Medicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Medicine.Location = new System.Drawing.Point(29, 633);
-            this.btn_Medicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Medicine.Location = new System.Drawing.Point(19, 405);
             this.btn_Medicine.Name = "btn_Medicine";
-            this.btn_Medicine.Size = new System.Drawing.Size(426, 144);
+            this.btn_Medicine.Size = new System.Drawing.Size(284, 92);
             this.btn_Medicine.TabIndex = 3;
             this.btn_Medicine.UseVisualStyleBackColor = false;
             this.btn_Medicine.Click += new System.EventHandler(this.btn_Medicine_Click);
@@ -136,10 +132,9 @@
             this.btn_Patient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Patient.FlatAppearance.BorderSize = 0;
             this.btn_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Patient.Location = new System.Drawing.Point(29, 412);
-            this.btn_Patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Patient.Location = new System.Drawing.Point(19, 264);
             this.btn_Patient.Name = "btn_Patient";
-            this.btn_Patient.Size = new System.Drawing.Size(426, 144);
+            this.btn_Patient.Size = new System.Drawing.Size(284, 92);
             this.btn_Patient.TabIndex = 2;
             this.btn_Patient.UseVisualStyleBackColor = false;
             this.btn_Patient.Click += new System.EventHandler(this.btn_Patient_Click);
@@ -148,10 +143,9 @@
             // 
             this.pic_Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Home.Image = ((System.Drawing.Image)(resources.GetObject("pic_Home.Image")));
-            this.pic_Home.Location = new System.Drawing.Point(3, 11);
-            this.pic_Home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_Home.Location = new System.Drawing.Point(2, 7);
             this.pic_Home.Name = "pic_Home";
-            this.pic_Home.Size = new System.Drawing.Size(484, 117);
+            this.pic_Home.Size = new System.Drawing.Size(323, 75);
             this.pic_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Home.TabIndex = 1;
             this.pic_Home.TabStop = false;
@@ -162,10 +156,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.label1.Location = new System.Drawing.Point(573, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(382, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 61);
+            this.label1.Size = new System.Drawing.Size(262, 38);
             this.label1.TabIndex = 17;
             this.label1.Text = "Import Medicine";
             // 
@@ -200,8 +193,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(584, 367);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(389, 235);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -213,7 +205,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1665, 727);
+            this.dataGridView1.Size = new System.Drawing.Size(1110, 465);
             this.dataGridView1.TabIndex = 18;
             // 
             // Medicine_Name
@@ -259,10 +251,9 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Back.Location = new System.Drawing.Point(2018, 1142);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Back.Location = new System.Drawing.Point(1345, 731);
             this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(206, 70);
+            this.btn_Back.Size = new System.Drawing.Size(137, 45);
             this.btn_Back.TabIndex = 31;
             this.btn_Back.Text = "Back";
             this.btn_Back.UseVisualStyleBackColor = false;
@@ -277,10 +268,9 @@
             this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.ForeColor = System.Drawing.Color.White;
-            this.btn_Register.Location = new System.Drawing.Point(584, 1142);
-            this.btn_Register.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Register.Location = new System.Drawing.Point(389, 731);
             this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(206, 70);
+            this.btn_Register.Size = new System.Drawing.Size(137, 45);
             this.btn_Register.TabIndex = 33;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = false;
@@ -295,10 +285,9 @@
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_save.Location = new System.Drawing.Point(1743, 1142);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_save.Location = new System.Drawing.Point(1162, 731);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(206, 70);
+            this.btn_save.Size = new System.Drawing.Size(137, 45);
             this.btn_save.TabIndex = 34;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
@@ -313,10 +302,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.button2.Location = new System.Drawing.Point(1545, 262);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(991, 168);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 70);
+            this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 35;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
@@ -326,10 +314,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(574, 152);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(383, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 46);
+            this.label3.Size = new System.Drawing.Size(115, 29);
             this.label3.TabIndex = 36;
             this.label3.Text = "Category";
             // 
@@ -337,10 +324,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1354, 152);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(864, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 46);
+            this.label4.Size = new System.Drawing.Size(81, 29);
             this.label4.TabIndex = 38;
             this.label4.Text = "Name";
             // 
@@ -348,10 +334,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(574, 273);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(383, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 46);
+            this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 40;
             this.label2.Text = "Quantity";
             // 
@@ -359,10 +344,9 @@
             // 
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(825, 262);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtQuantity.Location = new System.Drawing.Point(550, 168);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(426, 53);
+            this.txtQuantity.Size = new System.Drawing.Size(260, 36);
             this.txtQuantity.TabIndex = 45;
             this.txtQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantity_KeyDown);
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
@@ -373,10 +357,9 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Location = new System.Drawing.Point(825, 139);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox1.Location = new System.Drawing.Point(550, 89);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(426, 54);
+            this.comboBox1.Size = new System.Drawing.Size(260, 37);
             this.comboBox1.TabIndex = 46;
             this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -389,10 +372,9 @@
             this.cboName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboName.FormattingEnabled = true;
             this.cboName.IntegralHeight = false;
-            this.cboName.Location = new System.Drawing.Point(1545, 139);
-            this.cboName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboName.Location = new System.Drawing.Point(991, 89);
             this.cboName.Name = "cboName";
-            this.cboName.Size = new System.Drawing.Size(426, 54);
+            this.cboName.Size = new System.Drawing.Size(508, 37);
             this.cboName.TabIndex = 47;
             this.cboName.SelectedIndexChanged += new System.EventHandler(this.cboName_SelectedIndexChanged);
             // 
@@ -400,18 +382,17 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTotal.Location = new System.Drawing.Point(1338, 1148);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Location = new System.Drawing.Point(892, 735);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 46);
+            this.lblTotal.Size = new System.Drawing.Size(0, 29);
             this.lblTotal.TabIndex = 48;
             // 
             // frm_ImportMedicine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2312, 1283);
+            this.ClientSize = new System.Drawing.Size(1541, 821);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.cboName);
             this.Controls.Add(this.comboBox1);
@@ -426,7 +407,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frm_ImportMedicine";
             this.ShowIcon = false;

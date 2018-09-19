@@ -40,7 +40,7 @@
             // 
             this.txt_New_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_New_pass.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_New_pass.Location = new System.Drawing.Point(339, 258);
+            this.txt_New_pass.Location = new System.Drawing.Point(339, 196);
             this.txt_New_pass.Name = "txt_New_pass";
             this.txt_New_pass.Size = new System.Drawing.Size(361, 38);
             this.txt_New_pass.TabIndex = 11;
@@ -49,7 +49,7 @@
             // 
             this.txt_New_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_New_name.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_New_name.Location = new System.Drawing.Point(339, 173);
+            this.txt_New_name.Location = new System.Drawing.Point(339, 111);
             this.txt_New_name.Name = "txt_New_name";
             this.txt_New_name.Size = new System.Drawing.Size(361, 38);
             this.txt_New_name.TabIndex = 12;
@@ -58,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 175);
+            this.label1.Location = new System.Drawing.Point(67, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 31);
             this.label1.TabIndex = 14;
@@ -68,7 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 260);
+            this.label3.Location = new System.Drawing.Point(67, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 31);
             this.label3.TabIndex = 15;
@@ -83,7 +83,7 @@
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Back.Location = new System.Drawing.Point(563, 350);
+            this.btn_Back.Location = new System.Drawing.Point(563, 288);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(137, 45);
             this.btn_Back.TabIndex = 26;
@@ -100,7 +100,7 @@
             this.btn_Save_NewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Save_NewUser.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save_NewUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Save_NewUser.Location = new System.Drawing.Point(339, 350);
+            this.btn_Save_NewUser.Location = new System.Drawing.Point(339, 288);
             this.btn_Save_NewUser.Name = "btn_Save_NewUser";
             this.btn_Save_NewUser.Size = new System.Drawing.Size(137, 45);
             this.btn_Save_NewUser.TabIndex = 27;
@@ -120,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_New_name);
             this.Controls.Add(this.txt_New_pass);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_AddAccount";

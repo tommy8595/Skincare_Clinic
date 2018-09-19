@@ -93,6 +93,7 @@
             this.Controls.Add(this.btn_AddAccount);
             this.Controls.Add(this.btn_ChangePassword);
             this.Controls.Add(this.btn_ChangeUsername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Setting";

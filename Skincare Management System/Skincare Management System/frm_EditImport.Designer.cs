@@ -126,6 +126,7 @@
             this.Controls.Add(this.txt_qty_edimp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_name_edimp);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
