@@ -94,7 +94,8 @@ namespace Skincare_Management_System
         private void btn_history_patient_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   
+                if(class1.id==0)
                 class1.id = int.Parse(txt_id_patient.Text);
                 class1.name = txt_name_patient.Text;
  
@@ -112,14 +113,23 @@ namespace Skincare_Management_System
 
         private void btn_add_patient_Click(object sender, EventArgs e)
         {
-
+           
+       
             class_connection.insert_customer(txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
                 cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
             class_connection.reset_controll(this);
             SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
+            
             sqlDataReader.Read();
             string id = sqlDataReader.GetValue(0).ToString();
+            class1.name = txt_name_patient.Text;
+            class1.id = int.Parse(id);
             MessageBox.Show("You have successful, The id is: "+id);
+            this.Close();
+            th = new Thread(openHistory);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+
 
         }
         private void txt_id_patient_KeyUp(object sender, KeyEventArgs e)
@@ -192,34 +202,19 @@ namespace Skincare_Management_System
         }
         private void txt_phone_patient_KeyUp(object sender, KeyEventArgs e)
         {
+            
             if (e.KeyCode == Keys.Back)
             {
-                if (txt_id_patient.Text.Length != 0)
-                {
+              if (txt_id_patient.Text.Length != 0)
+              {
                     txt_address_patient.Text = "";
                     cbo_gender_patient.Text = "";
                     txt_occupation_patient.Text = "";
                     txt_name_patient.Text = "";
                     txt_id_patient.Text = "";
                     dt_dob_patient.Text = "";
-
-                }
-                else
-                {
-                    SqlDataReader s_dr = class_connection.get_customer_phone(txt_phone_patient.Text);
-                    while (s_dr.Read())
-                    {
-                        txt_id_patient.Text = s_dr["cus_id"].ToString();
-                        txt_name_patient.Text = s_dr["cus_name"].ToString();
-                        cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
-                        txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
-                        txt_address_patient.Text = s_dr["cus_address"].ToString();
-                        dt_dob_patient.Text = s_dr["cus_dob"].ToString();
-
-                    }
-
-
-                }
+              }
+          
 
             }
             else
@@ -227,7 +222,7 @@ namespace Skincare_Management_System
                 SqlDataReader s_dr = class_connection.get_customer_phone(txt_phone_patient.Text);
                 while (s_dr.Read())
                 {
-                    txt_id_patient.Text = s_dr["cus_id"].ToString();
+                     class1.id= int.Parse(s_dr["cus_id"].ToString()) ;
                     txt_name_patient.Text = s_dr["cus_name"].ToString();
                     cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
                     txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
@@ -241,16 +236,53 @@ namespace Skincare_Management_System
         }
 
         private void btn_edit_patient_Click(object sender, EventArgs e)
-        {
+        {   
+            if(class1.id==0)
             class_connection.update_customer(int.Parse(txt_id_patient.Text), txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
                cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+            else
+                class_connection.update_customer(class1.id, txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
+              cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
             MessageBox.Show("Update Successful");
 
         }
 
         private void frm_Patient_Load(object sender, EventArgs e)
         {
-
+            class1.id = 0;
+            class1.his_id = 0;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            class_connection.reset_controll(this);
+        }
+
+        private void txt_phone_patient_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar==(char)Keys.Space);
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+             (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_patientlist_Click(object sender, EventArgs e)
+        {
+            frm_PatientList pl = new frm_PatientList();
+            pl.Show();
+        }
+
+        //private void txt_phone_patient_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    Keys key = e.KeyCode;
+        //    if(key==Keys.Space)
+        //    {
+        //        e.Handled = false;
+        //    }
+        //    base.OnKeyDown(e);
+
+        //}
     }
 }

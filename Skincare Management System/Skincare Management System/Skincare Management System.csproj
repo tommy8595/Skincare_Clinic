@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\ridh\Desktop\skin\</PublishUrl>
+    <PublishUrl>C:\Users\ridh\Desktop\skin_app\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -180,6 +180,12 @@
     <Compile Include="frm_Patient.Designer.cs">
       <DependentUpon>frm_Patient.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_PatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PatientList.Designer.cs">
+      <DependentUpon>frm_PatientList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Prescription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Patient.resx">
       <DependentUpon>frm_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PatientList.resx">
+      <DependentUpon>frm_PatientList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Prescription.resx">
       <DependentUpon>frm_Prescription.cs</DependentUpon>

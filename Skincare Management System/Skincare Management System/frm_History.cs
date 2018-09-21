@@ -35,6 +35,8 @@ namespace Skincare_Management_System
 
         private void btn_Patient_Click(object sender, EventArgs e)
         {
+            class1.id = 0;
+            class1.name = "";
             this.Close();
             th = new Thread(openPatient);
             th.SetApartmentState(ApartmentState.STA);
@@ -113,7 +115,7 @@ namespace Skincare_Management_System
         private void btn_print_history_Click(object sender, EventArgs e)
         {
             frm_ReportPatient rp = new frm_ReportPatient
-            (int.Parse(dgv_history.CurrentRow.Cells[7].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
+            (int.Parse(dgv_history.CurrentRow.Cells[0].Value.ToString()), int.Parse(txt_id_history.Text),txt_name_history.Text);
             rp.Show();
         }
        

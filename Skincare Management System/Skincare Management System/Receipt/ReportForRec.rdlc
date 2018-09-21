@@ -397,7 +397,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>= "Consultation=" &amp; Fields!consultation.Value</Value>
+                              <Value>= "Consultation=" &amp; Fields!consultation.Value &amp;"$"</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -422,7 +422,6 @@
                       </Style>
                     </Textbox>
                     <ColSpan>4</ColSpan>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -827,7 +826,7 @@
               <Top>0.96944in</Top>
               <Left>2.00608in</Left>
               <Height>0.35in</Height>
-              <Width>0.81419in</Width>
+              <Width>3.28547in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1381,7 +1380,7 @@
           <Top>2.77263cm</Top>
           <Left>0cm</Left>
           <Height>6.07803cm</Height>
-          <Width>13.65821cm</Width>
+          <Width>13.65822cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

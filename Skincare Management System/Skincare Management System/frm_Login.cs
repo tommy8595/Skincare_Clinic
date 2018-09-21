@@ -49,7 +49,10 @@ namespace Skincare_Management_System
             }
             else
             {
-                MessageBox.Show("Incorrect Password or Username");
+                MessageBox.Show("Incorrect Password or Username","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txt_Password.Text = "";
+                txt_Username.Text = "";
+                txt_Username.Focus();
             }
             
         }

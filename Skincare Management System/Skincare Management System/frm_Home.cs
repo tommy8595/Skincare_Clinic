@@ -102,5 +102,12 @@ namespace Skincare_Management_System
             frm_ContactUs cs = new frm_ContactUs();
             cs.Show();
         }
+
+        private void frm_Home_Load(object sender, EventArgs e)
+        {
+            class1.id = 0;
+            class1.his_id = 0;
+            class1.name = "";
+        }
     }
 }

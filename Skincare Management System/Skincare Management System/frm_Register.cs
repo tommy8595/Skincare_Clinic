@@ -40,6 +40,9 @@ namespace Skincare_Management_System
 
         private void btn_save_register_Click(object sender, EventArgs e)
         {
+            
+            frm_Register frm = new frm_Register();
+            frm.Show();
             try
             {
                 if( string.IsNullOrEmpty((txt_importprice_register.Text)) || string.IsNullOrEmpty(txt_name_register.Text) || string.IsNullOrEmpty(txt_sellprice_register.Text)
@@ -97,6 +100,7 @@ namespace Skincare_Management_System
 
                 MessageBox.Show(x.Message);
             }
+            this.Close();
         }
 
         private void frm_Register_Load(object sender, EventArgs e)
@@ -156,5 +160,6 @@ namespace Skincare_Management_System
         }
 
        
+        
     }
 }

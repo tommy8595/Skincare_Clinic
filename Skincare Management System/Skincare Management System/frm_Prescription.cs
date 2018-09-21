@@ -189,14 +189,6 @@ namespace Skincare_Management_System
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openImportHistory);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }
-
-        private void openImportHistory()
-        {
-            Application.Run(new frm_ImportHistory());
         }
 
 

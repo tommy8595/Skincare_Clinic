@@ -35,7 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Setting = new System.Windows.Forms.Button();
             this.btn_LogOut = new System.Windows.Forms.Button();
-            this.btn_Report = new System.Windows.Forms.Button();
             this.btn_Medicine = new System.Windows.Forms.Button();
             this.btn_Patient = new System.Windows.Forms.Button();
             this.pic_Home = new System.Windows.Forms.PictureBox();
@@ -57,14 +56,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.panel1.Controls.Add(this.btn_Setting);
             this.panel1.Controls.Add(this.btn_LogOut);
-            this.panel1.Controls.Add(this.btn_Report);
             this.panel1.Controls.Add(this.btn_Medicine);
             this.panel1.Controls.Add(this.btn_Patient);
             this.panel1.Controls.Add(this.pic_Home);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 821);
+            this.panel1.Size = new System.Drawing.Size(492, 1283);
             this.panel1.TabIndex = 2;
             // 
             // btn_Setting
@@ -76,11 +75,12 @@
             this.btn_Setting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_Setting.FlatAppearance.BorderSize = 2;
             this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Setting.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Setting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Setting.Location = new System.Drawing.Point(90, 655);
+            this.btn_Setting.Location = new System.Drawing.Point(135, 1023);
+            this.btn_Setting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(137, 45);
+            this.btn_Setting.Size = new System.Drawing.Size(206, 70);
             this.btn_Setting.TabIndex = 69;
             this.btn_Setting.UseVisualStyleBackColor = false;
             this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
@@ -91,29 +91,16 @@
             this.btn_LogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_LogOut.FlatAppearance.BorderSize = 2;
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LogOut.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogOut.ForeColor = System.Drawing.Color.White;
-            this.btn_LogOut.Location = new System.Drawing.Point(90, 753);
+            this.btn_LogOut.Location = new System.Drawing.Point(135, 1177);
+            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Size = new System.Drawing.Size(137, 45);
+            this.btn_LogOut.Size = new System.Drawing.Size(206, 70);
             this.btn_LogOut.TabIndex = 13;
             this.btn_LogOut.Text = "Log Out";
             this.btn_LogOut.UseVisualStyleBackColor = true;
             this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
-            // 
-            // btn_Report
-            // 
-            this.btn_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Report.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Report.BackgroundImage")));
-            this.btn_Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Report.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Report.FlatAppearance.BorderSize = 0;
-            this.btn_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Report.Location = new System.Drawing.Point(21, 461);
-            this.btn_Report.Name = "btn_Report";
-            this.btn_Report.Size = new System.Drawing.Size(284, 92);
-            this.btn_Report.TabIndex = 3;
-            this.btn_Report.UseVisualStyleBackColor = false;
             // 
             // btn_Medicine
             // 
@@ -123,9 +110,10 @@
             this.btn_Medicine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Medicine.FlatAppearance.BorderSize = 0;
             this.btn_Medicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Medicine.Location = new System.Drawing.Point(21, 319);
+            this.btn_Medicine.Location = new System.Drawing.Point(32, 643);
+            this.btn_Medicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Medicine.Name = "btn_Medicine";
-            this.btn_Medicine.Size = new System.Drawing.Size(284, 92);
+            this.btn_Medicine.Size = new System.Drawing.Size(426, 144);
             this.btn_Medicine.TabIndex = 3;
             this.btn_Medicine.UseVisualStyleBackColor = false;
             this.btn_Medicine.Click += new System.EventHandler(this.btn_Medicine_Click);
@@ -138,9 +126,10 @@
             this.btn_Patient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Patient.FlatAppearance.BorderSize = 0;
             this.btn_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Patient.Location = new System.Drawing.Point(21, 177);
+            this.btn_Patient.Location = new System.Drawing.Point(32, 422);
+            this.btn_Patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Patient.Name = "btn_Patient";
-            this.btn_Patient.Size = new System.Drawing.Size(284, 92);
+            this.btn_Patient.Size = new System.Drawing.Size(426, 144);
             this.btn_Patient.TabIndex = 2;
             this.btn_Patient.UseVisualStyleBackColor = false;
             this.btn_Patient.Click += new System.EventHandler(this.btn_Patient_Click);
@@ -149,9 +138,10 @@
             // 
             this.pic_Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Home.Image = ((System.Drawing.Image)(resources.GetObject("pic_Home.Image")));
-            this.pic_Home.Location = new System.Drawing.Point(2, 7);
+            this.pic_Home.Location = new System.Drawing.Point(3, 11);
+            this.pic_Home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pic_Home.Name = "pic_Home";
-            this.pic_Home.Size = new System.Drawing.Size(323, 75);
+            this.pic_Home.Size = new System.Drawing.Size(484, 117);
             this.pic_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Home.TabIndex = 1;
             this.pic_Home.TabStop = false;
@@ -161,20 +151,22 @@
             // 
             this.dgv_stock.BackgroundColor = System.Drawing.Color.White;
             this.dgv_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_stock.Location = new System.Drawing.Point(389, 87);
+            this.dgv_stock.Location = new System.Drawing.Point(584, 136);
+            this.dgv_stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_stock.Name = "dgv_stock";
             this.dgv_stock.RowTemplate.Height = 24;
-            this.dgv_stock.Size = new System.Drawing.Size(1093, 613);
+            this.dgv_stock.Size = new System.Drawing.Size(1640, 958);
             this.dgv_stock.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.label1.Location = new System.Drawing.Point(382, 21);
+            this.label1.Location = new System.Drawing.Point(573, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 39);
+            this.label1.Size = new System.Drawing.Size(165, 61);
             this.label1.TabIndex = 15;
             this.label1.Text = "Stock";
             // 
@@ -185,11 +177,12 @@
             this.btn_register_stock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_register_stock.FlatAppearance.BorderSize = 2;
             this.btn_register_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_register_stock.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_register_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_register_stock.ForeColor = System.Drawing.Color.White;
-            this.btn_register_stock.Location = new System.Drawing.Point(389, 734);
+            this.btn_register_stock.Location = new System.Drawing.Point(584, 1147);
+            this.btn_register_stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_register_stock.Name = "btn_register_stock";
-            this.btn_register_stock.Size = new System.Drawing.Size(137, 45);
+            this.btn_register_stock.Size = new System.Drawing.Size(206, 70);
             this.btn_register_stock.TabIndex = 27;
             this.btn_register_stock.Text = "Register";
             this.btn_register_stock.UseVisualStyleBackColor = false;
@@ -202,11 +195,12 @@
             this.btn_edit_stock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_edit_stock.FlatAppearance.BorderSize = 2;
             this.btn_edit_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit_stock.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit_stock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_edit_stock.Location = new System.Drawing.Point(1162, 731);
+            this.btn_edit_stock.Location = new System.Drawing.Point(1743, 1142);
+            this.btn_edit_stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_edit_stock.Name = "btn_edit_stock";
-            this.btn_edit_stock.Size = new System.Drawing.Size(137, 45);
+            this.btn_edit_stock.Size = new System.Drawing.Size(206, 70);
             this.btn_edit_stock.TabIndex = 28;
             this.btn_edit_stock.Text = "Edit";
             this.btn_edit_stock.UseVisualStyleBackColor = false;
@@ -219,11 +213,12 @@
             this.btn_back_stock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_back_stock.FlatAppearance.BorderSize = 2;
             this.btn_back_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back_stock.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_stock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_back_stock.Location = new System.Drawing.Point(1345, 731);
+            this.btn_back_stock.Location = new System.Drawing.Point(2018, 1142);
+            this.btn_back_stock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_back_stock.Name = "btn_back_stock";
-            this.btn_back_stock.Size = new System.Drawing.Size(137, 45);
+            this.btn_back_stock.Size = new System.Drawing.Size(206, 70);
             this.btn_back_stock.TabIndex = 29;
             this.btn_back_stock.Text = "Back";
             this.btn_back_stock.UseVisualStyleBackColor = false;
@@ -231,10 +226,13 @@
             // 
             // dgv_product_frmstock
             // 
+            this.dgv_product_frmstock.AllowUserToAddRows = false;
+            this.dgv_product_frmstock.AllowUserToDeleteRows = false;
             this.dgv_product_frmstock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_product_frmstock.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -242,17 +240,19 @@
             this.dgv_product_frmstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_product_frmstock.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_product_frmstock.Location = new System.Drawing.Point(389, 87);
+            this.dgv_product_frmstock.Location = new System.Drawing.Point(584, 136);
+            this.dgv_product_frmstock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_product_frmstock.Name = "dgv_product_frmstock";
+            this.dgv_product_frmstock.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -260,7 +260,7 @@
             this.dgv_product_frmstock.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_product_frmstock.RowTemplate.Height = 24;
             this.dgv_product_frmstock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_product_frmstock.Size = new System.Drawing.Size(1093, 613);
+            this.dgv_product_frmstock.Size = new System.Drawing.Size(1640, 958);
             this.dgv_product_frmstock.TabIndex = 32;
             // 
             // btn_print_frmstock
@@ -270,11 +270,12 @@
             this.btn_print_frmstock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
             this.btn_print_frmstock.FlatAppearance.BorderSize = 2;
             this.btn_print_frmstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_print_frmstock.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print_frmstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_print_frmstock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_print_frmstock.Location = new System.Drawing.Point(979, 731);
+            this.btn_print_frmstock.Location = new System.Drawing.Point(1468, 1142);
+            this.btn_print_frmstock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_print_frmstock.Name = "btn_print_frmstock";
-            this.btn_print_frmstock.Size = new System.Drawing.Size(137, 45);
+            this.btn_print_frmstock.Size = new System.Drawing.Size(206, 70);
             this.btn_print_frmstock.TabIndex = 33;
             this.btn_print_frmstock.Text = "Print";
             this.btn_print_frmstock.UseVisualStyleBackColor = false;
@@ -282,10 +283,10 @@
             // 
             // frm_Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1541, 821);
+            this.ClientSize = new System.Drawing.Size(2312, 1283);
             this.Controls.Add(this.btn_print_frmstock);
             this.Controls.Add(this.dgv_product_frmstock);
             this.Controls.Add(this.btn_back_stock);
@@ -295,6 +296,7 @@
             this.Controls.Add(this.dgv_stock);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frm_Stock";
             this.ShowIcon = false;
@@ -315,7 +317,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Setting;
         private System.Windows.Forms.Button btn_LogOut;
-        private System.Windows.Forms.Button btn_Report;
         private System.Windows.Forms.Button btn_Medicine;
         private System.Windows.Forms.Button btn_Patient;
         private System.Windows.Forms.PictureBox pic_Home;
