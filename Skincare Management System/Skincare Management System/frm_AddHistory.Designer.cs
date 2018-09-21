@@ -70,9 +70,8 @@
             this.panel1.Controls.Add(this.pic_Home);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 1283);
+            this.panel1.Size = new System.Drawing.Size(328, 1033);
             this.panel1.TabIndex = 1;
             // 
             // btn_Setting
@@ -86,10 +85,9 @@
             this.btn_Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Setting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_Setting.Location = new System.Drawing.Point(135, 1023);
-            this.btn_Setting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Setting.Location = new System.Drawing.Point(90, 655);
             this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(206, 70);
+            this.btn_Setting.Size = new System.Drawing.Size(137, 45);
             this.btn_Setting.TabIndex = 69;
             this.btn_Setting.UseVisualStyleBackColor = false;
             this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
@@ -102,10 +100,9 @@
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogOut.ForeColor = System.Drawing.Color.White;
-            this.btn_LogOut.Location = new System.Drawing.Point(135, 1177);
-            this.btn_LogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_LogOut.Location = new System.Drawing.Point(90, 753);
             this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Size = new System.Drawing.Size(206, 70);
+            this.btn_LogOut.Size = new System.Drawing.Size(137, 45);
             this.btn_LogOut.TabIndex = 13;
             this.btn_LogOut.Text = "Log Out";
             this.btn_LogOut.UseVisualStyleBackColor = true;
@@ -119,10 +116,9 @@
             this.btn_Medicine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Medicine.FlatAppearance.BorderSize = 0;
             this.btn_Medicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Medicine.Location = new System.Drawing.Point(28, 656);
-            this.btn_Medicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Medicine.Location = new System.Drawing.Point(19, 420);
             this.btn_Medicine.Name = "btn_Medicine";
-            this.btn_Medicine.Size = new System.Drawing.Size(426, 144);
+            this.btn_Medicine.Size = new System.Drawing.Size(284, 92);
             this.btn_Medicine.TabIndex = 3;
             this.btn_Medicine.UseVisualStyleBackColor = false;
             this.btn_Medicine.Click += new System.EventHandler(this.btn_Medicine_Click);
@@ -135,10 +131,9 @@
             this.btn_Patient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Patient.FlatAppearance.BorderSize = 0;
             this.btn_Patient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Patient.Location = new System.Drawing.Point(28, 436);
-            this.btn_Patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Patient.Location = new System.Drawing.Point(19, 279);
             this.btn_Patient.Name = "btn_Patient";
-            this.btn_Patient.Size = new System.Drawing.Size(426, 144);
+            this.btn_Patient.Size = new System.Drawing.Size(284, 92);
             this.btn_Patient.TabIndex = 2;
             this.btn_Patient.UseVisualStyleBackColor = false;
             this.btn_Patient.Click += new System.EventHandler(this.btn_Patient_Click);
@@ -147,10 +142,9 @@
             // 
             this.pic_Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Home.Image = ((System.Drawing.Image)(resources.GetObject("pic_Home.Image")));
-            this.pic_Home.Location = new System.Drawing.Point(3, 11);
-            this.pic_Home.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_Home.Location = new System.Drawing.Point(2, 7);
             this.pic_Home.Name = "pic_Home";
-            this.pic_Home.Size = new System.Drawing.Size(484, 117);
+            this.pic_Home.Size = new System.Drawing.Size(323, 75);
             this.pic_Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Home.TabIndex = 1;
             this.pic_Home.TabStop = false;
@@ -161,10 +155,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.label1.Location = new System.Drawing.Point(573, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(382, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 61);
+            this.label1.Size = new System.Drawing.Size(127, 38);
             this.label1.TabIndex = 4;
             this.label1.Text = "History";
             // 
@@ -172,10 +165,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(988, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(659, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 46);
+            this.label2.Size = new System.Drawing.Size(37, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "ID";
             // 
@@ -183,20 +175,18 @@
             // 
             this.txt_id_patient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_id_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id_patient.Location = new System.Drawing.Point(1074, 41);
-            this.txt_id_patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_id_patient.Location = new System.Drawing.Point(716, 26);
             this.txt_id_patient.Name = "txt_id_patient";
-            this.txt_id_patient.Size = new System.Drawing.Size(137, 53);
+            this.txt_id_patient.Size = new System.Drawing.Size(92, 36);
             this.txt_id_patient.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1280, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(853, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 46);
+            this.label4.Size = new System.Drawing.Size(81, 29);
             this.label4.TabIndex = 12;
             this.label4.Text = "Name";
             // 
@@ -204,19 +194,17 @@
             // 
             this.txt_name_addhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_name_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_addhistory.Location = new System.Drawing.Point(1436, 41);
-            this.txt_name_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_name_addhistory.Location = new System.Drawing.Point(957, 26);
             this.txt_name_addhistory.Name = "txt_name_addhistory";
-            this.txt_name_addhistory.Size = new System.Drawing.Size(786, 53);
+            this.txt_name_addhistory.Size = new System.Drawing.Size(525, 36);
             this.txt_name_addhistory.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(584, 153);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(389, 98);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1640, 3);
+            this.pictureBox1.Size = new System.Drawing.Size(1093, 2);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
@@ -224,10 +212,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(574, 212);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(383, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 46);
+            this.label3.Size = new System.Drawing.Size(92, 29);
             this.label3.TabIndex = 27;
             this.label3.Text = "History";
             // 
@@ -235,10 +222,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(574, 427);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(383, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(330, 46);
+            this.label5.Size = new System.Drawing.Size(210, 29);
             this.label5.TabIndex = 29;
             this.label5.Text = "Skin Examination";
             // 
@@ -246,10 +232,9 @@
             // 
             this.rt_history_addhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rt_history_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rt_history_addhistory.Location = new System.Drawing.Point(998, 212);
-            this.rt_history_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rt_history_addhistory.Location = new System.Drawing.Point(665, 136);
             this.rt_history_addhistory.Name = "rt_history_addhistory";
-            this.rt_history_addhistory.Size = new System.Drawing.Size(1224, 171);
+            this.rt_history_addhistory.Size = new System.Drawing.Size(817, 111);
             this.rt_history_addhistory.TabIndex = 3;
             this.rt_history_addhistory.Text = "";
             // 
@@ -257,20 +242,18 @@
             // 
             this.txt_location_addhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_location_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_location_addhistory.Location = new System.Drawing.Point(998, 641);
-            this.txt_location_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_location_addhistory.Location = new System.Drawing.Point(665, 410);
             this.txt_location_addhistory.Name = "txt_location_addhistory";
-            this.txt_location_addhistory.Size = new System.Drawing.Size(1224, 53);
+            this.txt_location_addhistory.Size = new System.Drawing.Size(817, 36);
             this.txt_location_addhistory.TabIndex = 5;
             // 
             // rt_se_addhistory
             // 
             this.rt_se_addhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rt_se_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rt_se_addhistory.Location = new System.Drawing.Point(998, 427);
-            this.rt_se_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rt_se_addhistory.Location = new System.Drawing.Point(665, 273);
             this.rt_se_addhistory.Name = "rt_se_addhistory";
-            this.rt_se_addhistory.Size = new System.Drawing.Size(1224, 171);
+            this.rt_se_addhistory.Size = new System.Drawing.Size(817, 111);
             this.rt_se_addhistory.TabIndex = 4;
             this.rt_se_addhistory.Text = "";
             // 
@@ -278,10 +261,9 @@
             // 
             this.rt_investigation_addhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rt_investigation_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rt_investigation_addhistory.Location = new System.Drawing.Point(998, 741);
-            this.rt_investigation_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rt_investigation_addhistory.Location = new System.Drawing.Point(665, 474);
             this.rt_investigation_addhistory.Name = "rt_investigation_addhistory";
-            this.rt_investigation_addhistory.Size = new System.Drawing.Size(1224, 171);
+            this.rt_investigation_addhistory.Size = new System.Drawing.Size(817, 111);
             this.rt_investigation_addhistory.TabIndex = 6;
             this.rt_investigation_addhistory.Text = "";
             // 
@@ -289,10 +271,9 @@
             // 
             this.rt_diagnosis_addhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rt_diagnosis_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rt_diagnosis_addhistory.Location = new System.Drawing.Point(998, 955);
-            this.rt_diagnosis_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rt_diagnosis_addhistory.Location = new System.Drawing.Point(665, 611);
             this.rt_diagnosis_addhistory.Name = "rt_diagnosis_addhistory";
-            this.rt_diagnosis_addhistory.Size = new System.Drawing.Size(1224, 171);
+            this.rt_diagnosis_addhistory.Size = new System.Drawing.Size(817, 111);
             this.rt_diagnosis_addhistory.TabIndex = 7;
             this.rt_diagnosis_addhistory.Text = "";
             // 
@@ -300,10 +281,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 644);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(383, 412);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 46);
+            this.label6.Size = new System.Drawing.Size(109, 29);
             this.label6.TabIndex = 37;
             this.label6.Text = "Location";
             // 
@@ -311,10 +291,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(574, 744);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(383, 476);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(242, 46);
+            this.label7.Size = new System.Drawing.Size(155, 29);
             this.label7.TabIndex = 38;
             this.label7.Text = "Investigation";
             // 
@@ -322,10 +301,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(574, 958);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(383, 613);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(196, 46);
+            this.label8.Size = new System.Drawing.Size(125, 29);
             this.label8.TabIndex = 39;
             this.label8.Text = "Diagnosis";
             // 
@@ -338,10 +316,9 @@
             this.btn_back_addhistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_addhistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_back_addhistory.Location = new System.Drawing.Point(2016, 1167);
-            this.btn_back_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_back_addhistory.Location = new System.Drawing.Point(1344, 747);
             this.btn_back_addhistory.Name = "btn_back_addhistory";
-            this.btn_back_addhistory.Size = new System.Drawing.Size(206, 70);
+            this.btn_back_addhistory.Size = new System.Drawing.Size(137, 45);
             this.btn_back_addhistory.TabIndex = 40;
             this.btn_back_addhistory.Text = "Back";
             this.btn_back_addhistory.UseVisualStyleBackColor = false;
@@ -356,10 +333,9 @@
             this.btn_save_addhistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_addhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_addhistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_save_addhistory.Location = new System.Drawing.Point(1740, 1167);
-            this.btn_save_addhistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_save_addhistory.Location = new System.Drawing.Point(1160, 747);
             this.btn_save_addhistory.Name = "btn_save_addhistory";
-            this.btn_save_addhistory.Size = new System.Drawing.Size(206, 70);
+            this.btn_save_addhistory.Size = new System.Drawing.Size(137, 45);
             this.btn_save_addhistory.TabIndex = 8;
             this.btn_save_addhistory.Text = "Save";
             this.btn_save_addhistory.UseVisualStyleBackColor = false;
@@ -382,29 +358,27 @@
             "8",
             "9",
             "10"});
-            this.cbo_level.Location = new System.Drawing.Point(998, 1176);
-            this.cbo_level.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbo_level.Location = new System.Drawing.Point(665, 753);
             this.cbo_level.Name = "cbo_level";
-            this.cbo_level.Size = new System.Drawing.Size(426, 54);
+            this.cbo_level.Size = new System.Drawing.Size(285, 37);
             this.cbo_level.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(576, 1176);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(384, 753);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 46);
+            this.label9.Size = new System.Drawing.Size(74, 29);
             this.label9.TabIndex = 60;
             this.label9.Text = "Level";
             // 
             // frm_AddHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2312, 1283);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbo_level);
             this.Controls.Add(this.btn_save_addhistory);
@@ -427,7 +401,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frm_AddHistory";
             this.ShowIcon = false;

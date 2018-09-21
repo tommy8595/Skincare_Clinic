@@ -108,6 +108,7 @@ namespace Skincare_Management_System
             class_connection.insert_history(class1.id, rt_history_addhistory.Text, rt_se_addhistory.Text, txt_location_addhistory.Text, rt_investigation_addhistory.Text, rt_diagnosis_addhistory.Text, cbo_level.Text);
             MessageBox.Show("You have Saved");
             class_connection.reset_controll(this);
+            this.Close();
             th = new Thread(open_report_history);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();

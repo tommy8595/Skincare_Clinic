@@ -106,7 +106,7 @@ namespace Skincare_Management_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("You must select a patient first.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
            
         }

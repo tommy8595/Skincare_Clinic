@@ -106,18 +106,7 @@ namespace Skincare_Management_System
         private void frm_Register_Load(object sender, EventArgs e)
         {
             lst_category_register.Text = "Choose Or Add New...";
-            str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
-            con = new SqlConnection(str);
-            con.Open();
-            string q = "SELECT cat_id,cat_name FROM tbl_catagory";
-            SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
-            while (dr.Read())
-            {
-                lst_category_register.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
-            }
-            lst_category_register.Items.Add("Add New...");
-            dr.Close();
-            con.Close();
+            
         }
 
         private void cboCat_SelectedIndexChanged(object sender, EventArgs e)
@@ -159,7 +148,20 @@ namespace Skincare_Management_System
             }
         }
 
-       
-        
+        private void lst_category_register_DropDown(object sender, EventArgs e)
+        {
+            str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
+            con = new SqlConnection(str);
+            con.Open();
+            string q = "SELECT cat_id,cat_name FROM tbl_catagory";
+            SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
+            while (dr.Read())
+            {
+                lst_category_register.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
+            }
+            lst_category_register.Items.Add("Add New...");
+            dr.Close();
+            con.Close();
+        }
     }
 }
