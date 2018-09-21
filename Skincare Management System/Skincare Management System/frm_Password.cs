@@ -41,14 +41,18 @@ namespace Skincare_Management_System
             SkinCareConnection.OpenConnection();
             if (newpass==confirmpass)
             {
-                SqlCommand cmd = new SqlCommand("sp_update_user", SkinCareConnection.Conn);
+                SqlCommand cmd = new SqlCommand("update_password", SkinCareConnection.Conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@ou", ObjectUpdateUser.username));
-                cmd.Parameters.Add(new SqlParameter("@u", ObjectUpdateUser.username));
+                cmd.Parameters.Add(new SqlParameter("@ui", ObjectUpdateUser.username));
                 cmd.Parameters.Add(new SqlParameter("@p", txt_confirm_changepassword.Text));
                 cmd.ExecuteNonQuery();
-                this.Close();
+                
                 MessageBox.Show("change password sucessfully");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Password Does not Match.");
             }
             SkinCareConnection.CloseConnection();
         }

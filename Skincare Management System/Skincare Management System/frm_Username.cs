@@ -39,15 +39,22 @@ namespace Skincare_Management_System
         
         private void btn_save_update_username_Click(object sender, EventArgs e)
         {
+            if (txt_pass_ChangeUser.Text == ObjectUpdateUser.password)
+            {
+                SqlCommand cmd = new SqlCommand("sp_update_user", SkinCareConnection.Conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@ou", ObjectUpdateUser.username));//chab old name pi klang login
+                cmd.Parameters.Add(new SqlParameter("@u", txt_user_ChangeUser.Text));
+                cmd.Parameters.Add(new SqlParameter("@p", ObjectUpdateUser.password));
+                cmd.ExecuteNonQuery();
 
-            SqlCommand cmd = new SqlCommand("sp_update_user", SkinCareConnection.Conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@ou", ObjectUpdateUser.username));//chab old name pi klang login
-            cmd.Parameters.Add(new SqlParameter("@u", txt_user_ChangeUser.Text));
-            cmd.Parameters.Add(new SqlParameter("@p",ObjectUpdateUser.password));
-            cmd.ExecuteNonQuery();
-            this.Close();
-            MessageBox.Show("change user successfully");
+                ObjectUpdateUser.username = txt_user_ChangeUser.Text;
+                MessageBox.Show("change user successfully");
+                this.Close();
+            }
+            else
+                MessageBox.Show("Please Enter correct password.");
+            
         }
     }
 }
