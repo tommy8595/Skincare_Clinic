@@ -176,7 +176,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.3249in</Height>
+              <Height>0.17907in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -187,7 +187,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!pro_id.Value</Value>
+                              <Value>=RowNumber(nothing)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -345,7 +345,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.2999in</Height>
+              <Height>0.14365in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -386,7 +386,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.2999in</Height>
+              <Height>0.18532in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -537,8 +537,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetPres</DataSetName>
-        <Left>0.23786in</Left>
-        <Height>1.24126in</Height>
+        <Top>0.01389in</Top>
+        <Left>0.44274in</Left>
+        <Height>0.82459in</Height>
         <Width>4.81066in</Width>
         <Style>
           <Border>
@@ -556,6 +557,7 @@
                 <Value>Dr. SENG MALA</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
+                  <Color>Blue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -567,6 +569,7 @@
                 <Value>(DES Dermatology)</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
+                  <Color>Blue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -578,6 +581,7 @@
                 <Value>093 / 011 39 49 39</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
+                  <Color>Blue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -585,10 +589,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>2.36154in</Top>
-        <Left>3.41538in</Left>
+        <Top>1.99369in</Top>
+        <Left>3.65805in</Left>
         <Height>0.56506in</Height>
-        <Width>1.46963in</Width>
+        <Width>1.45921in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -620,8 +624,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox102</rd:DefaultName>
-        <Top>1.81346in</Top>
-        <Left>3.57608in</Left>
+        <Top>1.44561in</Top>
+        <Left>3.80833in</Left>
         <Height>0.31667in</Height>
         <Width>0.83714in</Width>
         <ZIndex>2</ZIndex>
@@ -654,8 +658,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox101</rd:DefaultName>
-        <Top>1.33569in</Top>
-        <Left>2.56731in</Left>
+        <Top>0.96784in</Top>
+        <Left>2.79956in</Left>
         <Height>0.35in</Height>
         <Width>2.48954in</Width>
         <ZIndex>3</ZIndex>
@@ -727,8 +731,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>1.33569in</Top>
-        <Left>0.24619in</Left>
+        <Top>0.96784in</Top>
+        <Left>0.47844in</Left>
         <Height>1.20917in</Height>
         <Width>2.25167in</Width>
         <ZIndex>4</ZIndex>
@@ -743,13 +747,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>10cm</Height>
+    <Height>6.56978cm</Height>
     <Style />
   </Body>
-  <Width>14.45285cm</Width>
+  <Width>14.50577cm</Width>
   <Page>
     <PageHeader>
-      <Height>8.85067cm</Height>
+      <Height>7.04125cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -760,10 +764,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>បន្ទប់ពិគ្រោះ​ និង​ ព្យាបាលជំងឺសើស្បែក ទឹកថ្លា</Value>
+                  <Value>ពេទ្យ​​​សើស្បែក ទឹកថ្លា</Value>
                   <Style>
-                    <FontFamily>daunPenh</FontFamily>
-                    <FontSize>28pt</FontSize>
+                    <FontFamily>Khmer OS Battambang</FontFamily>
+                    <FontSize>20pt</FontSize>
                     <Color>Blue</Color>
                   </Style>
                 </TextRun>
@@ -778,7 +782,6 @@
                   <Value>TEK TLA SKIN CABINET</Value>
                   <Style>
                     <FontFamily>Lucida Fax</FontFamily>
-                    <FontSize>12pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                     <Color>Blue</Color>
                   </Style>
@@ -790,8 +793,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox23</rd:DefaultName>
-          <Top>0.08741in</Top>
-          <Left>1.28351in</Left>
+          <Top>0.25in</Top>
+          <Left>1.03044in</Left>
           <Height>0.79445in</Height>
           <Width>4.09374in</Width>
           <Style>
@@ -823,15 +826,15 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Diagnostic</rd:DefaultName>
-              <Top>0.96944in</Top>
-              <Left>2.00608in</Left>
-              <Height>0.35in</Height>
-              <Width>3.28547in</Width>
+              <Top>0.64027in</Top>
+              <Left>1.90322in</Left>
+              <Height>0.23889in</Height>
+              <Width>1.57796in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
               </Style>
             </Textbox>
             <Textbox Name="Textbox16">
@@ -864,9 +867,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.96944in</Top>
-              <Left>0.24619in</Left>
-              <Height>0.35in</Height>
+              <Top>0.62638in</Top>
+              <Left>0.19888in</Left>
+              <Height>0.23889in</Height>
               <Width>1.69045in</Width>
               <ZIndex>1</ZIndex>
               <Style>
@@ -910,9 +913,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.49167in</Top>
-              <Left>0.24619in</Left>
-              <Height>0.40833in</Height>
+              <Top>0.31459in</Top>
+              <Left>0.20996in</Left>
+              <Height>0.29375in</Height>
               <Width>1.06943in</Width>
               <ZIndex>2</ZIndex>
               <Style>
@@ -943,16 +946,16 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Name</rd:DefaultName>
-              <Top>0.49167in</Top>
-              <Left>1.35729in</Left>
-              <Height>0.40833in</Height>
-              <Width>2.61065in</Width>
+              <Top>0.31459in</Top>
+              <Left>1.32106in</Left>
+              <Height>0.29375in</Height>
+              <Width>0.61558in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingBottom>3pt</PaddingBottom>
               </Style>
             </Textbox>
@@ -973,15 +976,16 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ID</rd:DefaultName>
+              <Top>0.01389in</Top>
               <Left>1.27397in</Left>
-              <Height>0.40834in</Height>
+              <Height>0.27292in</Height>
               <Width>0.66267in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingBottom>3pt</PaddingBottom>
               </Style>
             </Textbox>
@@ -1019,7 +1023,7 @@
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.01389in</Top>
               <Left>0.24619in</Left>
-              <Height>0.40834in</Height>
+              <Height>0.25903in</Height>
               <Width>1in</Width>
               <ZIndex>5</ZIndex>
               <Style>
@@ -1063,9 +1067,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox18</rd:DefaultName>
-              <Top>0.01389in</Top>
+              <Top>0.31179in</Top>
               <Left>4.03738in</Left>
-              <Height>0.40834in</Height>
+              <Height>0.25903in</Height>
               <Width>0.875in</Width>
               <ZIndex>6</ZIndex>
               <Style>
@@ -1092,15 +1096,16 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Age</rd:DefaultName>
+              <Top>0.2979in</Top>
               <Left>4.83272in</Left>
-              <Height>0.40834in</Height>
+              <Height>0.27292in</Height>
               <Width>0.54453in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingBottom>4pt</PaddingBottom>
               </Style>
             </Textbox>
@@ -1121,16 +1126,16 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Level</rd:DefaultName>
-              <Top>0.50556in</Top>
-              <Left>4.91238in</Left>
-              <Height>0.39444in</Height>
+              <Top>0.62638in</Top>
+              <Left>4.87615in</Left>
+              <Height>0.27986in</Height>
               <Width>0.37917in</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingBottom>4pt</PaddingBottom>
               </Style>
             </Textbox>
@@ -1167,9 +1172,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.50556in</Top>
-              <Left>4.03738in</Left>
-              <Height>0.39444in</Height>
+              <Top>0.62638in</Top>
+              <Left>4.00115in</Left>
+              <Height>0.27986in</Height>
               <Width>0.97216in</Width>
               <ZIndex>9</ZIndex>
               <Style>
@@ -1190,26 +1195,11 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>វេជ្ជបញ្ចា</Value>
+                      <Value>វេជ្ជបញ្ជា</Value>
                       <Style>
-                        <FontFamily>Khmer OS Moul</FontFamily>
-                        <FontSize>16pt</FontSize>
-                        <Color>Blue</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>(Prescription)</Value>
-                      <Style>
-                        <FontSize>11pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>Blue</Color>
+                        <FontFamily>Khmer Mool</FontFamily>
+                        <FontSize>18pt</FontSize>
+                        <Color>Red</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1219,10 +1209,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>1.375in</Top>
-              <Left>2.06771in</Left>
-              <Height>0.50626in</Height>
-              <Width>1.70833in</Width>
+              <Top>0.87916in</Top>
+              <Left>2.27887in</Left>
+              <Height>0.54793in</Height>
+              <Width>1.20231in</Width>
               <ZIndex>10</ZIndex>
               <Style>
                 <Border>
@@ -1266,9 +1256,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.01389in</Top>
-              <Left>2.09299in</Left>
-              <Height>0.39445in</Height>
+              <Top>0.31459in</Top>
+              <Left>2.07064in</Left>
+              <Height>0.27292in</Height>
               <Width>1.1071in</Width>
               <ZIndex>11</ZIndex>
               <Style>
@@ -1299,16 +1289,16 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Gender</rd:DefaultName>
-              <Top>0.01389in</Top>
-              <Left>3.24175in</Left>
-              <Height>0.39445in</Height>
+              <Top>0.31459in</Top>
+              <Left>3.23329in</Left>
+              <Height>0.27292in</Height>
               <Width>0.72619in</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingBottom>4pt</PaddingBottom>
               </Style>
             </Textbox>
@@ -1328,16 +1318,16 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.88125in</Top>
+              <Top>0.93471in</Top>
               <Left>1.25608in</Left>
-              <Height>0.35in</Height>
-              <Width>0.79519in</Width>
+              <Height>0.2875in</Height>
+              <Width>0.68056in</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
-                <VerticalAlign>Middle</VerticalAlign>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingBottom>3pt</PaddingBottom>
               </Style>
             </Textbox>
@@ -1348,7 +1338,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Order ID :</Value>
+                      <Value>Reciept :</Value>
                       <Style>
                         <FontFamily>daunPenh</FontFamily>
                         <FontSize>20pt</FontSize>
@@ -1359,10 +1349,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.88125in</Top>
+              <Top>0.93471in</Top>
               <Left>0.24619in</Left>
-              <Height>0.35in</Height>
-              <Width>1in</Width>
+              <Height>0.2875in</Height>
+              <Width>0.94045in</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
@@ -1377,9 +1367,9 @@
             </Textbox>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>2.77263cm</Top>
-          <Left>0cm</Left>
-          <Height>6.07803cm</Height>
+          <Top>2.34576cm</Top>
+          <Left>0.6194cm</Left>
+          <Height>4.23334cm</Height>
           <Width>13.65822cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -1392,8 +1382,8 @@
           <Source>Embedded</Source>
           <Value>TekTlaLogo</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.08741in</Top>
-          <Left>0.43755in</Left>
+          <Top>0.1013in</Top>
+          <Left>0.55948in</Left>
           <Height>0.79445in</Height>
           <Width>0.78902in</Width>
           <ZIndex>2</ZIndex>
