@@ -190,7 +190,7 @@ namespace Skincare_Management_System
             txtQuantity.Focus();
             lblTotal.BorderStyle = BorderStyle.Fixed3D;
             lblTotal.Text = "Total: " + getTotal().ToString("c");
-            if (dataGridView1.Rows.Count != 0) { btn_save.Enabled = true; } 
+            if (dataGridView1.Rows.Count != 0) { btn_save.Enabled = true; btnRemove.Enabled = true; } 
 
             }
             catch (Exception t)
@@ -276,6 +276,7 @@ namespace Skincare_Management_System
             this.dataGridView1.Columns[4].DefaultCellStyle.Format = "c";
             btn_save.Enabled = false;
             cboName.Enabled = false;
+            btnRemove.Enabled = false;
             comboBox1.Text = "Pick one..";
             cboName.Text = "Pick Category first.";
            
@@ -366,6 +367,15 @@ namespace Skincare_Management_System
                 MessageBox.Show(x.Message);
                 throw;
             } 
-        }      
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
+            }
+        }
     }
 }
