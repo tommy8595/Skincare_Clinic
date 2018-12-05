@@ -157,8 +157,8 @@ namespace Skincare_Management_System
             //dgv_history.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_history.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;          // wrapped to subsequent lines
             this.dgv_history.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;         //Row height autosize
-          
 
+            this.dgv_history.Sort(dgv_history.Columns[0], ListSortDirection.Descending);
 
         }
     }

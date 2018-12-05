@@ -27,6 +27,7 @@ namespace Skincare_Management_System
         Receipt.DataSetForReceipt receipt;
         int ord_id;
         List<int> pro_id = new List<int>();
+        int lastPrescription = 0;
 
         private void openImportMedicine()
         {
@@ -159,8 +160,12 @@ namespace Skincare_Management_System
                             double.Parse(dataGridView1[4, i].Value.ToString().Trim()), // Price
                             double.Parse(txt_consultation.Text.Trim()), // Consulation
                             getTotal()); // Total
+                        lastPrescription += 1;
+                        this.AppendHistoryForPrescription(
+                            dataGridView1[0, i].Value.ToString().Trim(),
+                            int.Parse(dataGridView1[2, i].Value.ToString().Trim())
+                        );
                     }
-
                     dataGridView1.Rows.Clear();
                     con.Close();
                     if (MessageBox.Show("Your data have been saved successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
@@ -403,6 +408,36 @@ namespace Skincare_Management_System
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+        private void AppendHistoryForPrescription(string pro_name,int qty)
+        {
+            try
+            {
+                string cmdText = "";
+                SqlCommand cmd;
+                string comma = ",";
+                string value = pro_name + " = " + qty + comma;
+                if (dataGridView1.Rows.Count.Equals(1))
+                {
+                    comma = null;
+                }
+                if (dataGridView1.Rows.Count.Equals(lastPrescription))
+                {
+                    value = value.Substring(0, value.Length - 1);        
+                }
+                cmdText = string.Format("UPDATE tbl_history SET prescription += N'{0}' WHERE his_id={1}",
+                           value, class1.his_id);
+                cmd = new SqlCommand(cmdText, con);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException sql_ex)
+            {
+                MessageBox.Show(sql_ex.Message);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

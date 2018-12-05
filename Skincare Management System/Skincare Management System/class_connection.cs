@@ -85,12 +85,13 @@ namespace Skincare_Management_System
             SqlCommand cmd = new SqlCommand("sp_insert_history", connection());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@ci",ci);
-            cmd.Parameters.AddWithValue("@his", his);
             cmd.Parameters.AddWithValue("@sk", sk);
-            cmd.Parameters.AddWithValue("@lc", lc);
             cmd.Parameters.AddWithValue("@iv", iv);
+            cmd.Parameters.AddWithValue("@lc", lc);
             cmd.Parameters.AddWithValue("@dg", dg);
             cmd.Parameters.AddWithValue("@lv", int.Parse(lv));
+            cmd.Parameters.AddWithValue("@his", his);
+            cmd.Parameters.AddWithValue("@pre", "");
             cmd.ExecuteNonQuery();
             cmd.Dispose();
 
