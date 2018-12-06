@@ -132,6 +132,7 @@ namespace Skincare_Management_System
             try
             {
                 frm_Prescription prescription = new frm_Prescription();
+                prescription.pres = dgv_history.CurrentRow.Cells["prescription"].Value.ToString();
                 prescription.Show();
             }
             catch (Exception ex)

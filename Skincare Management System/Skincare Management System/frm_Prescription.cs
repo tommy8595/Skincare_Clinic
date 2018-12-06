@@ -28,6 +28,8 @@ namespace Skincare_Management_System
         int ord_id;
         List<int> pro_id = new List<int>();
         int lastPrescription = 0;
+        DataSet dataSet = new DataSet();
+        public string pres = "";
 
         private void openImportMedicine()
         {
@@ -200,13 +202,21 @@ namespace Skincare_Management_System
         public void getData()
         {
             int n = dataGridView1.Rows.Add();
-            string st = cboName.SelectedItem.ToString();
-            spl = st.Split(new string[] { "    | " }, StringSplitOptions.None);
-            dataGridView1.Rows[n].Cells[0].Value = spl[0];
-            dataGridView1.Rows[n].Cells[1].Value = comboBox1.SelectedItem;
+            //string st = cboName.SelectedItem.ToString();
+            //spl = st.Split(new string[] { "    | " }, StringSplitOptions.None);
+            //dataGridView1.Rows[n].Cells[0].Value = spl[0];
+            //dataGridView1.Rows[n].Cells[1].Value = comboBox1.SelectedItem;
+            //dataGridView1.Rows[n].Cells[2].Value = txtQuantity.Text;
+            //dataGridView1.Rows[n].Cells[3].Value = spl[1];
+            //dataGridView1.Rows[n].Cells[4].Value = getPrice(int.Parse(spl[1]));
+
+
+            dataGridView1.Rows[n].Cells[0].Value = dataSet.Tables["Product"].Rows[cboName.SelectedIndex]["pro_name"].ToString();
+            dataGridView1.Rows[n].Cells[1].Value = dataSet.Tables["Category"].Rows[comboBox1.SelectedIndex]["cat_name"].ToString();
             dataGridView1.Rows[n].Cells[2].Value = txtQuantity.Text;
-            dataGridView1.Rows[n].Cells[3].Value = spl[1];
-            dataGridView1.Rows[n].Cells[4].Value = getPrice(int.Parse(spl[1]));
+            dataGridView1.Rows[n].Cells[3].Value = dataSet.Tables["Product"].Rows[cboName.SelectedIndex]["pro_id"].ToString();
+            dataGridView1.Rows[n].Cells[4].Value = getPrice((int)cboName.SelectedValue);
+
         }
 
         public float getPrice(int ID)
@@ -248,41 +258,84 @@ namespace Skincare_Management_System
             comboBox1.Text = "Pick one..";
             cboName.Text = "Pick Category first.";
             txt_consultation.Text = "0";
-            
 
+            if (dataSet.Tables.Count.Equals(0))
+            {
+                dataSet.Tables.Add(new DataTable("Category"));
+                dataSet.Tables.Add(new DataTable("Product"));
+            }
+
+            comboBox1.SelectedIndex = -1;
+            comboBox1.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] split;
-            string getString = comboBox1.SelectedItem.ToString();
-            split = getString.Split('.');
-            string SelectedString = split[0];
-            cboName.Items.Clear();
-            if (SelectedString != "")
+            //string[] split;
+            //string getString = comboBox1.SelectedItem.ToString();
+            //split = getString.Split('.');
+            //string SelectedString = split[0];
+            //cboName.Items.Clear();
+            //if (SelectedString != "")
+            //{
+            //    try
+            //    {
+            //        cboName.Text = "Pick One..";
+            //        cboName.Enabled = true;
+            //        con.Open();
+            //        string q = "Select pro_name,pro_id from tbl_product where cat_id= " + SelectedString;
+            //        SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
+            //        while (dr.Read())
+            //        {
+
+            //            cboName.Items.Add(dr.GetValue(0).ToString() + "    | " + dr.GetValue(1).ToString());
+            //            pro_id.Add(dr.GetInt32(1));
+            //        }
+
+            //        dr.Close();
+            //        con.Close();
+            //    }
+            //    catch (SqlException x)
+            //    {
+            //        MessageBox.Show(x.Message);
+            //        throw;
+            //    }
+            //}
+
+
+
+            dataSet.Tables["Product"].Rows.Clear();
+            try
             {
-                try
-                {
-                    cboName.Text = "Pick One..";
-                    cboName.Enabled = true;
-                    con.Open();
-                    string q = "Select pro_name,pro_id from tbl_product where cat_id= " + SelectedString;
-                    SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
-                    while (dr.Read())
-                    {
+                //cboName.Text = "Pick One..";
+                cboName.Enabled = true;
+                con.Open();
+                string q = "Select pro_name,pro_id from tbl_product where cat_id= " + (int)comboBox1.SelectedValue;
+                SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
+                //while (dr.Read())
+                //{
 
-                        cboName.Items.Add(dr.GetValue(0).ToString() + "    | " + dr.GetValue(1).ToString());
-                        pro_id.Add(dr.GetInt32(1));
-                    }
+                //    cboName.Items.Add(dr.GetValue(0).ToString());
+                //    pro_id.Add(dr.GetInt32(1));
+                //}
+                dataSet.Tables["Product"].Load(dr);
 
-                    dr.Close();
-                    con.Close();
-                }
-                catch (SqlException x)
-                {
-                    MessageBox.Show(x.Message);
-                    throw;
-                }
+                dr.Close();
+                con.Close();
+
+                cboName.DisplayMember = "pro_name";
+                cboName.ValueMember = "pro_id";
+                cboName.DataSource = dataSet.Tables["Product"];
+                pro_id.Add((int)dataSet.Tables["Product"].Rows[cboName.SelectedIndex]["pro_id"]);
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                con.Close();
             }
         }
 
@@ -298,7 +351,7 @@ namespace Skincare_Management_System
         {
             try
             {
-                spl = cboName.Text.Split(new string[] { "    | " }, StringSplitOptions.None);
+                //spl = cboName.Text.Split(new string[] { "    | " }, StringSplitOptions.None);
                 if (cboName.SelectedItem == null || txtQuantity.Text == "")
                 {
                     MessageBox.Show("Please Enter Name and Quantity!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -312,7 +365,7 @@ namespace Skincare_Management_System
                         int i = 0;
                         do
                         {
-                            if (dataGridView1.Rows[i].Cells[3].Value.ToString() == spl[1])
+                            if (dataGridView1.Rows[i].Cells[3].Value.ToString() == dataSet.Tables["Product"].Rows[cboName.SelectedIndex]["pro_id"].ToString())
                             {
                                 dataGridView1.Rows[i].Cells[2].Value = int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString())
                                 + int.Parse(txtQuantity.Text);
@@ -337,7 +390,8 @@ namespace Skincare_Management_System
                 if (dt.Rows[0][0].ToString() != "") ord_id = int.Parse(dt.Rows[0][0].ToString());
                 else ord_id = 0;
 
-                cboName.Items.Clear();
+                //cboName.Items.Clear();
+                dataSet.Tables["Product"].Rows.Clear();
                 comboBox1.Text = "Pick one...";
                 cboName.Enabled = false;
                 cboName.Text = "Pick Category First.";
@@ -346,12 +400,13 @@ namespace Skincare_Management_System
                 lblTotal.BorderStyle = BorderStyle.Fixed3D;
                 lblTotal.Text = "Total: " + getTotal().ToString("c");
                 if (dataGridView1.Rows.Count != 0) { btn_save.Enabled = true; }
+                comboBox1.SelectedIndexChanged -= comboBox1_SelectedIndexChanged;
                
             }
             catch (Exception t)
             {
 
-                MessageBox.Show("Please contact developer!" + t.Message);
+                MessageBox.Show("Please contact developer!\t" + t.Message);
             }
 
 
@@ -360,19 +415,28 @@ namespace Skincare_Management_System
         {
             try
             {
-                comboBox1.Items.Clear();
+                //comboBox1.Items.Clear();
+                dataSet.Tables["Category"].Rows.Clear();
                 str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
                 con = new SqlConnection(str);
                 con.Open();
                 string q = "SELECT cat_id,cat_name FROM tbl_catagory";
                 SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
-                while (dr.Read())
-                {
-                    comboBox1.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
+                //while (dr.Read())
+                //{
+                //    comboBox1.Items.Add(dr.GetValue(0) + "." + dr.GetValue(1).ToString());
 
-                }
+                //}
+
+                dataSet.Tables["Category"].Load(dr);
                 dr.Close();
                 con.Close();
+
+                comboBox1.DisplayMember = "cat_name";
+                comboBox1.ValueMember = "cat_id";
+                comboBox1.DataSource = dataSet.Tables["Category"];
+
+                comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             }
             catch (SqlException x)
             {
@@ -417,14 +481,26 @@ namespace Skincare_Management_System
                 string cmdText = "";
                 SqlCommand cmd;
                 string comma = ",";
-                string value = pro_name + " = " + qty + comma;
-                if (dataGridView1.Rows.Count.Equals(1))
+                string value = pro_name + " = " + qty + comma + "\n";
+                if (dataGridView1.Rows.Count.Equals(1) && this.pres.Equals(""))
                 {
                     comma = null;
                 }
+                if(this.pres != "")
+                {
+                    value = comma + "\n" + value.Substring(0, value.Length - 2);
+                }
                 if (dataGridView1.Rows.Count.Equals(lastPrescription))
                 {
-                    value = value.Substring(0, value.Length - 1);        
+                    if (this.pres.Equals(""))
+                    {
+                        value = value.Substring(0, value.Length - 2);
+                    }
+                    //else
+                    //{
+                    //    value = comma + "\n" + value.Substring(0,value.Length-2);
+                    //}
+                    //value = value.Substring(0, value.Length - 2);
                 }
                 cmdText = string.Format("UPDATE tbl_history SET prescription += N'{0}' WHERE his_id={1}",
                            value, class1.his_id);
