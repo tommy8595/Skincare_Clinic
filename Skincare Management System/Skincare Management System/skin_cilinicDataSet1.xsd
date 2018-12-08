@@ -39,6 +39,8 @@
               <Mapping SourceColumn="level" DataSetColumn="level" />
               <Mapping SourceColumn="history" DataSetColumn="history" />
               <Mapping SourceColumn="date" DataSetColumn="date" />
+              <Mapping SourceColumn="cus_age" DataSetColumn="cus_age" />
+              <Mapping SourceColumn="prescription" DataSetColumn="prescription" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -73,7 +75,7 @@ FROM     tbl_catagory INNER JOIN
   <xs:element name="skin_cilinicDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="skin_cilinicDataSet1" msprop:Generator_UserDSName="skin_cilinicDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="sp_select_history1" msprop:Generator_TableClassName="sp_select_history1DataTable" msprop:Generator_TableVarName="tablesp_select_history1" msprop:Generator_RowChangedName="sp_select_history1RowChanged" msprop:Generator_TablePropName="sp_select_history1" msprop:Generator_RowDeletingName="sp_select_history1RowDeleting" msprop:Generator_RowChangingName="sp_select_history1RowChanging" msprop:Generator_RowEvHandlerName="sp_select_history1RowChangeEventHandler" msprop:Generator_RowDeletedName="sp_select_history1RowDeleted" msprop:Generator_RowClassName="sp_select_history1Row" msprop:Generator_UserTableName="sp_select_history1" msprop:Generator_RowEvArgName="sp_select_history1RowChangeEvent">
+        <xs:element name="sp_select_history1" msprop:Generator_TableClassName="sp_select_history1DataTable" msprop:Generator_TableVarName="tablesp_select_history1" msprop:Generator_TablePropName="sp_select_history1" msprop:Generator_RowDeletingName="sp_select_history1RowDeleting" msprop:Generator_RowChangingName="sp_select_history1RowChanging" msprop:Generator_RowEvHandlerName="sp_select_history1RowChangeEventHandler" msprop:Generator_RowDeletedName="sp_select_history1RowDeleted" msprop:Generator_UserTableName="sp_select_history1" msprop:Generator_RowChangedName="sp_select_history1RowChanged" msprop:Generator_RowEvArgName="sp_select_history1RowChangeEvent" msprop:Generator_RowClassName="sp_select_history1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cus_id" msprop:Generator_ColumnVarNameInTable="columncus_id" msprop:Generator_ColumnPropNameInRow="cus_id" msprop:Generator_ColumnPropNameInTable="cus_idColumn" msprop:Generator_UserColumnName="cus_id" type="xs:int" />
@@ -152,10 +154,18 @@ FROM     tbl_catagory INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cus_age" msprop:Generator_ColumnVarNameInTable="columncus_age" msprop:Generator_ColumnPropNameInRow="cus_age" msprop:Generator_ColumnPropNameInTable="cus_ageColumn" msprop:Generator_UserColumnName="cus_age" type="xs:int" minOccurs="0" />
+              <xs:element name="prescription" msprop:Generator_ColumnVarNameInTable="columnprescription" msprop:Generator_ColumnPropNameInRow="prescription" msprop:Generator_ColumnPropNameInTable="prescriptionColumn" msprop:Generator_UserColumnName="prescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="sp_print_stock" msprop:Generator_TableClassName="sp_print_stockDataTable" msprop:Generator_TableVarName="tablesp_print_stock" msprop:Generator_TablePropName="sp_print_stock" msprop:Generator_RowDeletingName="sp_print_stockRowDeleting" msprop:Generator_RowChangingName="sp_print_stockRowChanging" msprop:Generator_RowEvHandlerName="sp_print_stockRowChangeEventHandler" msprop:Generator_RowDeletedName="sp_print_stockRowDeleted" msprop:Generator_UserTableName="sp_print_stock" msprop:Generator_RowChangedName="sp_print_stockRowChanged" msprop:Generator_RowEvArgName="sp_print_stockRowChangeEvent" msprop:Generator_RowClassName="sp_print_stockRow">
+        <xs:element name="sp_print_stock" msprop:Generator_TableClassName="sp_print_stockDataTable" msprop:Generator_TableVarName="tablesp_print_stock" msprop:Generator_RowChangedName="sp_print_stockRowChanged" msprop:Generator_TablePropName="sp_print_stock" msprop:Generator_RowDeletingName="sp_print_stockRowDeleting" msprop:Generator_RowChangingName="sp_print_stockRowChanging" msprop:Generator_RowEvHandlerName="sp_print_stockRowChangeEventHandler" msprop:Generator_RowDeletedName="sp_print_stockRowDeleted" msprop:Generator_RowClassName="sp_print_stockRow" msprop:Generator_UserTableName="sp_print_stock" msprop:Generator_RowEvArgName="sp_print_stockRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="pro_id" msprop:Generator_ColumnVarNameInTable="columnpro_id" msprop:Generator_ColumnPropNameInRow="pro_id" msprop:Generator_ColumnPropNameInTable="pro_idColumn" msprop:Generator_UserColumnName="pro_id" type="xs:int" />
@@ -176,6 +186,7 @@ FROM     tbl_catagory INNER JOIN
               <xs:element name="pro_sup" msprop:Generator_ColumnVarNameInTable="columnpro_sup" msprop:Generator_ColumnPropNameInRow="pro_sup" msprop:Generator_ColumnPropNameInTable="pro_supColumn" msprop:Generator_UserColumnName="pro_sup" type="xs:double" minOccurs="0" />
               <xs:element name="pro_upis" msprop:Generator_ColumnVarNameInTable="columnpro_upis" msprop:Generator_ColumnPropNameInRow="pro_upis" msprop:Generator_ColumnPropNameInTable="pro_upisColumn" msprop:Generator_UserColumnName="pro_upis" type="xs:double" minOccurs="0" />
               <xs:element name="pro_qty" msprop:Generator_ColumnVarNameInTable="columnpro_qty" msprop:Generator_ColumnPropNameInRow="pro_qty" msprop:Generator_ColumnPropNameInTable="pro_qtyColumn" msprop:Generator_UserColumnName="pro_qty" type="xs:int" minOccurs="0" />
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

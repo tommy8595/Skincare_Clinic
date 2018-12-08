@@ -346,6 +346,10 @@ namespace Skincare_Management_System {
             
             private global::System.Data.DataColumn columndate;
             
+            private global::System.Data.DataColumn columncus_age;
+            
+            private global::System.Data.DataColumn columnprescription;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public sp_select_history1DataTable() {
@@ -509,6 +513,22 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cus_ageColumn {
+                get {
+                    return this.columncus_age;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn prescriptionColumn {
+                get {
+                    return this.columnprescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -560,7 +580,9 @@ namespace Skincare_Management_System {
                         int his_id, 
                         int level, 
                         string history, 
-                        System.DateTime date) {
+                        System.DateTime date, 
+                        int cus_age, 
+                        string prescription) {
                 sp_select_history1Row rowsp_select_history1Row = ((sp_select_history1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cus_id,
@@ -578,7 +600,9 @@ namespace Skincare_Management_System {
                         his_id,
                         level,
                         history,
-                        date};
+                        date,
+                        cus_age,
+                        prescription};
                 rowsp_select_history1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsp_select_history1Row);
                 return rowsp_select_history1Row;
@@ -624,6 +648,8 @@ namespace Skincare_Management_System {
                 this.columnlevel = base.Columns["level"];
                 this.columnhistory = base.Columns["history"];
                 this.columndate = base.Columns["date"];
+                this.columncus_age = base.Columns["cus_age"];
+                this.columnprescription = base.Columns["prescription"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -661,6 +687,10 @@ namespace Skincare_Management_System {
                 base.Columns.Add(this.columnhistory);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
+                this.columncus_age = new global::System.Data.DataColumn("cus_age", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncus_age);
+                this.columnprescription = new global::System.Data.DataColumn("prescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprescription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncus_id}, true));
                 this.columncus_id.AllowDBNull = false;
@@ -675,6 +705,7 @@ namespace Skincare_Management_System {
                 this.columnlocation.MaxLength = 2147483647;
                 this.columndiagnostics.MaxLength = 2147483647;
                 this.columnhistory.MaxLength = 2147483647;
+                this.columnprescription.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -820,6 +851,8 @@ namespace Skincare_Management_System {
             
             private global::System.Data.DataColumn columnpro_qty;
             
+            private global::System.Data.DataColumn columnDataColumn1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public sp_print_stockDataTable() {
@@ -903,6 +936,14 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DataColumn1Column {
+                get {
+                    return this.columnDataColumn1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -938,7 +979,7 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_print_stockRow Addsp_print_stockRow(int pro_id, string pro_name, string cat_name, double pro_sup, double pro_upis, int pro_qty) {
+            public sp_print_stockRow Addsp_print_stockRow(int pro_id, string pro_name, string cat_name, double pro_sup, double pro_upis, int pro_qty, string DataColumn1) {
                 sp_print_stockRow rowsp_print_stockRow = ((sp_print_stockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         pro_id,
@@ -946,7 +987,8 @@ namespace Skincare_Management_System {
                         cat_name,
                         pro_sup,
                         pro_upis,
-                        pro_qty};
+                        pro_qty,
+                        DataColumn1};
                 rowsp_print_stockRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsp_print_stockRow);
                 return rowsp_print_stockRow;
@@ -982,6 +1024,7 @@ namespace Skincare_Management_System {
                 this.columnpro_sup = base.Columns["pro_sup"];
                 this.columnpro_upis = base.Columns["pro_upis"];
                 this.columnpro_qty = base.Columns["pro_qty"];
+                this.columnDataColumn1 = base.Columns["DataColumn1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -999,6 +1042,8 @@ namespace Skincare_Management_System {
                 base.Columns.Add(this.columnpro_upis);
                 this.columnpro_qty = new global::System.Data.DataColumn("pro_qty", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpro_qty);
+                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDataColumn1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpro_id}, true));
                 this.columnpro_id.AllowDBNull = false;
@@ -1398,6 +1443,38 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int cus_age {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_select_history1.cus_ageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cus_age\' in table \'sp_select_history1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_select_history1.cus_ageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string prescription {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_select_history1.prescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'prescription\' in table \'sp_select_history1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_select_history1.prescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Iscus_nameNull() {
                 return this.IsNull(this.tablesp_select_history1.cus_nameColumn);
             }
@@ -1575,6 +1652,30 @@ namespace Skincare_Management_System {
             public void SetdateNull() {
                 this[this.tablesp_select_history1.dateColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscus_ageNull() {
+                return this.IsNull(this.tablesp_select_history1.cus_ageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcus_ageNull() {
+                this[this.tablesp_select_history1.cus_ageColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsprescriptionNull() {
+                return this.IsNull(this.tablesp_select_history1.prescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetprescriptionNull() {
+                this[this.tablesp_select_history1.prescriptionColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1684,6 +1785,22 @@ namespace Skincare_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DataColumn1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_print_stock.DataColumn1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DataColumn1\' in table \'sp_print_stock\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_print_stock.DataColumn1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Ispro_nameNull() {
                 return this.IsNull(this.tablesp_print_stock.pro_nameColumn);
             }
@@ -1740,6 +1857,18 @@ namespace Skincare_Management_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setpro_qtyNull() {
                 this[this.tablesp_print_stock.pro_qtyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDataColumn1Null() {
+                return this.IsNull(this.tablesp_print_stock.DataColumn1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDataColumn1Null() {
+                this[this.tablesp_print_stock.DataColumn1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1952,6 +2081,8 @@ namespace Skincare_Management_System.skin_cilinicDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("level", "level");
             tableMapping.ColumnMappings.Add("history", "history");
             tableMapping.ColumnMappings.Add("date", "date");
+            tableMapping.ColumnMappings.Add("cus_age", "cus_age");
+            tableMapping.ColumnMappings.Add("prescription", "prescription");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
