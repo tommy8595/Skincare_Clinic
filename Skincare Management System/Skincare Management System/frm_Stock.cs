@@ -137,7 +137,7 @@ namespace Skincare_Management_System
         }
         public void refresh_frmstock()
         {
-            SqlCommand cmd = new SqlCommand(@"select pro.pro_id as [ID],pro.pro_name as [Name],cate.cat_name[Category],pro.pro_sup as [Sell Price],pro.pro_upis as [Import Price],pro.pro_qty as [Qty]
+            SqlCommand cmd = new SqlCommand(@"select pro.pro_name as [Name],cate.cat_name[Category],pro.pro_sup as [Sell Price],pro.pro_upis as [Import Price],pro.pro_qty as [Qty]
                                             from tbl_product pro inner join tbl_catagory cate
                                             on pro.cat_id = cate.cat_id", SkinCareConnection.Conn);
             SqlDataAdapter data = new SqlDataAdapter(cmd);

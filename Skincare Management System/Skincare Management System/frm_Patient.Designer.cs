@@ -56,6 +56,8 @@
             this.cbo_gender_patient = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_patientlist = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtage = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -270,20 +272,22 @@
             // dt_dob_patient
             // 
             this.dt_dob_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_dob_patient.Location = new System.Drawing.Point(997, 348);
+            this.dt_dob_patient.Location = new System.Drawing.Point(980, 296);
             this.dt_dob_patient.Name = "dt_dob_patient";
             this.dt_dob_patient.Size = new System.Drawing.Size(485, 36);
             this.dt_dob_patient.TabIndex = 4;
+            this.dt_dob_patient.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(799, 350);
+            this.label7.Location = new System.Drawing.Point(794, 296);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 29);
             this.label7.TabIndex = 17;
             this.label7.Text = "Date of Birth";
+            this.label7.Visible = false;
             // 
             // label8
             // 
@@ -358,9 +362,9 @@
             "Male",
             "Female"});
             this.cbo_gender_patient.Location = new System.Drawing.Point(629, 355);
-            this.cbo_gender_patient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_gender_patient.Margin = new System.Windows.Forms.Padding(2);
             this.cbo_gender_patient.Name = "cbo_gender_patient";
-            this.cbo_gender_patient.Size = new System.Drawing.Size(135, 37);
+            this.cbo_gender_patient.Size = new System.Drawing.Size(192, 37);
             this.cbo_gender_patient.TabIndex = 3;
             // 
             // button1
@@ -397,12 +401,33 @@
             this.btn_patientlist.UseVisualStyleBackColor = false;
             this.btn_patientlist.Click += new System.EventHandler(this.btn_patientlist_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(986, 358);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 29);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Age";
+            // 
+            // txtage
+            // 
+            this.txtage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtage.Location = new System.Drawing.Point(1130, 358);
+            this.txtage.Name = "txtage";
+            this.txtage.Size = new System.Drawing.Size(351, 36);
+            this.txtage.TabIndex = 24;
+            // 
             // frm_Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.txtage);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_patientlist);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbo_gender_patient);
@@ -469,5 +494,7 @@
         private System.Windows.Forms.ComboBox cbo_gender_patient;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_patientlist;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtage;
     }
 }

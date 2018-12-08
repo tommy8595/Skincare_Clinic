@@ -43,6 +43,11 @@
             this.txt_name_history = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_history = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_back_history = new System.Windows.Forms.Button();
+            this.btn_print_history = new System.Windows.Forms.Button();
+            this.btn_add_history = new System.Windows.Forms.Button();
+            this.btn_Prescription = new System.Windows.Forms.Button();
             this.history_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.History = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +56,6 @@
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_back_history = new System.Windows.Forms.Button();
-            this.btn_print_history = new System.Windows.Forms.Button();
-            this.btn_add_history = new System.Windows.Forms.Button();
-            this.btn_Prescription = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_history)).BeginInit();
@@ -233,72 +233,15 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_history.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_history.Location = new System.Drawing.Point(389, 135);
+            this.dgv_history.Location = new System.Drawing.Point(389, 147);
             this.dgv_history.Name = "dgv_history";
             this.dgv_history.ReadOnly = true;
             this.dgv_history.RowHeadersVisible = false;
             this.dgv_history.RowTemplate.Height = 24;
             this.dgv_history.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_history.Size = new System.Drawing.Size(1093, 565);
+            this.dgv_history.Size = new System.Drawing.Size(1093, 553);
             this.dgv_history.TabIndex = 13;
             this.dgv_history.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // history_id
-            // 
-            this.history_id.DataPropertyName = "his_id";
-            this.history_id.HeaderText = "history_id";
-            this.history_id.Name = "history_id";
-            this.history_id.ReadOnly = true;
-            this.history_id.Visible = false;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // History
-            // 
-            this.History.DataPropertyName = "History";
-            this.History.HeaderText = "History";
-            this.History.Name = "History";
-            this.History.ReadOnly = true;
-            // 
-            // SkinExamination
-            // 
-            this.SkinExamination.DataPropertyName = "Skin Examination";
-            this.SkinExamination.HeaderText = "Skin Examination";
-            this.SkinExamination.Name = "SkinExamination";
-            this.SkinExamination.ReadOnly = true;
-            // 
-            // Investigation
-            // 
-            this.Investigation.DataPropertyName = "Investigation";
-            this.Investigation.HeaderText = "Investigation";
-            this.Investigation.Name = "Investigation";
-            this.Investigation.ReadOnly = true;
-            // 
-            // Location
-            // 
-            this.Location.DataPropertyName = "Location";
-            this.Location.HeaderText = "Location";
-            this.Location.Name = "Location";
-            this.Location.ReadOnly = true;
-            // 
-            // Diagnostic
-            // 
-            this.Diagnostic.DataPropertyName = "Diagnostics";
-            this.Diagnostic.HeaderText = "Diagnostic";
-            this.Diagnostic.Name = "Diagnostic";
-            this.Diagnostic.ReadOnly = true;
-            // 
-            // Level
-            // 
-            this.Level.DataPropertyName = "Level";
-            this.Level.HeaderText = "Level";
-            this.Level.Name = "Level";
-            this.Level.ReadOnly = true;
             // 
             // pictureBox1
             // 
@@ -376,6 +319,63 @@
             this.btn_Prescription.Text = "Prescription";
             this.btn_Prescription.UseVisualStyleBackColor = false;
             this.btn_Prescription.Click += new System.EventHandler(this.btn_Prescription_Click);
+            // 
+            // history_id
+            // 
+            this.history_id.DataPropertyName = "his_id";
+            this.history_id.HeaderText = "history_id";
+            this.history_id.Name = "history_id";
+            this.history_id.ReadOnly = true;
+            this.history_id.Visible = false;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // History
+            // 
+            this.History.DataPropertyName = "History";
+            this.History.HeaderText = "History";
+            this.History.Name = "History";
+            this.History.ReadOnly = true;
+            // 
+            // SkinExamination
+            // 
+            this.SkinExamination.DataPropertyName = "Skin Examination";
+            this.SkinExamination.HeaderText = "Skin Examination";
+            this.SkinExamination.Name = "SkinExamination";
+            this.SkinExamination.ReadOnly = true;
+            // 
+            // Investigation
+            // 
+            this.Investigation.DataPropertyName = "Investigation";
+            this.Investigation.HeaderText = "Investigation";
+            this.Investigation.Name = "Investigation";
+            this.Investigation.ReadOnly = true;
+            // 
+            // Location
+            // 
+            this.Location.DataPropertyName = "Location";
+            this.Location.HeaderText = "Location";
+            this.Location.Name = "Location";
+            this.Location.ReadOnly = true;
+            // 
+            // Diagnostic
+            // 
+            this.Diagnostic.DataPropertyName = "Diagnostics";
+            this.Diagnostic.HeaderText = "Diagnostic";
+            this.Diagnostic.Name = "Diagnostic";
+            this.Diagnostic.ReadOnly = true;
+            // 
+            // Level
+            // 
+            this.Level.DataPropertyName = "Level";
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            this.Level.ReadOnly = true;
             // 
             // frm_History
             // 

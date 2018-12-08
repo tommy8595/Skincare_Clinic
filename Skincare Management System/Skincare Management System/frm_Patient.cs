@@ -116,7 +116,7 @@ namespace Skincare_Management_System
            
        
             class_connection.insert_customer(txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
-                cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+                cbo_gender_patient.Text,txt_occupation_patient.Text,int.Parse(txtage.Text));
             class_connection.reset_controll(this);
             SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
             
@@ -143,7 +143,7 @@ namespace Skincare_Management_System
                     txt_occupation_patient.Text = "";
                     txt_name_patient.Text = "";
                     txt_phone_patient.Text = "";
-                    dt_dob_patient.Text = "";
+                    txtage.Text = "";
                     btn_add_patient.Enabled = true;
                 }
                 else
@@ -157,7 +157,7 @@ namespace Skincare_Management_System
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                        dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+                        txtage.Text = s_dr["cus_age"].ToString();
                         btn_add_patient.Enabled = false;
                     }
 
@@ -180,7 +180,7 @@ namespace Skincare_Management_System
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                        dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+                        txtage.Text = s_dr["cus_age"].ToString();
                         btn_add_patient.Enabled = false;
                     }
                 }
@@ -212,7 +212,7 @@ namespace Skincare_Management_System
                     txt_occupation_patient.Text = "";
                     txt_name_patient.Text = "";
                     txt_id_patient.Text = "";
-                    dt_dob_patient.Text = "";
+                    txtage.Text = "";
               }
           
 
@@ -227,7 +227,7 @@ namespace Skincare_Management_System
                     cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
                     txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                     txt_address_patient.Text = s_dr["cus_address"].ToString();
-                    dt_dob_patient.Text = s_dr["cus_dob"].ToString();
+                    txtage.Text = s_dr["cus_age"].ToString();
 
                 }
 
@@ -239,10 +239,10 @@ namespace Skincare_Management_System
         {   
             if(class1.id==0)
             class_connection.update_customer(int.Parse(txt_id_patient.Text), txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
-               cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+               cbo_gender_patient.Text,txt_occupation_patient.Text,int.Parse(txtage.Text));
             else
                 class_connection.update_customer(class1.id, txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
-              cbo_gender_patient.Text, dt_dob_patient.Text, txt_occupation_patient.Text);
+              cbo_gender_patient.Text,txt_occupation_patient.Text,int.Parse(txtage.Text));
             MessageBox.Show("Update Successful");
 
         }

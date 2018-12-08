@@ -66,7 +66,7 @@ namespace Skincare_Management_System
                 }
             }
         }
-        public static void insert_customer(string cn, string ca, string cp, string cg, string cd, string co)
+        public static void insert_customer(string cn, string ca, string cp, string cg, string co,int cage)
         {
             SqlCommand cmd = new SqlCommand("sp_insert_customer", connection());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -75,7 +75,7 @@ namespace Skincare_Management_System
             cmd.Parameters.AddWithValue("@cp", cp);
             cmd.Parameters.AddWithValue("@cg", cg);
             cmd.Parameters.AddWithValue("@co", co);
-            cmd.Parameters.AddWithValue("@cd", DateTime.Parse(cd));
+            cmd.Parameters.AddWithValue("@cage",cage);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
 
@@ -96,7 +96,7 @@ namespace Skincare_Management_System
             cmd.Dispose();
 
         }
-        public static void update_customer(int ci, string cn, string ca, string cp, string cg, string cd, string co)
+        public static void update_customer(int ci, string cn, string ca, string cp, string cg,string co,int cage)
         {
             SqlCommand cmd = new SqlCommand("sp_update_customer", connection());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -106,7 +106,7 @@ namespace Skincare_Management_System
             cmd.Parameters.AddWithValue("@cp", cp);
             cmd.Parameters.AddWithValue("@cg", cg);
             cmd.Parameters.AddWithValue("@co", co);
-            cmd.Parameters.AddWithValue("@cd", DateTime.Parse(cd));
+            cmd.Parameters.AddWithValue("@cage",cage);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
 
