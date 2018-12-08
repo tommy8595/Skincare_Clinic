@@ -512,7 +512,6 @@ namespace Skincare_Management_System.Receipt {
                 this.columncus_name.MaxLength = 2147483647;
                 this.columncus_gender.MaxLength = 10;
                 this.columndiagnostics.MaxLength = 2147483647;
-                this.columnage.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1598,7 +1597,7 @@ namespace Skincare_Management_System.Receipt.DataSetForReceiptTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT cus.cus_id, cus.cus_name, cus.cus_gender, his.diagnostics, his.level, YEAR(GETDATE()) - YEAR(cus.cus_dob) AS age
+            this._commandCollection[0].CommandText = @"SELECT cus.cus_id, cus.cus_name, cus.cus_gender, his.diagnostics, his.level, cus.cus_age as age
 FROM     tbl_customer AS cus INNER JOIN
                   tbl_history AS his ON cus.cus_id = his.cus_id
 WHERE  (cus.cus_id = @cus_id) AND (his.his_id = @his_id)";

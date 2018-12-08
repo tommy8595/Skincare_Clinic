@@ -171,17 +171,32 @@ namespace Skincare_Management_System
                 {
                     SqlDataReader s_dr = class_connection.get_customer_id(int.Parse(txt_id_patient.Text.Trim()));
 
-
-                    while (s_dr.Read())
+                    if (s_dr.HasRows)
                     {
-                        txt_id_patient.Text = s_dr["cus_id"].ToString();
-                        txt_name_patient.Text = (s_dr["cus_name"].ToString());
-                        cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
-                        txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
-                        txt_address_patient.Text = s_dr["cus_address"].ToString();
-                        txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                        txtage.Text = s_dr["cus_age"].ToString();
-                        btn_add_patient.Enabled = false;
+                        while (s_dr.Read())
+                        {
+                            txt_id_patient.Text = s_dr["cus_id"].ToString();
+                            txt_name_patient.Text = (s_dr["cus_name"].ToString());
+                            cbo_gender_patient.Text = s_dr["cus_gender"].ToString();
+                            txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
+                            txt_address_patient.Text = s_dr["cus_address"].ToString();
+                            txt_phone_patient.Text = s_dr["cus_phone"].ToString();
+                            txtage.Text = s_dr["cus_age"].ToString();
+                            btn_add_patient.Enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        txt_address_patient.Text = "";
+                        cbo_gender_patient.Text = "";
+                        txt_occupation_patient.Text = "";
+                        txt_name_patient.Text = "";
+                        txt_phone_patient.Text = "";
+                        txtage.Text = "";
+                        btn_add_patient.Enabled = true;
+
+                        MessageBox.Show("No Patient of this ID : " + txt_id_patient.Text.Trim());
+                        txt_id_patient.Clear();
                     }
                 }
                 catch (Exception ex)

@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="skin_cilinicConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT cus.cus_id, cus.cus_name, cus.cus_gender, his.diagnostics, his.level, YEAR(GETDATE()) - YEAR(cus.cus_dob) AS age
+                    <CommandText>SELECT cus.cus_id, cus.cus_name, cus.cus_gender, his.diagnostics, his.level, cus.cus_age as age
 FROM     tbl_customer AS cus INNER JOIN
                   tbl_history AS his ON cus.cus_id = his.cus_id
 WHERE  (cus.cus_id = @cus_id) AND (his.his_id = @his_id)</CommandText>
@@ -42,7 +42,7 @@ WHERE  (cus.cus_id = @cus_id) AND (his.his_id = @his_id)</CommandText>
   <xs:element name="DataSetForReceipt" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetForReceipt" msprop:Generator_UserDSName="DataSetForReceipt">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Prescripton" msprop:Generator_TableClassName="PrescriptonDataTable" msprop:Generator_TableVarName="tablePrescripton" msprop:Generator_RowChangedName="PrescriptonRowChanged" msprop:Generator_TablePropName="Prescripton" msprop:Generator_RowDeletingName="PrescriptonRowDeleting" msprop:Generator_RowChangingName="PrescriptonRowChanging" msprop:Generator_RowEvHandlerName="PrescriptonRowChangeEventHandler" msprop:Generator_RowDeletedName="PrescriptonRowDeleted" msprop:Generator_RowClassName="PrescriptonRow" msprop:Generator_UserTableName="Prescripton" msprop:Generator_RowEvArgName="PrescriptonRowChangeEvent">
+        <xs:element name="Prescripton" msprop:Generator_TableClassName="PrescriptonDataTable" msprop:Generator_TableVarName="tablePrescripton" msprop:Generator_TablePropName="Prescripton" msprop:Generator_RowDeletingName="PrescriptonRowDeleting" msprop:Generator_RowChangingName="PrescriptonRowChanging" msprop:Generator_RowEvHandlerName="PrescriptonRowChangeEventHandler" msprop:Generator_RowDeletedName="PrescriptonRowDeleted" msprop:Generator_UserTableName="Prescripton" msprop:Generator_RowChangedName="PrescriptonRowChanged" msprop:Generator_RowEvArgName="PrescriptonRowChangeEvent" msprop:Generator_RowClassName="PrescriptonRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ord_id" msprop:Generator_ColumnVarNameInTable="columnord_id" msprop:Generator_ColumnPropNameInRow="ord_id" msprop:Generator_ColumnPropNameInTable="ord_idColumn" msprop:Generator_UserColumnName="ord_id" type="xs:int" />
@@ -56,7 +56,7 @@ WHERE  (cus.cus_id = @cus_id) AND (his.his_id = @his_id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Patient" msprop:Generator_TableClassName="PatientDataTable" msprop:Generator_TableVarName="tablePatient" msprop:Generator_RowChangedName="PatientRowChanged" msprop:Generator_TablePropName="Patient" msprop:Generator_RowDeletingName="PatientRowDeleting" msprop:Generator_RowChangingName="PatientRowChanging" msprop:Generator_RowEvHandlerName="PatientRowChangeEventHandler" msprop:Generator_RowDeletedName="PatientRowDeleted" msprop:Generator_RowClassName="PatientRow" msprop:Generator_UserTableName="Patient" msprop:Generator_RowEvArgName="PatientRowChangeEvent">
+        <xs:element name="Patient" msprop:Generator_TableClassName="PatientDataTable" msprop:Generator_TableVarName="tablePatient" msprop:Generator_TablePropName="Patient" msprop:Generator_RowDeletingName="PatientRowDeleting" msprop:Generator_RowChangingName="PatientRowChanging" msprop:Generator_RowEvHandlerName="PatientRowChangeEventHandler" msprop:Generator_RowDeletedName="PatientRowDeleted" msprop:Generator_UserTableName="Patient" msprop:Generator_RowChangedName="PatientRowChanged" msprop:Generator_RowEvArgName="PatientRowChangeEvent" msprop:Generator_RowClassName="PatientRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cus_id" msprop:Generator_ColumnVarNameInTable="columncus_id" msprop:Generator_ColumnPropNameInRow="cus_id" msprop:Generator_ColumnPropNameInTable="cus_idColumn" msprop:Generator_UserColumnName="cus_id" type="xs:int" />
@@ -82,7 +82,7 @@ WHERE  (cus.cus_id = @cus_id) AND (his.his_id = @his_id)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="level" msprop:Generator_ColumnVarNameInTable="columnlevel" msprop:Generator_ColumnPropNameInRow="level" msprop:Generator_ColumnPropNameInTable="levelColumn" msprop:Generator_UserColumnName="level" type="xs:int" minOccurs="0" />
-              <xs:element name="age" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnage" msprop:Generator_ColumnPropNameInRow="age" msprop:Generator_ColumnPropNameInTable="ageColumn" msprop:Generator_UserColumnName="age" type="xs:int" minOccurs="0" />
+              <xs:element name="age" msprop:Generator_ColumnVarNameInTable="columnage" msprop:Generator_ColumnPropNameInRow="age" msprop:Generator_ColumnPropNameInTable="ageColumn" msprop:Generator_UserColumnName="age" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

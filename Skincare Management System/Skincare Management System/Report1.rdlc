@@ -805,7 +805,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=First(Fields!cus_age.Value, "DataSet1")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -1117,13 +1117,21 @@
           <DataField>date</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="cus_age">
+          <DataField>cus_age</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="prescription">
+          <DataField>prescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>skin_cilinicDataSet1</rd:DataSetName>
-        <rd:SchemaPath>D:\skin care\Skincare Management System\Skincare Management System\skin_cilinicDataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\SkincareV2\Skincare Management System\Skincare Management System\skin_cilinicDataSet1.xsd</rd:SchemaPath>
         <rd:TableName>sp_select_history1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName>sp_select_history1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
