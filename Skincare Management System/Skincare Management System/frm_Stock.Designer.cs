@@ -188,12 +188,13 @@
             this.btn_edit_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit_stock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_edit_stock.Location = new System.Drawing.Point(1162, 731);
+            this.btn_edit_stock.Location = new System.Drawing.Point(805, 731);
             this.btn_edit_stock.Name = "btn_edit_stock";
             this.btn_edit_stock.Size = new System.Drawing.Size(137, 45);
             this.btn_edit_stock.TabIndex = 28;
             this.btn_edit_stock.Text = "Edit";
             this.btn_edit_stock.UseVisualStyleBackColor = false;
+            this.btn_edit_stock.Visible = false;
             this.btn_edit_stock.Click += new System.EventHandler(this.btn_edit_stock_Click);
             // 
             // btn_back_stock
@@ -260,7 +261,7 @@
             this.btn_print_frmstock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_print_frmstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_print_frmstock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(168)))), ((int)(((byte)(253)))));
-            this.btn_print_frmstock.Location = new System.Drawing.Point(979, 731);
+            this.btn_print_frmstock.Location = new System.Drawing.Point(1161, 731);
             this.btn_print_frmstock.Name = "btn_print_frmstock";
             this.btn_print_frmstock.Size = new System.Drawing.Size(137, 45);
             this.btn_print_frmstock.TabIndex = 33;

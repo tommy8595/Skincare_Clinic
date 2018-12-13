@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Data.SqlClient;
-
+using System.Globalization;
 
 namespace Skincare_Management_System
 {
@@ -146,6 +146,7 @@ namespace Skincare_Management_System
                     txtage.Text = "";
                     btn_add_patient.Enabled = true;
                 }
+           
                 else
                 {
                     SqlDataReader s_dr = class_connection.get_customer_id(int.Parse(txt_id_patient.Text.Trim()));
@@ -157,8 +158,11 @@ namespace Skincare_Management_System
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                        txtage.Text = s_dr["cus_age"].ToString();
+                        txtage.Text = s_dr["age"].ToString();
+                       
+                        
                         btn_add_patient.Enabled = false;
+                        //+DateTime.Now-s_dr["cus_dob"]
                     }
 
 
@@ -181,7 +185,7 @@ namespace Skincare_Management_System
                             txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                             txt_address_patient.Text = s_dr["cus_address"].ToString();
                             txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                            txtage.Text = s_dr["cus_age"].ToString();
+                            txtage.Text = s_dr["age"].ToString();
                             btn_add_patient.Enabled = false;
                         }
                     }
@@ -217,7 +221,8 @@ namespace Skincare_Management_System
         }
         private void txt_phone_patient_KeyUp(object sender, KeyEventArgs e)
         {
-            
+            MessageBox.Show(txtage.Text);
+
             if (e.KeyCode == Keys.Back)
             {
               if (txt_id_patient.Text.Length != 0)
@@ -287,6 +292,12 @@ namespace Skincare_Management_System
         {
             frm_PatientList pl = new frm_PatientList();
             pl.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlDataReader s_dr = class_connection.get_customer_id(int.Parse(txt_id_patient.Text.Trim()));
+            MessageBox.Show(s_dr["cus_age"].ToString());
         }
 
         //private void txt_phone_patient_KeyDown(object sender, KeyEventArgs e)
