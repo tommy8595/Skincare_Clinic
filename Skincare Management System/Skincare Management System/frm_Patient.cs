@@ -220,8 +220,7 @@ namespace Skincare_Management_System
             }
         }
         private void txt_phone_patient_KeyUp(object sender, KeyEventArgs e)
-        {
-            MessageBox.Show(txtage.Text);
+        {          
 
             if (e.KeyCode == Keys.Back)
             {

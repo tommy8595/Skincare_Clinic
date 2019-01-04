@@ -100,8 +100,8 @@ namespace Skincare_Management_System
         {
             refresh_frmstock();
             dgv_product_frmstock.Update();
+            this.dgv_product_frmstock.Columns[2].DefaultCellStyle.Format = "c";
             this.dgv_product_frmstock.Columns[3].DefaultCellStyle.Format = "c";
-            this.dgv_product_frmstock.Columns[4].DefaultCellStyle.Format = "c";
 
         }
 

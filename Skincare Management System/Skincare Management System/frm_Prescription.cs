@@ -516,5 +516,15 @@ namespace Skincare_Management_System
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)//button remove
+
+        {
+            foreach (DataGridViewCell oneCell in dataGridView1.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    dataGridView1.Rows.RemoveAt(oneCell.RowIndex);
+            }
+        }
     }
 }
