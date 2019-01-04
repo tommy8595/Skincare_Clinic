@@ -19,6 +19,19 @@ namespace Skincare_Management_System
             InitializeComponent();
         }
 
+
+
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show(e.Result.ToString());
+        }
+
+        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            int num = int.Parse(e.Argument.ToString());
+            e.Result = num;
+        }
+
         Thread th;
         string str;
         SqlConnection con;
@@ -165,7 +178,8 @@ namespace Skincare_Management_System
                         lastPrescription += 1;
                         this.AppendHistoryForPrescription(
                             dataGridView1[0, i].Value.ToString().Trim(),
-                            int.Parse(dataGridView1[2, i].Value.ToString().Trim())
+                            int.Parse(dataGridView1[2, i].Value.ToString().Trim()),
+                            dataGridView1[1, i].Value.ToString().Trim()
                         );
                     }
                     dataGridView1.Rows.Clear();
@@ -176,6 +190,9 @@ namespace Skincare_Management_System
                         th = new Thread(openMedicine);
                         th.SetApartmentState(ApartmentState.STA);
                         th.Start();
+
+                        frm_History f = (frm_History)frm_History.ActiveForm;
+                        f.RefreshHistoryInformation();
                     }
 
                 }
@@ -474,14 +491,14 @@ namespace Skincare_Management_System
                 e.Handled = true;
             }
         }
-        private void AppendHistoryForPrescription(string pro_name,int qty)
+        private void AppendHistoryForPrescription(string pro_name,int qty,string cate)
         {
             try
             {
                 string cmdText = "";
                 SqlCommand cmd;
                 string comma = ",";
-                string value = pro_name + " = " + qty + comma + "\n";
+                string value = pro_name + " = " + qty + " ( " + cate + " ) " + comma + "\n";
                 if (dataGridView1.Rows.Count.Equals(1) && this.pres.Equals(""))
                 {
                     comma = null;

@@ -22,7 +22,7 @@ namespace Skincare_Management_System
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
 
         }
-      
+
         private void frm_Receipt_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSetForReceipt.Prescription' table. You can move, or remove it, as needed.

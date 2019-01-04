@@ -25,8 +25,9 @@ namespace Skincare_Management_System
         string str;
         string test;
         string[] spl;
-        Thread th;       
-        
+        Thread th;
+        Dictionary<object,int> dic_category = new Dictionary<object, int>();
+        public frm_Stock frm_Stock;
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -56,12 +57,12 @@ namespace Skincare_Management_System
                     con = new SqlConnection(str);
                     con.Open();
                     if (lst_category_register.SelectedIndex != (lst_category_register.Items.Count - 1))
-                    {                      
+                     {                      
                         spl = lst_category_register.Text.Split('.');                       
                         SqlCommand cmd = new SqlCommand("dbo.sp_insert_product", con);
                         cmd.CommandType = CommandType.StoredProcedure;                    
                         cmd.Parameters.AddWithValue("@pn", txt_name_register.Text);
-                        cmd.Parameters.AddWithValue("@ci", spl[0]);
+                        cmd.Parameters.AddWithValue("@ci", (int)dic_category[lst_category_register.SelectedItem]);
                         cmd.Parameters.AddWithValue("@ps", txt_sellprice_register.Text);
                         cmd.Parameters.AddWithValue("@pu", txt_importprice_register.Text);
                         cmd.Parameters.AddWithValue("@q",0);
@@ -71,7 +72,7 @@ namespace Skincare_Management_System
                         txt_sellprice_register.Clear();
                         lst_category_register.Text = "";
                         MessageBox.Show("Your data have been saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        con.Close(); 
+                        con.Close();
                     }
                     else
                     {
@@ -94,6 +95,7 @@ namespace Skincare_Management_System
                     }
 
                 }
+                this.frm_Stock.refresh_frmstock();
             }
             catch (SqlException x)
             {
@@ -150,6 +152,20 @@ namespace Skincare_Management_System
 
         private void lst_category_register_DropDown(object sender, EventArgs e)
         {
+            lst_category_register.Items.Clear();
+            dic_category.Clear();
+            //str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
+            //con = new SqlConnection(str);
+            //con.Open();
+            //string q = "SELECT cat_id,cat_name FROM tbl_catagory";
+            //SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
+            //while (dr.Read())
+            //{
+            //    lst_category_register.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
+            //}
+            //lst_category_register.Items.Add("Add New...");
+            //dr.Close();
+            //con.Close();
             str = "Data Source=.;Initial Catalog=skin_cilinic;Integrated Security=True";
             con = new SqlConnection(str);
             con.Open();
@@ -157,7 +173,11 @@ namespace Skincare_Management_System
             SqlDataReader dr = new SqlCommand(q, con).ExecuteReader();
             while (dr.Read())
             {
-                lst_category_register.Items.Add(dr.GetValue(0).ToString() + "." + dr.GetValue(1).ToString());
+                lst_category_register.Items.Add(dr.GetValue(1).ToString());
+                if (dic_category.Count >= 0)
+                {
+                    dic_category.Add(dr.GetValue(1), dr.GetInt32(0));
+                }
             }
             lst_category_register.Items.Add("Add New...");
             dr.Close();

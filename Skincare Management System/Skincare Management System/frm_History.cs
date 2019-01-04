@@ -162,5 +162,11 @@ namespace Skincare_Management_System
             this.dgv_history.Sort(dgv_history.Columns[0], ListSortDirection.Descending);
 
         }
+        public void RefreshHistoryInformation()
+        {
+            DataTable dt = new DataTable();
+            dt.Load(class_connection.get_history_id(class1.id));
+            dgv_history.DataSource = dt;
+        }
     }
 }

@@ -343,7 +343,7 @@ namespace Skincare_Management_System
             this.dataGridView1.Columns[4].DefaultCellStyle.Format = "c";
             btn_save.Enabled = false;
             cboName.Enabled = false;
-            btnRemove.Enabled = false;
+            //btnRemove.Enabled = false;
             comboBox1.Text = "Pick one..";
             cboName.Text = "Pick Category first.";
 

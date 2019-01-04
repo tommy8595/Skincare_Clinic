@@ -94,6 +94,7 @@ namespace Skincare_Management_System
         {
             frm_Register register = new frm_Register();
             register.Show();
+            register.frm_Stock = this;
         }
 
         private void frm_Stock_Load(object sender, EventArgs e)

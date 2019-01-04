@@ -117,13 +117,13 @@ namespace Skincare_Management_System
        
             class_connection.insert_customer(txt_name_patient.Text, txt_address_patient.Text, txt_phone_patient.Text,
                 cbo_gender_patient.Text,txt_occupation_patient.Text,int.Parse(txtage.Text));
-            class_connection.reset_controll(this);
             SqlDataReader sqlDataReader = class_connection.get_customer_max_id();
             
             sqlDataReader.Read();
             string id = sqlDataReader.GetValue(0).ToString();
             class1.name = txt_name_patient.Text;
             class1.id = int.Parse(id);
+            class_connection.reset_controll(this);
             MessageBox.Show("You have successful, The id is: "+id);
             this.Close();
             th = new Thread(openHistory);
@@ -158,7 +158,7 @@ namespace Skincare_Management_System
                         txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                         txt_address_patient.Text = s_dr["cus_address"].ToString();
                         txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                        txtage.Text = s_dr["age"].ToString();
+                        txtage.Text = s_dr[7].ToString();
                        
                         
                         btn_add_patient.Enabled = false;
@@ -185,7 +185,7 @@ namespace Skincare_Management_System
                             txt_occupation_patient.Text = s_dr["cus_occupation"].ToString();
                             txt_address_patient.Text = s_dr["cus_address"].ToString();
                             txt_phone_patient.Text = s_dr["cus_phone"].ToString();
-                            txtage.Text = s_dr["age"].ToString();
+                            txtage.Text = s_dr[7].ToString();
                             btn_add_patient.Enabled = false;
                         }
                     }
